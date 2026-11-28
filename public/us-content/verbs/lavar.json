@@ -1,0 +1,278 @@
+{
+ "verb": "lavar",
+ "meaning": "to wash",
+ "level": "A1",
+ "title": "Spanish Verb Lavar and Lavarse Practice: Reflexive Forms and Quiz",
+ "description": "Practice the Spanish verbs lavar and lavarse: wash something vs wash yourself, me lavo las manos, present and preterite forms, ten questions and a reading.",
+ "h1": "Spanish verb lavar: practice",
+ "intro": "Lavar means to wash something (lavo los platos), and lavarse, with a reflexive pronoun, means to wash yourself (me lavo las manos). Spanish uses the article, not the possessive, for body parts. Practice both with feedback.",
+ "demand": {
+  "query": "spanish verb lavar",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "To wash something",
+   "example": "Lavo los platos después de cenar.",
+   "meaning": "I wash the dishes after dinner."
+  },
+  {
+   "use": "Lavarse: to wash yourself",
+   "example": "Me lavo la cara con agua fría.",
+   "meaning": "I wash my face with cold water."
+  },
+  {
+   "use": "Body parts take the article",
+   "example": "Lávate las manos.",
+   "meaning": "Wash your hands."
+  },
+  {
+   "use": "Brushing teeth: lavarse los dientes",
+   "example": "Nos lavamos los dientes antes de dormir.",
+   "meaning": "We brush our teeth before bed."
+  },
+  {
+   "use": "Laundry: lavar la ropa",
+   "example": "Lavamos la ropa los domingos.",
+   "meaning": "We do laundry on Sundays."
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "lavo"
+  ],
+  [
+   "tú",
+   "lavas"
+  ],
+  [
+   "él / ella / usted",
+   "lava"
+  ],
+  [
+   "nosotros / nosotras",
+   "lavamos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "lavan"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "lavé"
+  ],
+  [
+   "tú",
+   "lavaste"
+  ],
+  [
+   "él / ella / usted",
+   "lavó"
+  ],
+  [
+   "nosotros / nosotras",
+   "lavamos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "lavaron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "Yo ",
+   "after": " el carro los sábados.",
+   "options": [
+    "lavo",
+    "me lavo",
+    "lava"
+   ],
+   "answer": 0,
+   "why": "Washing something: lavo, not reflexive."
+  },
+  {
+   "before": "Antes de comer, me ",
+   "after": " las manos.",
+   "options": [
+    "lavo",
+    "lava",
+    "lavas"
+   ],
+   "answer": 0,
+   "why": "Lavarse: me lavo."
+  },
+  {
+   "before": "¿Te ",
+   "after": " el pelo todos los días?",
+   "options": [
+    "lavas",
+    "lavan",
+    "lava"
+   ],
+   "answer": 0,
+   "why": "Tú te lavas."
+  },
+  {
+   "before": "Mi hermano nunca ",
+   "after": " los platos.",
+   "options": [
+    "lava",
+    "se lava",
+    "lavan"
+   ],
+   "answer": 0,
+   "why": "He washes the dishes: lava, not reflexive."
+  },
+  {
+   "before": "Los niños se lavan ",
+   "after": " dientes.",
+   "options": [
+    "los",
+    "sus",
+    "su"
+   ],
+   "answer": 0,
+   "why": "Body parts take the article: los dientes."
+  },
+  {
+   "before": "Ayer ",
+   "after": " toda la ropa.",
+   "options": [
+    "lavé",
+    "lave",
+    "me lavé"
+   ],
+   "answer": 0,
+   "why": "Preterite yo: lavé, washing clothes is not reflexive."
+  },
+  {
+   "before": "¿Ya te ",
+   "after": " la cara?",
+   "options": [
+    "lavaste",
+    "lavastes",
+    "lavas ayer"
+   ],
+   "answer": 0,
+   "why": "Preterite tú: te lavaste."
+  },
+  {
+   "before": "Mi papá ",
+   "after": " el perro en el patio.",
+   "options": [
+    "lavó",
+    "lavo",
+    "se lavó"
+   ],
+   "answer": 0,
+   "why": "Preterite él: lavó the dog, not himself."
+  },
+  {
+   "before": "Nosotros nos ",
+   "after": " las manos con jabón.",
+   "options": [
+    "lavamos",
+    "lavaron",
+    "lava"
+   ],
+   "answer": 0,
+   "why": "Nosotros nos lavamos."
+  },
+  {
+   "before": "Ellos ",
+   "after": " las ventanas antes de la fiesta.",
+   "options": [
+    "lavaron",
+    "se lavaron",
+    "lavamos"
+   ],
+   "answer": 0,
+   "why": "Preterite ellos: lavaron the windows."
+  }
+ ],
+ "reading": {
+  "titleEs": "La lavandería de la esquina",
+  "paragraphs": [
+   "En el barrio de Pilsen, en Chicago, hay una lavandería pequeña que abre a las seis de la mañana. Allí, mientras lavan la ropa, los vecinos conversan. Doña Carmen, la dueña, conoce a todos y sabe quién tiene trabajo nuevo y quién se casa pronto, o al menos eso dicen.",
+   "Un día, un estudiante dejó su ropa en una máquina y se fue. Doña Carmen la lavó, la secó y la dobló. Cuando el joven volvió, avergonzado, ella solo le dijo: «Aquí no lavamos solo ropa, también cuidamos a los vecinos»."
+  ],
+  "comprehension": [
+   {
+    "before": "La lavandería está en ",
+    "after": ".",
+    "options": [
+     "Chicago",
+     "Houston",
+     "Miami"
+    ],
+    "answer": 0,
+    "why": "In Pilsen, Chicago."
+   },
+   {
+    "before": "La lavandería abre ",
+    "after": ".",
+    "options": [
+     "a las seis de la mañana",
+     "a mediodía",
+     "por la noche"
+    ],
+    "answer": 0,
+    "why": "At six in the morning."
+   },
+   {
+    "before": "El estudiante dejó su ropa ",
+    "after": ".",
+    "options": [
+     "en una máquina",
+     "en la calle",
+     "en su casa"
+    ],
+    "answer": 0,
+    "why": "He left it in a machine."
+   },
+   {
+    "before": "Doña Carmen ",
+    "after": " la ropa del estudiante.",
+    "options": [
+     "lavó, secó y dobló",
+     "tiró",
+     "vendió"
+    ],
+    "answer": 0,
+    "why": "She washed, dried and folded it."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Lavo mis manos.",
+   "right": "Me lavo las manos.",
+   "why": "Use lavarse and the article for body parts."
+  },
+  {
+   "wrong": "Me lavo el carro.",
+   "right": "Lavo el carro.",
+   "why": "Washing something else is not reflexive."
+  },
+  {
+   "wrong": "Ayer lave los platos.",
+   "right": "Ayer lavé los platos.",
+   "why": "Preterite yo needs the accent: lavé."
+  },
+  {
+   "wrong": "Me cepillo mis dientes.",
+   "right": "Me cepillo los dientes.",
+   "why": "Body parts take the article, not the possessive."
+  }
+ ],
+ "heritage": "Heritage speakers in the US sometimes say «lavar la ropa» and «lavar los trastes» for dishes, which is common in Mexico. The writing trap is the possessive with body parts, an English pattern: write «me lavo las manos», not «mis manos».",
+ "teacher": "Act out a morning routine in order with lavarse, cepillarse and peinarse, and then have students describe their partner's routine in the third person.",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish verb lavar». Four ask for lavarse and reflexive conjugation, so the reflexive forms are drilled here.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

@@ -1,0 +1,176 @@
+{
+ "theme": "forms",
+ "level": "A1–A2",
+ "name": "demonstrative adjectives",
+ "title": "Spanish Demonstrative Adjectives Practice: Este, Ese, Aquel Quiz",
+ "description": "Practice Spanish demonstratives: este, ese, aquel and their forms, pronouns and esto, eso, aquello, with a rule table and 10 sentences checked as you tap.",
+ "h1": "Spanish demonstrative adjectives practice",
+ "answer": "Spanish has three distances where English has two. Este (this) is near the speaker, ese (that) is near the listener or a little away, and aquel (that over there) is far from both. Each agrees with the noun: este libro, esta mesa, estos libros, estas mesas. Esto, eso and aquello refer to an idea or an unknown thing.",
+ "demand": {
+  "query": "spanish demonstrative adjectives practice",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "rulesCaption": "Demonstratives by distance",
+ "rules": [
+  {
+   "use": "Near me: this, these",
+   "example": "este carro, esta casa, estos días, estas fotos",
+   "meaning": "este / esta / estos / estas"
+  },
+  {
+   "use": "Near you or not far: that, those",
+   "example": "ese libro, esa silla, esos zapatos, esas llaves",
+   "meaning": "ese / esa / esos / esas"
+  },
+  {
+   "use": "Far from both: that one over there",
+   "example": "aquel edificio, aquella montaña, aquellos años",
+   "meaning": "aquel / aquella / aquellos / aquellas"
+  },
+  {
+   "use": "As pronouns (no noun after)",
+   "example": "Quiero este, no ese.",
+   "meaning": "same forms"
+  },
+  {
+   "use": "Unknown thing or idea (neuter)",
+   "example": "¿Qué es esto? Eso no es justo.",
+   "meaning": "esto / eso / aquello"
+  },
+  {
+   "use": "Time: aquel for the distant past",
+   "example": "En aquella época no había internet.",
+   "meaning": "aquel / aquella"
+  }
+ ],
+ "quiz": [
+  {
+   "before": "",
+   "after": " camisa que llevo es nueva.",
+   "options": [
+    "Esta",
+    "Este"
+   ],
+   "answer": 0,
+   "why": "Near me and feminine: esta."
+  },
+  {
+   "before": "¿Cuánto cuestan ",
+   "after": " zapatos que tienes en la mano?",
+   "options": [
+    "esos",
+    "estos"
+   ],
+   "answer": 0,
+   "why": "Near the listener: esos."
+  },
+  {
+   "before": "¿Ves ",
+   "after": " montañas al fondo?",
+   "options": [
+    "aquellas",
+    "estas"
+   ],
+   "answer": 0,
+   "why": "Far from both speakers: aquellas."
+  },
+  {
+   "before": "",
+   "after": " libros de mi mochila pesan mucho.",
+   "options": [
+    "Estos",
+    "Esos"
+   ],
+   "answer": 0,
+   "why": "In my backpack, close to me: estos."
+  },
+  {
+   "before": "¿Qué es ",
+   "after": "? Huele raro.",
+   "options": [
+    "esto",
+    "este"
+   ],
+   "answer": 0,
+   "why": "An unknown thing: esto, the neuter form."
+  },
+  {
+   "before": "No me gusta esta chaqueta. Prefiero ",
+   "after": " que está allí, junto a la puerta.",
+   "options": [
+    "esa",
+    "esta"
+   ],
+   "answer": 0,
+   "why": "A little away from me: esa."
+  },
+  {
+   "before": "En ",
+   "after": " tiempos, mis abuelos vivían en el campo.",
+   "options": [
+    "aquellos",
+    "estos"
+   ],
+   "answer": 0,
+   "why": "Distant past: aquellos tiempos."
+  },
+  {
+   "before": "",
+   "after": " mañana me levanté a las cinco.",
+   "options": [
+    "Esta",
+    "Este"
+   ],
+   "answer": 0,
+   "why": "Mañana (morning) is feminine: esta mañana."
+  },
+  {
+   "before": "—Te doy dinero mañana. —",
+   "after": " dijiste ayer.",
+   "options": [
+    "Eso",
+    "Ese"
+   ],
+   "answer": 0,
+   "why": "Referring to an idea: eso."
+  },
+  {
+   "before": "Me encanta ",
+   "after": " foto que tienes ahí.",
+   "options": [
+    "esa",
+    "ese"
+   ],
+   "answer": 0,
+   "why": "Foto is feminine: esa."
+  }
+ ],
+ "mistakes": [
+  "Using este for everything: Spanish separates ese (near you) from aquel (far away), and native speakers notice the difference.",
+  "Making the neuter agree: «este es mi problema» is fine, but «¿qué es este?» about an unknown object should be «¿qué es esto?».",
+  "Forgetting gender with tricky nouns: esta mano, este día, esa foto, ese problema.",
+  "Adding -o for masculine: «esto libro» should be «este libro»; esto never goes before a noun.",
+  "Writing old accents on pronouns: since 2010, «este», «ese» and «aquel» as pronouns need no accent unless there is real ambiguity."
+ ],
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 8 searches to people in the United States who typed «spanish demonstrative adjectives practice». 2 ask for a worksheet or a PDF (spanish demonstrative adjectives worksheet; demonstrative adjectives in spanish practice worksheets pdf). 2 ask for a quiz or exercises (spanish demonstrative adjectives quiz; spanish demonstrative adjectives exercises). Demonstrative pronouns appear in the suggestions next to the adjectives, so the table shows both uses.",
+  "source": "Google autocomplete in English (United States), captured by SpanishCue on 27 November 2026"
+ },
+ "heritage": "Many heritage speakers in the US use ese and aquel naturally but rarely write them. Two writing points: esto, eso and aquello never go before a noun, and older textbooks put accents on pronouns (éste, ése) that current spelling rules no longer require.",
+ "teacher": "Place three objects at three distances in the room. Students point and say Este lápiz es rojo, ese cuaderno es azul, aquella mochila es negra, and then move objects to change the forms.",
+ "faq": [
+  {
+   "question": "What is the difference between ese and aquel?",
+   "answer": "Ese is near the listener or at a middle distance; aquel is far from both speaker and listener, in space or in time. In everyday Latin American speech, ese often covers both, but aquel is still common for the distant past."
+  },
+  {
+   "question": "When do I use esto, eso and aquello?",
+   "answer": "When you do not know the name of the thing (¿qué es esto?) or when you refer to an idea or a whole situation (eso es imposible). They never go before a noun and have no plural."
+  },
+  {
+   "question": "Do demonstrative pronouns have an accent?",
+   "answer": "Not anymore by default. The 2010 spelling rules removed the accent from este, ese and aquel used as pronouns. You may still see éste or ése in older books."
+  }
+ ]
+}

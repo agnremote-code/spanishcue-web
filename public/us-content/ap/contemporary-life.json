@@ -1,0 +1,360 @@
+{
+ "theme": "unit-5",
+ "unitName": "Contemporary Life",
+ "level": "B1",
+ "title": "AP Spanish Contemporary Life (Unit 5): Vocabulary and Practice",
+ "description": "AP Spanish Unit 5, Contemporary Life: vocabulary on school, work, leisure and health, an original reading, an essay prompt and four Q&A questions.",
+ "h1": "AP Spanish Contemporary Life (Unit 5)",
+ "intro": "Unit 5 is about the life you are living now: school, first jobs, free time, food and health, and the media around you. Here is the vocabulary, an original text about a student who delayed college, an essay prompt and four questions to answer aloud.",
+ "demand": {
+  "query": "ap spanish contemporary life",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127.csv",
+  "date": "2026-11-27"
+ },
+ "overview": {
+  "heading": "What Unit 5 covers",
+  "paragraphs": [
+   "Contemporary Life looks at how people live day to day in Spanish-speaking countries and how that compares with your own routine: studies and careers, entertainment and media, food and health, pop culture, and sports and leisure, among others.",
+   "Because the topics are familiar, the risk in this unit is a simple, personal answer. On the exam, push one step further: explain why a habit exists, who it affects and how it differs between two places."
+  ]
+ },
+ "contexts": [
+  "Education and Career",
+  "Entertainment and Media",
+  "Food and Health",
+  "Pop Culture",
+  "Sports and Leisure"
+ ],
+ "vocabulary": [
+  {
+   "title": "School and work",
+   "words": [
+    [
+     "la carrera",
+     "college major, career"
+    ],
+    [
+     "el año sabático",
+     "gap year"
+    ],
+    [
+     "la beca",
+     "scholarship"
+    ],
+    [
+     "las prácticas",
+     "internship"
+    ],
+    [
+     "el empleo de medio tiempo",
+     "part-time job"
+    ],
+    [
+     "el currículum",
+     "résumé"
+    ],
+    [
+     "solicitar",
+     "to apply for"
+    ],
+    [
+     "la matrícula",
+     "tuition, enrollment"
+    ]
+   ]
+  },
+  {
+   "title": "Free time and media",
+   "words": [
+    [
+     "el ocio",
+     "leisure"
+    ],
+    [
+     "la serie",
+     "TV series"
+    ],
+    [
+     "la plataforma de streaming",
+     "streaming platform"
+    ],
+    [
+     "el influencer",
+     "influencer"
+    ],
+    [
+     "el pasatiempo",
+     "hobby"
+    ],
+    [
+     "el equipo",
+     "team"
+    ],
+    [
+     "entrenar",
+     "to train"
+    ],
+    [
+     "la tendencia",
+     "trend"
+    ]
+   ]
+  },
+  {
+   "title": "Health and habits",
+   "words": [
+    [
+     "el estrés",
+     "stress"
+    ],
+    [
+     "la alimentación",
+     "diet, nutrition"
+    ],
+    [
+     "el sedentarismo",
+     "sedentary lifestyle"
+    ],
+    [
+     "dormir lo suficiente",
+     "to get enough sleep"
+    ],
+    [
+     "la salud mental",
+     "mental health"
+    ],
+    [
+     "el equilibrio",
+     "balance"
+    ],
+    [
+     "agotado",
+     "exhausted"
+    ],
+    [
+     "la comida rápida",
+     "fast food"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Antes de empezar la universidad, Lucía se tomó un ",
+   "after": " para trabajar y viajar.",
+   "options": [
+    "año sabático",
+    "currículum",
+    "equipo"
+   ],
+   "answer": 0,
+   "why": "Año sabático is a year off before or during studies."
+  },
+  {
+   "before": "Ganó una ",
+   "after": " que paga la mitad de la matrícula.",
+   "options": [
+    "beca",
+    "serie",
+    "tendencia"
+   ],
+   "answer": 0,
+   "why": "A beca is a scholarship that covers costs."
+  },
+  {
+   "before": "Este verano hago ",
+   "after": " en un hospital para ver si me gusta la medicina.",
+   "options": [
+    "prácticas",
+    "ocio",
+    "comida rápida"
+   ],
+   "answer": 0,
+   "why": "Hacer prácticas is to do an internship."
+  },
+  {
+   "before": "Pasar todo el día sentado frente a la computadora es ",
+   "after": ".",
+   "options": [
+    "sedentarismo",
+    "equilibrio",
+    "pasatiempo"
+   ],
+   "answer": 0,
+   "why": "Sedentarismo is a lifestyle with little physical activity."
+  },
+  {
+   "before": "Después de tres exámenes y el turno en el restaurante, llegué ",
+   "after": ".",
+   "options": [
+    "agotada",
+    "becada",
+    "entrenada"
+   ],
+   "answer": 0,
+   "why": "Agotado/agotada means exhausted."
+  },
+  {
+   "before": "Para ",
+   "after": " a un trabajo necesitas un currículum actualizado.",
+   "options": [
+    "solicitar",
+    "entrenar",
+    "dormir"
+   ],
+   "answer": 0,
+   "why": "Solicitar un trabajo is to apply for a job."
+  },
+  {
+   "before": "Mi ",
+   "after": " favorito es tocar la guitarra los domingos.",
+   "options": [
+    "pasatiempo",
+    "estrés",
+    "matrícula"
+   ],
+   "answer": 0,
+   "why": "Pasatiempo is a hobby."
+  },
+  {
+   "before": "Muchos jóvenes siguen a un ",
+   "after": " que recomienda productos en video.",
+   "options": [
+    "influencer",
+    "equilibrio",
+    "año sabático"
+   ],
+   "answer": 0,
+   "why": "In Spanish media, influencer is used as is."
+  }
+ ],
+ "reading": {
+  "titleEs": "El año que Lucía no fue a la universidad",
+  "intro": "An original text written for this page, at about B1. Lucía is a fictional student.",
+  "paragraphs": [
+   "Cuando Lucía terminó el bachillerato en Sevilla, todos esperaban que empezara Derecho en septiembre, como su hermana mayor. Sus notas eran buenas y tenía plaza en la universidad. Sin embargo, Lucía anunció en la cena familiar que necesitaba un año antes de decidir qué quería estudiar. Su madre se preocupó; su padre no dijo nada durante dos días.",
+   "En España el año sabático todavía no es tan común como en otros países, y muchos lo ven como una pérdida de tiempo. Lucía tenía un plan para demostrar lo contrario. Trabajó seis meses en una cafetería para ahorrar, aprendió a organizar su dinero y, con lo que ganó, se fue de voluntaria a una escuela rural en Ecuador.",
+   "Allí descubrió algo que en clase nunca había sentido: le encantaba enseñar. Daba apoyo en matemáticas a niños de primaria y por las tardes organizaba partidos de fútbol. También conoció los límites de la experiencia. Hubo semanas de soledad, problemas con el visado y días en que dudó de todo.",
+   "Al volver, Lucía no eligió Derecho, sino Magisterio. Su madre reconoce que el año le dio una madurez que no habría conseguido en un aula. Su hermana, en cambio, piensa que no todo el mundo puede permitirse un año sin estudiar, y que la experiencia de Lucía fue posible porque tenía una familia que la apoyaba.",
+   "Las dos tienen parte de razón. Para algunos jóvenes, un año sabático es una forma de conocerse y elegir mejor. Para otros, es un lujo o un riesgo, porque retrasa la entrada al mercado laboral. Lo que Lucía recomienda a sus amigos es sencillo: si te tomas un año, que sea con un plan, no para escapar."
+  ],
+  "comprehension": [
+   {
+    "before": "Su familia esperaba que Lucía estudiara ",
+    "after": ".",
+    "options": [
+     "Derecho",
+     "Magisterio",
+     "Medicina"
+    ],
+    "answer": 0,
+    "why": "Everyone expected Law, like her older sister."
+   },
+   {
+    "before": "Según el texto, en España muchos ven el año sabático como ",
+    "after": ".",
+    "options": [
+     "una pérdida de tiempo",
+     "una obligación",
+     "algo muy común"
+    ],
+    "answer": 0,
+    "why": "The text says many see it as a waste of time."
+   },
+   {
+    "before": "Lucía pagó su viaje a Ecuador con ",
+    "after": ".",
+    "options": [
+     "el dinero de la cafetería",
+     "una beca",
+     "ayuda de su hermana"
+    ],
+    "answer": 0,
+    "why": "She worked six months in a café to save."
+   },
+   {
+    "before": "En Ecuador descubrió que le encantaba ",
+    "after": ".",
+    "options": [
+     "enseñar",
+     "jugar al fútbol profesionalmente",
+     "viajar sola"
+    ],
+    "answer": 0,
+    "why": "She discovered she loved teaching."
+   },
+   {
+    "before": "La hermana piensa que el año sabático ",
+    "after": ".",
+    "options": [
+     "no es posible para todos",
+     "es obligatorio",
+     "es aburrido"
+    ],
+    "answer": 0,
+    "why": "She points out that not everyone can afford a year off."
+   },
+   {
+    "before": "El consejo final de Lucía es tomarse un año ",
+    "after": ".",
+    "options": [
+     "con un plan",
+     "para descansar",
+     "en el extranjero"
+    ],
+    "answer": 0,
+    "why": "Her advice: if you take a year, have a plan; don't use it to escape."
+   }
+  ]
+ },
+ "essay": {
+  "prompt": "¿Es una buena idea tomarse un año sabático antes de empezar la universidad?",
+  "sideA": "Sí: permite madurar, ahorrar y elegir la carrera con más información.",
+  "sideB": "No: retrasa los estudios y la entrada al trabajo, y no todas las familias pueden pagarlo.",
+  "outline": [
+   "Introduction: define año sabático in one line and state your position.",
+   "Paragraph 2: maturity and better choices; use the testimony in the audio source.",
+   "Paragraph 3: cost and inequality; use the chart and say what the numbers show.",
+   "Paragraph 4: the condition that makes it work or fail (a plan, savings, family support).",
+   "Conclusion: who should take one and who should not."
+  ],
+  "phrases": [
+   [
+    "Para empezar,…",
+    "To begin with,…"
+   ],
+   [
+    "Como se observa en el gráfico,…",
+    "As the chart shows,…"
+   ],
+   [
+    "En cambio,…",
+    "On the other hand,…"
+   ],
+   [
+    "Dicho de otro modo,…",
+    "In other words,…"
+   ],
+   [
+    "Es aconsejable que + subjuntivo",
+    "It is advisable that…"
+   ],
+   [
+    "Por todo lo anterior,…",
+    "For all these reasons,…"
+   ]
+  ]
+ },
+ "speaking": [
+  "¿Qué carrera te gustaría estudiar y por qué?",
+  "¿Cómo equilibras los estudios, el trabajo y el tiempo libre?",
+  "¿Qué deporte o pasatiempo es importante en tu comunidad?",
+  "Compara la manera de comer de tu familia con la de un país hispanohablante."
+ ],
+ "heritage": "Many heritage speakers already juggle school and a job, which gives you real examples for this unit. In writing, distinguish «aplicar» (to apply a rule or a cream) from «solicitar» (to apply for a job or a scholarship), and use «carrera» for a college major, not «mayor».",
+ "teacher": "Have students interview one adult about the first job they had and present the answers comparing two generations. It fits Education and Career and practices the past tenses.",
+ "figure": {
+  "text": "On 27 November 2026, people in the United States who typed «ap spanish contemporary life» saw suggestions such as «ap spanish review» and «ap spanish lang vs ap spanish lit». Many searchers are still deciding which AP course to take, so this page says plainly that it is about the Language and Culture course.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

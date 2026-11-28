@@ -1,0 +1,366 @@
+{
+ "theme": "unit-1",
+ "unitName": "Families and Communities",
+ "level": "B1",
+ "title": "AP Spanish Families and Communities: Vocabulary, Reading, Essay",
+ "description": "AP Spanish Unit 1, Families and Communities: key vocabulary, an original reading with questions, an essay prompt with two sides and Q&A practice.",
+ "h1": "AP Spanish Families and Communities (Unit 1)",
+ "intro": "Unit 1 asks how families and communities shape the people in them. Here is the vocabulary to talk about it, an original text about a neighborhood that shares its grandparents, an essay prompt and four questions to answer aloud.",
+ "demand": {
+  "query": "ap spanish families and communities",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127.csv",
+  "date": "2026-11-27"
+ },
+ "overview": {
+  "heading": "What Unit 1 covers",
+  "paragraphs": [
+   "Families and Communities opens the course. It looks at who we live with, how families change from one generation to the next, and what neighbors, clubs and towns do for each other. The course description also uses this unit to start building the skills for the Project Presentation, with a short cultural presentation about a Spanish-speaking community.",
+   "For the exam, the useful habit is to compare: a family in Bogotá and one in Chicago, a village and a capital city, a community that meets in a plaza and one that meets online. Comparing gives you something to argue about in the essay and something concrete to say in the Q&A."
+  ]
+ },
+ "contexts": [
+  "Community Activities",
+  "Family Relationships",
+  "Social Interactions and Relationships",
+  "Urban and Rural Communities"
+ ],
+ "vocabulary": [
+  {
+   "title": "Family ties",
+   "words": [
+    [
+     "los lazos familiares",
+     "family ties"
+    ],
+    [
+     "la familia extendida",
+     "extended family"
+    ],
+    [
+     "criar",
+     "to raise (children)"
+    ],
+    [
+     "la crianza",
+     "upbringing"
+    ],
+    [
+     "convivir",
+     "to live together"
+    ],
+    [
+     "el hogar",
+     "home, household"
+    ],
+    [
+     "la brecha generacional",
+     "generation gap"
+    ],
+    [
+     "los antepasados",
+     "ancestors"
+    ],
+    [
+     "heredar",
+     "to inherit"
+    ]
+   ]
+  },
+  {
+   "title": "Community life",
+   "words": [
+    [
+     "el vecindario",
+     "neighborhood"
+    ],
+    [
+     "la junta de vecinos",
+     "residents' association"
+    ],
+    [
+     "el voluntariado",
+     "volunteer work"
+    ],
+    [
+     "la convivencia",
+     "living side by side"
+    ],
+    [
+     "el sentido de pertenencia",
+     "sense of belonging"
+    ],
+    [
+     "la plaza",
+     "town square"
+    ],
+    [
+     "las fiestas patronales",
+     "patron saint festivities"
+    ],
+    [
+     "apoyarse mutuamente",
+     "to support each other"
+    ]
+   ]
+  },
+  {
+   "title": "City and countryside",
+   "words": [
+    [
+     "el ámbito rural",
+     "rural setting"
+    ],
+    [
+     "el ámbito urbano",
+     "urban setting"
+    ],
+    [
+     "la migración interna",
+     "internal migration"
+    ],
+    [
+     "despoblarse",
+     "to lose population"
+    ],
+    [
+     "el aislamiento",
+     "isolation"
+    ],
+    [
+     "la vivienda",
+     "housing"
+    ],
+    [
+     "el costo de vida",
+     "cost of living"
+    ],
+    [
+     "mudarse",
+     "to move (house)"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Mis abuelos ayudaron a ",
+   "after": " a sus nietos mientras mis padres trabajaban.",
+   "options": [
+    "criar",
+    "heredar",
+    "despoblarse"
+   ],
+   "answer": 0,
+   "why": "Criar is to raise children; heredar is to inherit."
+  },
+  {
+   "before": "En muchos pueblos pequeños los jóvenes se van y el pueblo empieza a ",
+   "after": ".",
+   "options": [
+    "despoblarse",
+    "convivir",
+    "mudarse"
+   ],
+   "answer": 0,
+   "why": "Despoblarse means a place loses its population."
+  },
+  {
+   "before": "Tres generaciones bajo el mismo techo tienen que aprender a ",
+   "after": ".",
+   "options": [
+    "convivir",
+    "heredar",
+    "criar"
+   ],
+   "answer": 0,
+   "why": "Convivir is living together and getting along."
+  },
+  {
+   "before": "La ",
+   "after": " organiza la limpieza del parque cada primavera.",
+   "options": [
+    "junta de vecinos",
+    "brecha generacional",
+    "crianza"
+   ],
+   "answer": 0,
+   "why": "A junta de vecinos is the residents' association that organizes neighborhood work."
+  },
+  {
+   "before": "Entre mi abuela y yo hay una ",
+   "after": ": ella no entiende para qué sirven las redes.",
+   "options": [
+    "brecha generacional",
+    "vivienda",
+    "plaza"
+   ],
+   "answer": 0,
+   "why": "Brecha generacional is the gap between generations."
+  },
+  {
+   "before": "Participar en las fiestas del barrio me da un ",
+   "after": ".",
+   "options": [
+    "sentido de pertenencia",
+    "aislamiento",
+    "costo de vida"
+   ],
+   "answer": 0,
+   "why": "Sentido de pertenencia is the feeling that you belong."
+  },
+  {
+   "before": "En la ciudad el ",
+   "after": " es tan alto que muchas familias comparten casa.",
+   "options": [
+    "costo de vida",
+    "voluntariado",
+    "antepasado"
+   ],
+   "answer": 0,
+   "why": "Costo de vida is how much it costs to live somewhere."
+  },
+  {
+   "before": "Mi bisabuelo llegó de Galicia; conocer a mis ",
+   "after": " me ayuda a entender mi apellido.",
+   "options": [
+    "antepasados",
+    "vecindarios",
+    "hogares"
+   ],
+   "answer": 0,
+   "why": "Antepasados are ancestors, the people your family comes from."
+  }
+ ],
+ "reading": {
+  "titleEs": "Una calle que adoptó a sus abuelos",
+  "intro": "An original text written for this page, at about B1. It describes a fictional street, so you can practice without looking anything up.",
+  "paragraphs": [
+   "En la calle Los Almendros, en una ciudad mediana del norte de México, vivían muchas personas mayores solas. Sus hijos se habían mudado a Monterrey o a Texas por trabajo y llamaban los domingos, pero durante la semana nadie tocaba a su puerta. Doña Rosario, de setenta y ocho años, decía que el silencio de su casa pesaba más que la artritis.",
+   "Un grupo de vecinos jóvenes decidió cambiar eso. Primero hicieron una lista de quién vivía solo y qué necesitaba: alguien que comprara medicinas, alguien que arreglara una lámpara, alguien que simplemente tomara un café y escuchara. Después repartieron las tareas en un grupo de mensajes. A los niños de la calle les tocó la parte más divertida: leerles el periódico a los abuelos y, a cambio, escuchar historias de cuando la calle era de tierra.",
+   "Al principio algunos mayores desconfiaban. No querían sentirse una carga ni aceptar ayuda de desconocidos. Lo que los convenció fue que el intercambio iba en las dos direcciones: don Ernesto, carpintero jubilado, enseñó a tres adolescentes a reparar sillas, y doña Rosario dio clases de cocina a las familias recién llegadas de otros estados.",
+   "Dos años después, la calle celebra una comida mensual en la que cada casa aporta un plato. No todo es perfecto: hay discusiones por el ruido y no todos los vecinos participan. Sin embargo, las familias dicen que la experiencia les cambió la idea de comunidad. Ya no la ven como un lugar donde uno vive, sino como una red de personas que se cuidan. Para los abuelos, la diferencia es sencilla: ahora alguien nota cuando no abren la ventana por la mañana."
+  ],
+  "comprehension": [
+   {
+    "before": "Muchas personas mayores de la calle vivían solas porque sus hijos ",
+    "after": ".",
+    "options": [
+     "se habían mudado por trabajo",
+     "no las querían",
+     "vivían en la misma casa"
+    ],
+    "answer": 0,
+    "why": "The text says their children had moved to Monterrey or Texas for work."
+   },
+   {
+    "before": "Lo primero que hicieron los vecinos jóvenes fue ",
+    "after": ".",
+    "options": [
+     "hacer una lista de necesidades",
+     "organizar una fiesta",
+     "llamar a los hijos"
+    ],
+    "answer": 0,
+    "why": "They first listed who lived alone and what each person needed."
+   },
+   {
+    "before": "Los niños les leían el periódico a los abuelos y a cambio ",
+    "after": ".",
+    "options": [
+     "escuchaban historias de la calle",
+     "recibían dinero",
+     "aprendían carpintería"
+    ],
+    "answer": 0,
+    "why": "In exchange, the children heard stories from when the street was unpaved."
+   },
+   {
+    "before": "Algunos mayores desconfiaban porque no querían ",
+    "after": ".",
+    "options": [
+     "sentirse una carga",
+     "salir de casa",
+     "cocinar"
+    ],
+    "answer": 0,
+    "why": "They did not want to feel like a burden or accept help from strangers."
+   },
+   {
+    "before": "Según el texto, lo que convenció a los mayores fue que ",
+    "after": ".",
+    "options": [
+     "el intercambio iba en las dos direcciones",
+     "la ayuda era gratis",
+     "sus hijos lo pidieron"
+    ],
+    "answer": 0,
+    "why": "They were convinced because they could also give: carpentry lessons, cooking classes."
+   },
+   {
+    "before": "Al final, las familias ven la comunidad como ",
+    "after": ".",
+    "options": [
+     "una red de personas que se cuidan",
+     "un lugar donde uno vive",
+     "un grupo de mensajes"
+    ],
+    "answer": 0,
+    "why": "The text contrasts the old idea (a place) with the new one (a network of care)."
+   }
+  ]
+ },
+ "essay": {
+  "prompt": "¿Deben las ciudades financiar programas para que los jóvenes acompañen a las personas mayores que viven solas?",
+  "sideA": "Sí: la soledad afecta la salud de los mayores y estos programas unen a generaciones que casi no se hablan.",
+  "sideB": "No: el cuidado de los mayores es responsabilidad de las familias, y el dinero público hace falta para hospitales y residencias.",
+  "outline": [
+   "Introduction: name the problem (older people living alone) and state your position in one sentence.",
+   "Paragraph 2: your strongest reason, supported by the print source; cite it by its title or author.",
+   "Paragraph 3: a second reason from the audio or the chart, and what it adds that the print source does not.",
+   "Paragraph 4: answer the other side fairly, then explain why your position still holds.",
+   "Conclusion: give your position again in new words and end with a consequence for the community."
+  ],
+  "phrases": [
+   [
+    "Cabe destacar que…",
+    "It is worth noting that…"
+   ],
+   [
+    "Según la fuente 2…",
+    "According to source 2…"
+   ],
+   [
+    "Si bien es cierto que…, …",
+    "While it is true that…, …"
+   ],
+   [
+    "Esto demuestra que…",
+    "This shows that…"
+   ],
+   [
+    "Por un lado… por otro lado…",
+    "On the one hand… on the other hand…"
+   ],
+   [
+    "En definitiva,…",
+    "All in all,…"
+   ],
+   [
+    "Es imprescindible que + subjuntivo",
+    "It is essential that…"
+   ]
+  ]
+ },
+ "speaking": [
+  "¿Quién en tu familia ha influido más en tu manera de ser y por qué?",
+  "¿Prefieres vivir en una ciudad grande o en un pueblo? Da dos razones.",
+  "¿Qué hace tu comunidad para ayudar a los vecinos que lo necesitan?",
+  "Compara una tradición familiar tuya con una de un país hispanohablante que conozcas."
+ ],
+ "heritage": "If Spanish is your home language, this unit is your advantage: you can talk about your own family, quinceañeras, compadres and godparents, and the relatives who stayed in another country. Where points slip is register. In the essay write «mis padres» and «la familia extendida», not «mi apá» or «la family», and watch accents on words like «país», «también» and «después».",
+ "teacher": "Pair the reading with a short survey of your class: who lives with grandparents, who has relatives abroad. The results give students real data to cite in a practice essay.",
+ "figure": {
+  "text": "On 27 November 2026, when people in the United States typed «ap spanish families and communities», Google suggested the theme itself, «ap spanish examples», «spanish family terms» and «what is ap spanish language and culture». Searchers want examples and vocabulary, so this page leads with both.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

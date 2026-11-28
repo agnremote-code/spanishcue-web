@@ -1,0 +1,278 @@
+{
+ "verb": "comprar",
+ "meaning": "to buy",
+ "level": "A1",
+ "title": "Spanish Verb Comprar Practice: Regular Forms, Shopping and Quiz",
+ "description": "Practice the Spanish verb comprar: a regular -ar verb in the present and preterite, comprar for someone, shopping phrases, ten questions and a reading.",
+ "h1": "Spanish verb comprar: practice",
+ "intro": "Comprar is a regular -ar verb, which makes it a model for many others. Learn the present and the preterite, how to say buy for someone and useful shopping phrases, then practice with instant feedback.",
+ "demand": {
+  "query": "spanish verb comprar",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "To buy",
+   "example": "Compro pan todas las mañanas.",
+   "meaning": "I buy bread every morning."
+  },
+  {
+   "use": "To buy for someone: comprarle",
+   "example": "Le compré un regalo a mi mamá.",
+   "meaning": "I bought my mom a present."
+  },
+  {
+   "use": "Ir de compras: to go shopping",
+   "example": "Los sábados vamos de compras.",
+   "meaning": "We go shopping on Saturdays."
+  },
+  {
+   "use": "Online shopping",
+   "example": "Compramos casi todo por internet.",
+   "meaning": "We buy almost everything online."
+  },
+  {
+   "use": "Hacer la compra / el mandado",
+   "example": "Mi papá hace el mandado los viernes.",
+   "meaning": "My dad does the grocery shopping on Fridays."
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "compro"
+  ],
+  [
+   "tú",
+   "compras"
+  ],
+  [
+   "él / ella / usted",
+   "compra"
+  ],
+  [
+   "nosotros / nosotras",
+   "compramos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "compran"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "compré"
+  ],
+  [
+   "tú",
+   "compraste"
+  ],
+  [
+   "él / ella / usted",
+   "compró"
+  ],
+  [
+   "nosotros / nosotras",
+   "compramos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "compraron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "Yo ",
+   "after": " fruta en el mercado.",
+   "options": [
+    "compro",
+    "compra",
+    "compré mañana"
+   ],
+   "answer": 0,
+   "why": "Present yo: compro."
+  },
+  {
+   "before": "¿Dónde ",
+   "after": " tus zapatos?",
+   "options": [
+    "compras",
+    "compran",
+    "compro"
+   ],
+   "answer": 0,
+   "why": "Tú: compras."
+  },
+  {
+   "before": "Mi hermana ",
+   "after": " libros usados.",
+   "options": [
+    "compra",
+    "compran",
+    "compro"
+   ],
+   "answer": 0,
+   "why": "Ella: compra."
+  },
+  {
+   "before": "Nosotros ",
+   "after": " los boletos por internet.",
+   "options": [
+    "compramos",
+    "compran",
+    "compremos ayer"
+   ],
+   "answer": 0,
+   "why": "Nosotros: compramos."
+  },
+  {
+   "before": "Mis padres ",
+   "after": " una casa nueva este año.",
+   "options": [
+    "compran",
+    "compra",
+    "compramos"
+   ],
+   "answer": 0,
+   "why": "Ellos: compran."
+  },
+  {
+   "before": "Ayer ",
+   "after": " un regalo para mi novia.",
+   "options": [
+    "compré",
+    "compre",
+    "compró"
+   ],
+   "answer": 0,
+   "why": "Preterite yo: compré, with accent."
+  },
+  {
+   "before": "¿Qué ",
+   "after": " en el centro comercial?",
+   "options": [
+    "compraste",
+    "comprastes",
+    "compras ayer"
+   ],
+   "answer": 0,
+   "why": "Preterite tú: compraste."
+  },
+  {
+   "before": "Mi abuelo ",
+   "after": " un carro rojo en 1985.",
+   "options": [
+    "compró",
+    "compro",
+    "compré"
+   ],
+   "answer": 0,
+   "why": "Preterite él: compró."
+  },
+  {
+   "before": "Ellas ",
+   "after": " flores para la maestra.",
+   "options": [
+    "compraron",
+    "compramos",
+    "compró"
+   ],
+   "answer": 0,
+   "why": "Preterite ellas: compraron."
+  },
+  {
+   "before": "Le ",
+   "after": " un helado a mi hermano.",
+   "options": [
+    "compré",
+    "compró yo",
+    "compraron yo"
+   ],
+   "answer": 0,
+   "why": "Buying for someone: le compré."
+  }
+ ],
+ "reading": {
+  "titleEs": "La lista del mandado",
+  "paragraphs": [
+   "Cada viernes, Diego y su mamá van al supermercado latino de su barrio en Houston. Su mamá escribe la lista: tortillas, frijoles, aguacates y pan dulce. Diego siempre compra algo que no está en la lista, normalmente chicles o una revista.",
+   "Este viernes, su mamá le dio veinte dólares y le dijo: «Hoy tú compras todo». Diego comparó precios, buscó ofertas y compró todo lo de la lista con dieciocho dólares. Con los dos dólares que sobraron, le compró a su mamá una rosa."
+  ],
+  "comprehension": [
+   {
+    "before": "Diego y su mamá van al supermercado ",
+    "after": ".",
+    "options": [
+     "los viernes",
+     "los domingos",
+     "todos los días"
+    ],
+    "answer": 0,
+    "why": "Every Friday."
+   },
+   {
+    "before": "Diego normalmente compra ",
+    "after": ".",
+    "options": [
+     "chicles o una revista",
+     "flores",
+     "frutas"
+    ],
+    "answer": 0,
+    "why": "Something not on the list."
+   },
+   {
+    "before": "Este viernes, Diego tenía ",
+    "after": ".",
+    "options": [
+     "veinte dólares",
+     "dieciocho dólares",
+     "dos dólares"
+    ],
+    "answer": 0,
+    "why": "His mom gave him twenty dollars."
+   },
+   {
+    "before": "Con el dinero que sobró, Diego compró ",
+    "after": ".",
+    "options": [
+     "una rosa",
+     "pan dulce",
+     "aguacates"
+    ],
+    "answer": 0,
+    "why": "A rose for his mom."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Ayer compre un libro.",
+   "right": "Ayer compré un libro.",
+   "why": "Without the accent, compre is a different form (subjunctive)."
+  },
+  {
+   "wrong": "Compré mi mamá un regalo.",
+   "right": "Le compré un regalo a mi mamá.",
+   "why": "The person you buy for is an indirect object: le… a mi mamá."
+  },
+  {
+   "wrong": "Él compro pan.",
+   "right": "Él compró pan.",
+   "why": "Preterite él needs the accent: compró."
+  },
+  {
+   "wrong": "Voy a ir comprando.",
+   "right": "Voy a ir de compras.",
+   "why": "To go shopping is ir de compras."
+  }
+ ],
+ "heritage": "In the US, many heritage speakers say «hacer el mandado» or «ir a la tienda» for grocery shopping. Also common is «comprar para atrás», a calque of «buy back»; the standard forms are «recomprar» or «volver a comprar».",
+ "teacher": "Set up a class market with price tags: students buy and sell with ¿Cuánto cuesta? and Compro…, then report with the preterite what everyone bought.",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish verb comprar». 1 of them asks for conjugation, charts or tenses (conjugation). Most suggestions ask for the conjugation, so both tenses are shown in full.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

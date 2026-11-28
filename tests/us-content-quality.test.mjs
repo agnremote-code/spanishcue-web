@@ -44,7 +44,7 @@ test('the generated catalog lists exactly the pages in public/us-content', () =>
 });
 
 test('only known families exist', () => {
-  for (const family of families) assert.ok(['vocabulary', 'verbs'].includes(family), `${family} has a route and a gate`);
+  for (const family of families) assert.ok(['vocabulary', 'verbs', 'ap', 'grammar'].includes(family), `${family} has a route and a gate`);
 });
 
 test('vocabulary pages pass the gate', () => {
@@ -124,8 +124,95 @@ test('verb pages pass the gate', () => {
   }
 });
 
+// AP units: the six unit names are College Board's (course framework effective fall 2026); contexts may only be
+// the ones printed in the course description, so the gate pins them to the list we read on 2026-11-27.
+const AP_UNITS = {
+  'unit-1': 'Families and Communities', 'unit-2': 'Language and Culture', 'unit-3': 'Art and Creativity',
+  'unit-4': 'Science and Technology', 'unit-5': 'Contemporary Life', 'unit-6': 'Global Contexts',
+};
+const AP_CONTEXTS = new Set(['Community Activities', 'Family Relationships', 'Social Interactions and Relationships', 'Urban and Rural Communities',
+  'Customs and Celebrations', 'Linguistics', 'Spanish in the World', 'Architecture', 'Artistic Heritage', 'Beauty and Aesthetics', 'Fashion and Design',
+  'Literature', 'Visual and Performing Arts', 'Innovations and Emerging Technologies', 'Personal Technology and Communication', 'Science in Everyday Life',
+  'Societal Impacts of Science and Technology', 'Education and Career', 'Entertainment and Media', 'Food and Health', 'Pop Culture', 'Sports and Leisure']);
+
+test('AP unit pages pass the gate', () => {
+  if (!families.includes('ap')) return;
+  const pages = load('ap');
+  const sentences = new Set();
+  for (const { slug, page } of pages) {
+    assert.doesNotMatch(JSON.stringify(page), /PENDING/, `${slug}: no placeholder left`);
+    assert.equal(page.unitName, AP_UNITS[page.theme], `${slug}: official unit name for ${page.theme}`);
+    assert.equal(slug, page.unitName.toLowerCase().replaceAll(' ', '-'), `${slug}: slug is the unit name`);
+    assert.match(page.level, /^(B1|B2)$/);
+    for (const context of page.contexts) assert.ok(AP_CONTEXTS.has(context), `${slug}: «${context}» is a context we read in the course description`);
+    assert.ok(page.title.length <= 70, `${slug}: title at most 70 characters`);
+    assert.ok(page.description.length >= 110 && page.description.length <= 165, `${slug}: description 110-165 characters (${page.description.length})`);
+    assert.ok(page.demand?.query && /ap spanish/i.test(page.demand.query) && page.demand.source && page.demand.date, `${slug}: real US demand recorded`);
+    const listed = page.vocabulary.flatMap(group => group.words);
+    assert.ok(page.vocabulary.length >= 3 && listed.length >= 24, `${slug}: 24+ words in 3+ groups`);
+    assert.equal(new Set(listed.map(([es]) => es)).size, listed.length, `${slug}: no word listed twice`);
+    assert.ok(page.vocabQuiz.length >= 8 && page.reading.comprehension.length >= 6, `${slug}: 8 vocabulary + 6 reading questions`);
+    checkQuiz(page.vocabQuiz, slug);
+    checkQuiz(page.reading.comprehension, slug);
+    for (const item of [...page.vocabQuiz, ...page.reading.comprehension]) {
+      const key = normal(`${item.before} ${item.after}`).trim();
+      assert.ok(!sentences.has(key), `${slug}: question repeated from another page («${item.before}…»)`);
+      sentences.add(key);
+    }
+    assert.ok(words(page.reading.paragraphs.join(' ')).length >= 260, `${slug}: B1/B2 reading of 260+ words`);
+    assert.ok(page.essay.outline.length >= 4 && page.essay.phrases.length >= 6, `${slug}: essay outline and phrases`);
+    assert.ok(page.speaking.length >= 4, `${slug}: four Q&A questions`);
+    assert.ok(words(ownText(page)).length >= 600, `${slug}: at least 600 own words`);
+    assert.ok(words(page.heritage).length >= 30 && words(page.teacher).length >= 15 && words(page.figure.text).length >= 15, `${slug}: heritage, teacher note and figure`);
+  }
+  assert.ok(pages.length <= 6, 'one page per unit');
+  const sets = pages.map(({ slug, page }) => ({ slug, set: shingles(ownText(page)) }));
+  for (let i = 0; i < sets.length; i += 1) for (let j = i + 1; j < sets.length; j += 1) {
+    const score = jaccard(sets[i].set, sets[j].set);
+    assert.ok(score < 0.3, `${sets[i].slug} and ${sets[j].slug} share ${(score * 100).toFixed(0)} % of their 5-word sequences`);
+  }
+});
+
+test('grammar practice pages pass the gate', () => {
+  if (!families.includes('grammar')) return;
+  const pages = load('grammar');
+  const legacy = readFileSync(resolve(root, 'app/spanish-grammar-practice/data.ts'), 'utf8');
+  const legacySlugs = new Set([...legacy.matchAll(/slug: "([a-z0-9-]+)"/g)].map(match => match[1]));
+  const legacyTitles = new Set([...legacy.matchAll(/title: "([^"]+)"/g)].map(match => match[1]));
+  const sentences = new Set([...legacy.matchAll(/before: "([^"]*)", after: "([^"]*)"/g)].map(match => normal(`${match[1]} ${match[2]}`).trim()));
+  const titles = new Set();
+  for (const { slug, page } of pages) {
+    assert.doesNotMatch(JSON.stringify(page), /PENDING/, `${slug}: no placeholder left`);
+    assert.ok(!legacySlugs.has(slug), `${slug}: already a bundled topic`);
+    assert.match(slug, /^[a-z0-9]+(?:-[a-z0-9]+)*$/);
+    assert.ok(['contrast', 'forms'].includes(page.theme), `${slug}: hub group`);
+    assert.match(page.h1, /^Spanish .+ practice$/, `${slug}: the hub card name comes from the H1`);
+    assert.match(page.level, /^(A1|A2|B1|B2|C1)(–(A2|B1|B2|C1))?$/, `${slug}: level range`);
+    assert.ok(page.title.length <= 70 && !titles.has(page.title) && !legacyTitles.has(page.title), `${slug}: title unique and at most 70 characters`);
+    titles.add(page.title);
+    assert.ok(page.description.length >= 110 && page.description.length <= 165, `${slug}: description 110-165 characters (${page.description.length})`);
+    assert.ok(page.demand?.query?.startsWith('spanish ') && page.demand.source && page.demand.date, `${slug}: real US demand recorded`);
+    assert.ok(words(page.answer).length >= 35, `${slug}: direct answer`);
+    assert.ok(page.rules.length >= 5 && page.mistakes.length >= 4 && page.faq.length >= 3, `${slug}: rules, mistakes and questions`);
+    assert.ok(page.quiz.length >= 10, `${slug}: 10+ practice questions`);
+    checkQuiz(page.quiz, slug);
+    for (const item of page.quiz) {
+      const key = normal(`${item.before} ${item.after}`).trim();
+      assert.ok(!sentences.has(key), `${slug}: question repeated from another page («${item.before}…»)`);
+      sentences.add(key);
+    }
+    assert.ok(words(ownText(page)).length >= 450, `${slug}: at least 450 own words`);
+    assert.ok(words(page.heritage).length >= 30 && words(page.teacher).length >= 15 && words(page.figure.text).length >= 15 && page.figure.source, `${slug}: heritage, teacher note and figure`);
+  }
+  const sets = pages.map(({ slug, page }) => ({ slug, set: shingles(ownText(page)) }));
+  for (let i = 0; i < sets.length; i += 1) for (let j = i + 1; j < sets.length; j += 1) {
+    const score = jaccard(sets[i].set, sets[j].set);
+    assert.ok(score < 0.3, `${sets[i].slug} and ${sets[j].slug} share ${(score * 100).toFixed(0)} % of their 5-word sequences`);
+  }
+});
+
 test('page bodies stay out of the Worker bundle', () => {
-  for (const file of ['app/spanish-vocabulary/[theme]/page.tsx', 'app/spanish-verb-practice/[verb]/page.tsx']) {
+  for (const file of ['app/spanish-vocabulary/[theme]/page.tsx', 'app/spanish-verb-practice/[verb]/page.tsx', 'app/ap-spanish-language/themes/[unit]/page.tsx', 'app/spanish-grammar-practice/[topic]/page.tsx']) {
     const route = readFileSync(resolve(root, file), 'utf8');
     assert.match(route, /loadUsContent/);
     assert.doesNotMatch(route, /public\/us-content|\.json['"]/);

@@ -1,0 +1,176 @@
+{
+ "theme": "forms",
+ "level": "B1",
+ "name": "double object pronouns",
+ "title": "Spanish Double Object Pronouns Practice: Me Lo, Se Lo Quiz",
+ "description": "Practice Spanish double object pronouns: indirect before direct, le and les become se, position with infinitives and commands, with 10 checked sentences.",
+ "h1": "Spanish double object pronouns practice",
+ "answer": "When a sentence has two object pronouns, the indirect one (who receives) comes before the direct one (what): me lo das, te la compro. Le and les become se before lo, la, los or las: se lo digo, never le lo digo. Both pronouns go together before a conjugated verb or attached to an infinitive, gerund or affirmative command, with an accent: dámelo.",
+ "demand": {
+  "query": "spanish double object pronouns practice",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "rulesCaption": "Order and position of two pronouns",
+ "rules": [
+  {
+   "use": "Indirect + direct",
+   "example": "Me lo explicas. Nos la mandan.",
+   "meaning": "me / te / nos + lo / la / los / las"
+  },
+  {
+   "use": "Le, les → se",
+   "example": "Se lo doy a Ana. Se las compré a mis hijos.",
+   "meaning": "se + lo / la / los / las"
+  },
+  {
+   "use": "Before a conjugated verb",
+   "example": "Te los traigo mañana.",
+   "meaning": "pronouns + verb"
+  },
+  {
+   "use": "Attached to infinitive or gerund",
+   "example": "Voy a dártelo. Estoy explicándoselo.",
+   "meaning": "verb + pronouns, with accent"
+  },
+  {
+   "use": "Affirmative command",
+   "example": "Dímelo. Cómpraselas.",
+   "meaning": "attached, with accent"
+  },
+  {
+   "use": "Negative command",
+   "example": "No me lo digas. No se la des.",
+   "meaning": "no + pronouns + verb"
+  }
+ ],
+ "quiz": [
+  {
+   "before": "—¿Me prestas tu bicicleta? —Sí, te ",
+   "after": " presto.",
+   "options": [
+    "la",
+    "lo"
+   ],
+   "answer": 0,
+   "why": "Bicicleta is feminine: te la presto."
+  },
+  {
+   "before": "—¿Le diste el regalo a tu mamá? —Sí, ",
+   "after": " di ayer.",
+   "options": [
+    "se lo",
+    "le lo"
+   ],
+   "answer": 0,
+   "why": "Le becomes se before lo: se lo di."
+  },
+  {
+   "before": "—¿Quién te compró esos zapatos? —Mi tía ",
+   "after": " compró.",
+   "options": [
+    "me los",
+    "los me"
+   ],
+   "answer": 0,
+   "why": "Indirect before direct: me los."
+  },
+  {
+   "before": "Las fotos son para mis primos. Voy a mandár",
+   "after": " hoy.",
+   "options": [
+    "selas",
+    "lesas"
+   ],
+   "answer": 0,
+   "why": "Les + las becomes selas, attached: mandárselas."
+  },
+  {
+   "before": "—¿Nos explicas la tarea? —Sí, ",
+   "after": " explico ahora.",
+   "options": [
+    "se la",
+    "les la"
+   ],
+   "answer": 0,
+   "why": "To ustedes, les becomes se before la: se la explico."
+  },
+  {
+   "before": "Si sabes la respuesta, dí",
+   "after": ".",
+   "options": [
+    "melo",
+    "lome"
+   ],
+   "answer": 0,
+   "why": "Attached to an affirmative command, indirect first: dímelo."
+  },
+  {
+   "before": "No ",
+   "after": " digas a nadie; es un secreto.",
+   "options": [
+    "se lo",
+    "lo se"
+   ],
+   "answer": 0,
+   "why": "Negative command: pronouns before the verb, se before lo."
+  },
+  {
+   "before": "—¿Les devolviste los libros a tus compañeros? —Sí, ",
+   "after": " devolví.",
+   "options": [
+    "se los",
+    "les los"
+   ],
+   "answer": 0,
+   "why": "Les + los becomes se los."
+  },
+  {
+   "before": "Estoy preparándo",
+   "after": " a mi abuela.",
+   "options": [
+    "sela",
+    "lese"
+   ],
+   "answer": 0,
+   "why": "Le + la becomes sela, attached to the gerund with an accent."
+  },
+  {
+   "before": "—¿Me traes un café? —Claro, ahora ",
+   "after": " traigo.",
+   "options": [
+    "te lo",
+    "lo te"
+   ],
+   "answer": 0,
+   "why": "Indirect te before direct lo."
+  }
+ ],
+ "mistakes": [
+  "Keeping le before lo: «le lo di» should be «se lo di».",
+  "Putting the direct pronoun first: «lo me dio» should be «me lo dio».",
+  "Splitting the pronouns: «se voy a lo dar» should be «se lo voy a dar» or «voy a dárselo».",
+  "Forgetting the accent when two pronouns attach: «dimelo» should be «dímelo», «explicandoselo» should be «explicándoselo».",
+  "Making se plural for a plural receiver: «se los di» works for one person or several; the plural shows only in the direct pronoun."
+ ],
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 5 searches to people in the United States who typed «spanish double object pronouns practice». 2 ask for a worksheet or a PDF (double object pronouns spanish practice pdf; double object pronouns spanish practice worksheets). Several ask for worksheets and PDFs, and one asks what a double object pronoun is, so the table starts from that definition.",
+  "source": "Google autocomplete in English (United States), captured by SpanishCue on 27 November 2026"
+ },
+ "heritage": "In many parts of Latin America and the US, speakers mark a plural receiver on lo: «se los dije» meaning «I told it to them». It is very common in speech, but standard writing keeps «se lo dije» when the thing told is singular. Check accents when you attach two pronouns.",
+ "teacher": "Pass objects around the class and ask ¿Quién te dio el lápiz? Students answer with Me lo dio Ana, then report for others with Se lo dio a Marco. Speed it up as they improve.",
+ "faq": [
+  {
+   "question": "What is a double object pronoun?",
+   "answer": "It is a pair of pronouns in one sentence: one for the person who receives (indirect: me, te, le, nos, les) and one for the thing (direct: lo, la, los, las). Te lo doy means I give it to you."
+  },
+  {
+   "question": "Why does le become se?",
+   "answer": "Spanish avoids le lo and les la, which sound awkward. Before lo, la, los or las, both le and les change to se: se lo digo a él, se lo digo a ellos. Add a él or a ellos if se is unclear."
+  },
+  {
+   "question": "Where do I add the accent?",
+   "answer": "When you attach two pronouns to an infinitive (dárselo), a gerund (diciéndomelo) or an affirmative command (cómpramela), add an accent so the verb keeps its original stress."
+  }
+ ]
+}

@@ -1,0 +1,369 @@
+{
+ "level": "A1",
+ "theme": "bathroom",
+ "themeLabel": "Bathroom",
+ "title": "Spanish Bathroom Vocabulary: Words, Routine and Practice Quiz",
+ "description": "Spanish bathroom vocabulary: fixtures, toiletries and routine verbs, with a practice quiz that corrects itself and a short A1 reading about one bathroom for five.",
+ "h1": "Spanish bathroom vocabulary",
+ "titleEs": "Un baño para cinco",
+ "focus": "reflexive verbs in a routine, time expressions",
+ "intro": "Learn the Spanish words for the bathroom, toiletries and the verbs of your morning routine, practice them with instant feedback, then see how a family of five shares one bathroom in Bogotá.",
+ "paragraphs": [
+  "La familia Gómez vive en un apartamento en Bogotá. Son cinco: los padres, dos hijas adolescentes y un abuelo. El problema es que solo tienen un baño, y por las mañanas todos lo necesitan al mismo tiempo.",
+  "Por eso tienen un horario en la puerta. El papá se ducha primero, a las cinco y media, porque sale temprano. Después entra la mamá. A las seis y cuarto es el turno de Paula, la hija mayor, que se seca el pelo con la secadora durante quince minutos.",
+  "Sofía, la menor, se cepilla los dientes en la cocina para ganar tiempo. El abuelo prefiere bañarse por la noche, cuando la casa está tranquila.",
+  "A veces hay discusiones. Paula se queda demasiado tiempo frente al espejo y Sofía golpea la puerta. Pero el sistema funciona casi siempre y nadie llega tarde a la escuela ni al trabajo."
+ ],
+ "glossary": [
+  [
+   "al mismo tiempo",
+   "at the same time"
+  ],
+  [
+   "el horario",
+   "schedule"
+  ],
+  [
+   "temprano",
+   "early"
+  ],
+  [
+   "el turno",
+   "turn"
+  ],
+  [
+   "ganar tiempo",
+   "to save time"
+  ],
+  [
+   "la discusión",
+   "argument"
+  ],
+  [
+   "golpear",
+   "to knock, bang"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "La familia Gómez tiene ",
+   "after": ".",
+   "options": [
+    "un solo baño",
+    "dos baños",
+    "tres baños"
+   ],
+   "answer": 0,
+   "why": "Five people, one bathroom."
+  },
+  {
+   "before": "El primero en ducharse es ",
+   "after": ".",
+   "options": [
+    "el papá",
+    "la mamá",
+    "el abuelo"
+   ],
+   "answer": 0,
+   "why": "Dad showers first because he leaves early."
+  },
+  {
+   "before": "Paula usa la secadora durante ",
+   "after": ".",
+   "options": [
+    "quince minutos",
+    "una hora",
+    "cinco minutos"
+   ],
+   "answer": 0,
+   "why": "Fifteen minutes."
+  },
+  {
+   "before": "Sofía se cepilla los dientes ",
+   "after": ".",
+   "options": [
+    "en la cocina",
+    "en el baño",
+    "en la escuela"
+   ],
+   "answer": 0,
+   "why": "In the kitchen, to save time."
+  },
+  {
+   "before": "El abuelo prefiere bañarse ",
+   "after": ".",
+   "options": [
+    "por la noche",
+    "a las cinco",
+    "después del papá"
+   ],
+   "answer": 0,
+   "why": "At night, when the house is quiet."
+  },
+  {
+   "before": "Hay discusiones cuando Paula ",
+   "after": ".",
+   "options": [
+    "se queda mucho tiempo frente al espejo",
+    "no se ducha",
+    "usa el jabón de Sofía"
+   ],
+   "answer": 0,
+   "why": "She stays too long at the mirror."
+  }
+ ],
+ "grammar": {
+  "title": "Reflexive verbs: me ducho, te peinas",
+  "intro": "Routine verbs take a reflexive pronoun that matches the subject: me, te, se, nos, se.",
+  "items": [
+   {
+    "before": "Yo ",
+    "after": " ducho por la mañana.",
+    "options": [
+     "me",
+     "te",
+     "se"
+    ],
+    "answer": 0,
+    "why": "Yo goes with me."
+   },
+   {
+    "before": "¿A qué hora ",
+    "after": " acuestas tú?",
+    "options": [
+     "te",
+     "me",
+     "se"
+    ],
+    "answer": 0,
+    "why": "Tú goes with te."
+   },
+   {
+    "before": "Mis hermanas ",
+    "after": " peinan juntas.",
+    "options": [
+     "se",
+     "nos",
+     "te"
+    ],
+    "answer": 0,
+    "why": "Ellas goes with se."
+   }
+  ]
+ },
+ "speaking": [
+  "Describe tu rutina de la mañana en el baño, en orden.",
+  "¿Cuántos baños hay en tu casa? ¿Hay problemas por la mañana?",
+  "Inventa un horario para compartir un baño entre cuatro personas."
+ ],
+ "heritage": "Bathroom words vary: «el inodoro», «el excusado» or «el escusado» (Mexico), «el váter» (Spain); «la llave» or «el grifo» for the faucet; «la tina» or «la bañera». All are fine; in writing pick one and stay consistent. Remember the accent in «champú».",
+ "teacher": "Ask students to draw and label their own bathroom, then describe their routine with reflexive verbs. It is a quick, personal speaking task.",
+ "vocabulary": [
+  {
+   "title": "The room",
+   "words": [
+    [
+     "el baño",
+     "bathroom"
+    ],
+    [
+     "el inodoro",
+     "toilet"
+    ],
+    [
+     "el lavabo / el lavamanos",
+     "bathroom sink"
+    ],
+    [
+     "la ducha",
+     "shower"
+    ],
+    [
+     "la bañera / la tina",
+     "bathtub"
+    ],
+    [
+     "el espejo",
+     "mirror"
+    ],
+    [
+     "la toalla",
+     "towel"
+    ],
+    [
+     "el grifo / la llave",
+     "faucet"
+    ]
+   ]
+  },
+  {
+   "title": "Toiletries",
+   "words": [
+    [
+     "el jabón",
+     "soap"
+    ],
+    [
+     "el champú",
+     "shampoo"
+    ],
+    [
+     "el cepillo de dientes",
+     "toothbrush"
+    ],
+    [
+     "la pasta de dientes",
+     "toothpaste"
+    ],
+    [
+     "el papel higiénico",
+     "toilet paper"
+    ],
+    [
+     "el desodorante",
+     "deodorant"
+    ],
+    [
+     "el peine",
+     "comb"
+    ],
+    [
+     "la secadora de pelo",
+     "hair dryer"
+    ]
+   ]
+  },
+  {
+   "title": "Routine verbs",
+   "words": [
+    [
+     "ducharse",
+     "to shower"
+    ],
+    [
+     "bañarse",
+     "to take a bath"
+    ],
+    [
+     "lavarse las manos",
+     "to wash your hands"
+    ],
+    [
+     "cepillarse los dientes",
+     "to brush your teeth"
+    ],
+    [
+     "peinarse",
+     "to comb your hair"
+    ],
+    [
+     "afeitarse",
+     "to shave"
+    ],
+    [
+     "secarse",
+     "to dry off"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Me lavo las manos con agua y ",
+   "after": ".",
+   "options": [
+    "jabón",
+    "champú",
+    "peine"
+   ],
+   "answer": 0,
+   "why": "Hands: soap and water."
+  },
+  {
+   "before": "Después de ducharme, me seco con una ",
+   "after": ".",
+   "options": [
+    "toalla",
+    "secadora",
+    "tina"
+   ],
+   "answer": 0,
+   "why": "You dry off with a towel."
+  },
+  {
+   "before": "Pongo la pasta en el ",
+   "after": ".",
+   "options": [
+    "cepillo de dientes",
+    "espejo",
+    "inodoro"
+   ],
+   "answer": 0,
+   "why": "Toothpaste goes on the toothbrush."
+  },
+  {
+   "before": "¡No hay ",
+   "after": " en el baño! ¿Puedes traer más?",
+   "options": [
+    "papel higiénico",
+    "ducha",
+    "grifo"
+   ],
+   "answer": 0,
+   "why": "The classic emergency: no toilet paper."
+  },
+  {
+   "before": "Me miro en el ",
+   "after": " para peinarme.",
+   "options": [
+    "espejo",
+    "lavabo",
+    "jabón"
+   ],
+   "answer": 0,
+   "why": "A mirror: espejo."
+  },
+  {
+   "before": "Mi papá ",
+   "after": " todas las mañanas con una máquina.",
+   "options": [
+    "se afeita",
+    "se baña en el espejo",
+    "se cepilla el pelo con jabón"
+   ],
+   "answer": 0,
+   "why": "Shaving with a razor: afeitarse."
+  },
+  {
+   "before": "Cierra el ",
+   "after": ": se pierde mucha agua.",
+   "options": [
+    "grifo",
+    "peine",
+    "cepillo"
+   ],
+   "answer": 0,
+   "why": "Turn off the faucet to save water."
+  },
+  {
+   "before": "Por la noche, mi hermanita se ",
+   "after": " en la tina con burbujas.",
+   "options": [
+    "baña",
+    "ducha",
+    "afeita"
+   ],
+   "answer": 0,
+   "why": "In a tub: bañarse."
+  }
+ ],
+ "demand": {
+  "query": "spanish bathroom vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 4 searches to people in the United States who typed «spanish bathroom vocabulary». 1 of them asks for something to do with the words (vocabulary quizlet). One even asks how to say bathroom in Spain, so the list gives the common words in different countries.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

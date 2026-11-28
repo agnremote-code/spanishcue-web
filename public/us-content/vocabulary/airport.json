@@ -1,0 +1,377 @@
+{
+ "level": "A2",
+ "theme": "airport",
+ "themeLabel": "Airport",
+ "title": "Spanish Airport Vocabulary: Words and Phrases for Travel",
+ "description": "Spanish airport vocabulary: check-in, security, boarding and delays, with a practice quiz that corrects itself and an A2 reading about a missed connection.",
+ "h1": "Spanish airport vocabulary",
+ "titleEs": "La conexión perdida",
+ "focus": "the preterite, problems and solutions at the airport",
+ "intro": "Learn the Spanish words and phrases for checking in, going through security, boarding and handling delays, practice them with instant feedback, then follow Sara through a missed connection in Bogotá.",
+ "paragraphs": [
+  "Sara vive en Atlanta y viajó sola por primera vez para visitar a su familia en Lima. Su vuelo tenía una escala en Bogotá. En el mostrador de Atlanta facturó una maleta, recibió dos tarjetas de embarque y pasó el control de seguridad sin problemas.",
+  "El primer vuelo salió con un retraso de dos horas por una tormenta. Cuando el avión aterrizó en Bogotá, Sara corrió por el aeropuerto con su equipaje de mano, pero llegó a la puerta de embarque cinco minutos tarde. El vuelo a Lima ya estaba cerrado.",
+  "Sara estaba nerviosa, pero respiró y fue al mostrador de la aerolínea. Explicó en español: «Mi primer vuelo llegó tarde y ahora no tengo conexión». La empleada revisó el sistema y le dio un asiento en el siguiente vuelo, a las once de la noche. También le dio un cupón para cenar.",
+  "Sara llamó a su tía para avisarle del cambio. Llegó a Lima a la una de la mañana, pasó por migración y aduana, y esperó su maleta en el reclamo de equipaje. Su tía la esperaba con un cartel enorme que decía «¡Bienvenida, Sarita!». Sara se rió y la abrazó muy fuerte."
+ ],
+ "glossary": [
+  [
+   "sola",
+   "alone"
+  ],
+  [
+   "la tormenta",
+   "storm"
+  ],
+  [
+   "correr",
+   "to run"
+  ],
+  [
+   "respirar",
+   "to breathe"
+  ],
+  [
+   "revisar",
+   "to check"
+  ],
+  [
+   "el cupón",
+   "voucher"
+  ],
+  [
+   "avisar",
+   "to let know"
+  ],
+  [
+   "el cartel",
+   "sign"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Sara viajó a Lima para ",
+   "after": ".",
+   "options": [
+    "visitar a su familia",
+    "estudiar",
+    "trabajar"
+   ],
+   "answer": 0,
+   "why": "She went to visit her family."
+  },
+  {
+   "before": "El primer vuelo salió con retraso por ",
+   "after": ".",
+   "options": [
+    "una tormenta",
+    "un problema técnico",
+    "falta de pilotos"
+   ],
+   "answer": 0,
+   "why": "A storm caused the delay."
+  },
+  {
+   "before": "Sara perdió la conexión porque ",
+   "after": ".",
+   "options": [
+    "llegó a la puerta cinco minutos tarde",
+    "olvidó el pasaporte",
+    "se durmió"
+   ],
+   "answer": 0,
+   "why": "She reached the gate five minutes late."
+  },
+  {
+   "before": "En el mostrador, la empleada ",
+   "after": ".",
+   "options": [
+    "le dio un asiento en otro vuelo",
+    "le cobró una multa",
+    "le dijo que esperara al día siguiente"
+   ],
+   "answer": 0,
+   "why": "She got a seat on the next flight."
+  },
+  {
+   "before": "La aerolínea también le dio ",
+   "after": ".",
+   "options": [
+    "un cupón para cenar",
+    "una habitación de hotel",
+    "dinero"
+   ],
+   "answer": 0,
+   "why": "A meal voucher."
+  },
+  {
+   "before": "En Lima, su tía la esperaba con ",
+   "after": ".",
+   "options": [
+    "un cartel",
+    "flores",
+    "un taxi"
+   ],
+   "answer": 0,
+   "why": "With a huge welcome sign."
+  }
+ ],
+ "grammar": {
+  "title": "Preterite of travel verbs",
+  "intro": "To tell what happened on a trip, use the preterite: facturé, llegó, perdimos.",
+  "items": [
+   {
+    "before": "Ayer yo ",
+    "after": " dos maletas.",
+    "options": [
+     "facturé",
+     "facturo",
+     "facturaba"
+    ],
+    "answer": 0,
+    "why": "Yo in the preterite: facturé."
+   },
+   {
+    "before": "El avión ",
+    "after": " a tiempo en Miami.",
+    "options": [
+     "aterrizó",
+     "aterriza",
+     "aterrizaba"
+    ],
+    "answer": 0,
+    "why": "One completed event: aterrizó."
+   },
+   {
+    "before": "Nosotros ",
+    "after": " el vuelo por diez minutos.",
+    "options": [
+     "perdimos",
+     "perdemos",
+     "perdíamos"
+    ],
+    "answer": 0,
+    "why": "Preterite nosotros: perdimos."
+   }
+  ]
+ },
+ "speaking": [
+  "Describe tu último viaje en avión, del mostrador a la llegada.",
+  "¿Prefieres ventanilla o pasillo? ¿Por qué?",
+  "Haz el diálogo: perdiste tu vuelo y hablas con la aerolínea."
+ ],
+ "heritage": "If you translate for family at airports, you already know much of this. Watch the standard forms: «facturar» or «documentar» (Mexico) for checking a bag, «la tarjeta de embarque» or «el pase de abordar», and avoid «el boarding pass» in writing.",
+ "teacher": "Set up the classroom as an airport with stations (counter, security, gate, customs). Students rotate with a passport and solve one problem at each station.",
+ "vocabulary": [
+  {
+   "title": "Check-in",
+   "words": [
+    [
+     "el aeropuerto",
+     "airport"
+    ],
+    [
+     "la aerolínea",
+     "airline"
+    ],
+    [
+     "el mostrador",
+     "check-in counter"
+    ],
+    [
+     "la tarjeta de embarque",
+     "boarding pass"
+    ],
+    [
+     "facturar la maleta",
+     "to check a bag"
+    ],
+    [
+     "el equipaje de mano",
+     "carry-on bag"
+    ],
+    [
+     "el pasaporte",
+     "passport"
+    ],
+    [
+     "el boleto / el pasaje",
+     "ticket"
+    ]
+   ]
+  },
+  {
+   "title": "Security and boarding",
+   "words": [
+    [
+     "el control de seguridad",
+     "security check"
+    ],
+    [
+     "la puerta de embarque",
+     "gate"
+    ],
+    [
+     "abordar / embarcar",
+     "to board"
+    ],
+    [
+     "el asiento de ventanilla",
+     "window seat"
+    ],
+    [
+     "el asiento de pasillo",
+     "aisle seat"
+    ],
+    [
+     "el vuelo",
+     "flight"
+    ],
+    [
+     "despegar",
+     "to take off"
+    ],
+    [
+     "aterrizar",
+     "to land"
+    ]
+   ]
+  },
+  {
+   "title": "Problems and arrivals",
+   "words": [
+    [
+     "el retraso",
+     "delay"
+    ],
+    [
+     "cancelado",
+     "canceled"
+    ],
+    [
+     "la escala",
+     "layover"
+    ],
+    [
+     "la conexión",
+     "connecting flight"
+    ],
+    [
+     "la aduana",
+     "customs"
+    ],
+    [
+     "la migración",
+     "immigration"
+    ],
+    [
+     "el reclamo de equipaje",
+     "baggage claim"
+    ],
+    [
+     "perder un vuelo",
+     "to miss a flight"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Para subir al avión necesitas la ",
+   "after": ".",
+   "options": [
+    "tarjeta de embarque",
+    "aduana",
+    "escala"
+   ],
+   "answer": 0,
+   "why": "You need your boarding pass to board."
+  },
+  {
+   "before": "Mi maleta es muy grande; tengo que ",
+   "after": ".",
+   "options": [
+    "facturarla",
+    "abordarla",
+    "aterrizarla"
+   ],
+   "answer": 0,
+   "why": "Big bags are checked: facturar."
+  },
+  {
+   "before": "Me gusta ver las nubes, así que pido un asiento de ",
+   "after": ".",
+   "options": [
+    "ventanilla",
+    "pasillo",
+    "mostrador"
+   ],
+   "answer": 0,
+   "why": "To see outside: window seat."
+  },
+  {
+   "before": "El vuelo sale a las 3:00, pero hay un ",
+   "after": " de una hora.",
+   "options": [
+    "retraso",
+    "reclamo",
+    "asiento"
+   ],
+   "answer": 0,
+   "why": "A delay: retraso."
+  },
+  {
+   "before": "El avión ",
+   "after": " a las 8:15 en Ciudad de México.",
+   "options": [
+    "aterriza",
+    "despega",
+    "factura"
+   ],
+   "answer": 0,
+   "why": "Arriving on the ground: aterrizar."
+  },
+  {
+   "before": "No es un vuelo directo: tiene una ",
+   "after": " en Panamá.",
+   "options": [
+    "escala",
+    "puerta",
+    "aduana"
+   ],
+   "answer": 0,
+   "why": "A stop on the way: escala."
+  },
+  {
+   "before": "Después de aterrizar, buscamos las maletas en el ",
+   "after": ".",
+   "options": [
+    "reclamo de equipaje",
+    "control de seguridad",
+    "mostrador"
+   ],
+   "answer": 0,
+   "why": "Bags come out at baggage claim."
+  },
+  {
+   "before": "Nuestro vuelo sale de la ",
+   "after": " número 12.",
+   "options": [
+    "puerta de embarque",
+    "aerolínea",
+    "migración"
+   ],
+   "answer": 0,
+   "why": "Gates have numbers: puerta 12."
+  }
+ ],
+ "demand": {
+  "query": "spanish airport vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 4 searches to people in the United States who typed «spanish airport vocabulary». 1 of them asks for something to do with the words (vocabulary quizlet). People ask for the words and for a quiz, so every group below is tested in the practice questions.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

@@ -1,0 +1,373 @@
+{
+ "level": "A2",
+ "theme": "mental-health",
+ "themeLabel": "Mental health",
+ "title": "Spanish Mental Health Vocabulary: Feelings, Care and Support",
+ "description": "Spanish mental health vocabulary: feelings, wellbeing and asking for help, with a quiz that corrects itself and an A2 reading about talking to a school counselor.",
+ "h1": "Spanish mental health vocabulary",
+ "titleEs": "La puerta abierta",
+ "focus": "giving advice with deberías and es importante + infinitive",
+ "intro": "Learn Spanish words to talk about stress, mood and wellbeing and to ask for or offer support, practice them with instant feedback, then read how a student finds help at school. This page teaches language, not therapy.",
+ "paragraphs": [
+  "Daniel tiene diecisiete años y estudia en una escuela de Los Ángeles. Este semestre trabaja en un restaurante por las tardes para ayudar a su familia, y por las noches estudia para la universidad. Desde hace semanas duerme poco, no tiene ganas de ver a sus amigos y se siente agotado.",
+  "Su amiga Mariela lo nota. Un día, después de clase, le pregunta: «¿Cómo estás de verdad?». Daniel primero dice que bien, pero luego le cuenta que se siente presionado y que no sabe cómo hacerlo todo. Mariela lo escucha sin interrumpir y le dice que no tiene que resolverlo solo.",
+  "Mariela le habla de la consejera escolar, la señora Ortiz, que habla español y tiene la puerta abierta para los estudiantes. Daniel tiene dudas: en su familia casi nunca se habla de estos temas. Pero al final decide ir.",
+  "La señora Ortiz lo escucha con atención. Juntos organizan un horario más realista, hablan de la importancia de dormir y ella le explica dónde buscar más apoyo si lo necesita. Daniel sale de la oficina más tranquilo. No todos sus problemas desaparecen, pero ya no se siente solo y sabe que puede volver."
+ ],
+ "glossary": [
+  [
+   "ayudar a su familia",
+   "to help his family"
+  ],
+  [
+   "desde hace semanas",
+   "for weeks"
+  ],
+  [
+   "no tener ganas de",
+   "to not feel like"
+  ],
+  [
+   "notar",
+   "to notice"
+  ],
+  [
+   "presionado",
+   "under pressure"
+  ],
+  [
+   "interrumpir",
+   "to interrupt"
+  ],
+  [
+   "tener dudas",
+   "to have doubts"
+  ],
+  [
+   "realista",
+   "realistic"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Daniel trabaja por las tardes para ",
+   "after": ".",
+   "options": [
+    "ayudar a su familia",
+    "comprar un carro",
+    "viajar"
+   ],
+   "answer": 0,
+   "why": "To help his family."
+  },
+  {
+   "before": "Desde hace semanas, Daniel ",
+   "after": ".",
+   "options": [
+    "duerme poco y se siente agotado",
+    "duerme demasiado",
+    "sale mucho con amigos"
+   ],
+   "answer": 0,
+   "why": "He sleeps little and feels exhausted."
+  },
+  {
+   "before": "Mariela le pregunta ",
+   "after": ".",
+   "options": [
+    "cómo está de verdad",
+    "si quiere estudiar con ella",
+    "por qué trabaja"
+   ],
+   "answer": 0,
+   "why": "How he really is."
+  },
+  {
+   "before": "Mariela escucha a Daniel ",
+   "after": ".",
+   "options": [
+    "sin interrumpir",
+    "con prisa",
+    "mirando el teléfono"
+   ],
+   "answer": 0,
+   "why": "Without interrupting."
+  },
+  {
+   "before": "Daniel tiene dudas de ir a la consejera porque ",
+   "after": ".",
+   "options": [
+    "en su familia casi no se habla de estos temas",
+    "no habla español",
+    "la oficina está cerrada"
+   ],
+   "answer": 0,
+   "why": "His family rarely talks about these topics."
+  },
+  {
+   "before": "Con la consejera, Daniel organiza ",
+   "after": ".",
+   "options": [
+    "un horario más realista",
+    "un viaje",
+    "una fiesta"
+   ],
+   "answer": 0,
+   "why": "A more realistic schedule."
+  }
+ ],
+ "grammar": {
+  "title": "Giving advice: deberías and es importante + infinitive",
+  "intro": "Gentle advice uses the conditional deberías or es importante + infinitive.",
+  "items": [
+   {
+    "before": "Deberías ",
+    "after": " más horas.",
+    "options": [
+     "dormir",
+     "duermes",
+     "dormiste"
+    ],
+    "answer": 0,
+    "why": "After deberías, the infinitive."
+   },
+   {
+    "before": "Es importante ",
+    "after": " con alguien de confianza.",
+    "options": [
+     "hablar",
+     "hablas",
+     "hablado"
+    ],
+    "answer": 0,
+    "why": "Es importante + infinitive."
+   },
+   {
+    "before": "Tú ",
+    "after": " pedir ayuda si te sientes mal.",
+    "options": [
+     "deberías",
+     "deberíamos",
+     "debieron"
+    ],
+    "answer": 0,
+    "why": "Tú: deberías."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Qué haces para relajarte cuando tienes estrés?",
+  "Da tres consejos a un amigo que se siente agotado.",
+  "¿Por qué crees que a veces es difícil pedir ayuda?"
+ ],
+ "heritage": "In many families mental health is talked about with indirect words like «nervios» or «estar mal». Knowing the direct vocabulary («ansiedad», «salud mental», «terapia») helps you speak with professionals and support relatives. If you or someone you know needs help now, talk to a trusted adult or a counselor.",
+ "teacher": "Handle this page with care: keep discussion general, never ask students to share personal diagnoses, and know your school's support resources before using it.",
+ "vocabulary": [
+  {
+   "title": "How someone feels",
+   "words": [
+    [
+     "la salud mental",
+     "mental health"
+    ],
+    [
+     "el estrés",
+     "stress"
+    ],
+    [
+     "la ansiedad",
+     "anxiety"
+    ],
+    [
+     "estar deprimido / deprimida",
+     "to be depressed"
+    ],
+    [
+     "sentirse solo / sola",
+     "to feel lonely"
+    ],
+    [
+     "estar agotado / agotada",
+     "to be exhausted"
+    ],
+    [
+     "el estado de ánimo",
+     "mood"
+    ],
+    [
+     "el bienestar",
+     "wellbeing"
+    ]
+   ]
+  },
+  {
+   "title": "Getting support",
+   "words": [
+    [
+     "pedir ayuda",
+     "to ask for help"
+    ],
+    [
+     "el consejero escolar",
+     "school counselor"
+    ],
+    [
+     "el psicólogo / la psicóloga",
+     "psychologist"
+    ],
+    [
+     "la terapia",
+     "therapy"
+    ],
+    [
+     "hablar con alguien",
+     "to talk to someone"
+    ],
+    [
+     "escuchar",
+     "to listen"
+    ],
+    [
+     "el apoyo",
+     "support"
+    ],
+    [
+     "la confianza",
+     "trust"
+    ]
+   ]
+  },
+  {
+   "title": "Taking care",
+   "words": [
+    [
+     "descansar",
+     "to rest"
+    ],
+    [
+     "dormir bien",
+     "to sleep well"
+    ],
+    [
+     "hacer ejercicio",
+     "to exercise"
+    ],
+    [
+     "respirar hondo",
+     "to take a deep breath"
+    ],
+    [
+     "desconectarse",
+     "to unplug"
+    ],
+    [
+     "cuidarse",
+     "to take care of yourself"
+    ],
+    [
+     "¿Cómo estás de verdad?",
+     "How are you really?"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Tengo tres exámenes esta semana y mucho ",
+   "after": ".",
+   "options": [
+    "estrés",
+    "bienestar",
+    "apoyo"
+   ],
+   "answer": 0,
+   "why": "Exams cause stress."
+  },
+  {
+   "before": "Si te sientes mal, es importante ",
+   "after": ".",
+   "options": [
+    "pedir ayuda",
+    "estar agotado",
+    "desconectar a los demás"
+   ],
+   "answer": 0,
+   "why": "Asking for help matters."
+  },
+  {
+   "before": "En la escuela puedes hablar con el ",
+   "after": ".",
+   "options": [
+    "consejero escolar",
+    "estado de ánimo",
+    "psicólogo del gimnasio"
+   ],
+   "answer": 0,
+   "why": "The school counselor."
+  },
+  {
+   "before": "Antes de hablar en público, ",
+   "after": " para calmarme.",
+   "options": [
+    "respiro hondo",
+    "me deprimo",
+    "me agoto"
+   ],
+   "answer": 0,
+   "why": "Deep breaths help calm nerves."
+  },
+  {
+   "before": "Mi amiga no tiene con quién hablar y se siente ",
+   "after": ".",
+   "options": [
+    "sola",
+    "descansada",
+    "apoyada"
+   ],
+   "answer": 0,
+   "why": "No one to talk to: sola."
+  },
+  {
+   "before": "Un buen amigo sabe ",
+   "after": " sin juzgar.",
+   "options": [
+    "escuchar",
+    "estresar",
+    "agotar"
+   ],
+   "answer": 0,
+   "why": "Listening without judging."
+  },
+  {
+   "before": "Por la noche apago el teléfono para ",
+   "after": ".",
+   "options": [
+    "desconectarme",
+    "deprimirme",
+    "estresarme"
+   ],
+   "answer": 0,
+   "why": "Turning off the phone: desconectarse."
+  },
+  {
+   "before": "Mi ",
+   "after": " cambia cuando duermo poco.",
+   "options": [
+    "estado de ánimo",
+    "consejero",
+    "apoyo"
+   ],
+   "answer": 0,
+   "why": "Mood: estado de ánimo."
+  }
+ ],
+ "demand": {
+  "query": "spanish mental health vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 8 searches to people in the United States who typed «spanish mental health vocabulary». Several ask for terms, words and a glossary. Health professionals need a full clinical glossary; this page covers the everyday language around mental health.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

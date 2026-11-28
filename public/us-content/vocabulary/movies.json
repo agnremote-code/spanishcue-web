@@ -1,0 +1,377 @@
+{
+ "level": "A2",
+ "theme": "movies",
+ "themeLabel": "Movies",
+ "title": "Spanish Movie Vocabulary: Film Genres and Movie Night Words",
+ "description": "Spanish movie vocabulary: la película, el estreno, los subtítulos, la película de terror and la taquilla, with a quiz and an A2 reading about a movie club.",
+ "h1": "Spanish movie vocabulary",
+ "titleEs": "El club de cine",
+ "focus": "opinions with me pareció and the preterite",
+ "intro": "Learn the Spanish words for movies: film genres, the people who make films and the words for going to the cinema or watching at home. Practice with instant feedback, then read about a school movie club that votes on a Spanish-language film.",
+ "paragraphs": [
+  "En la escuela secundaria de Valeria, en Chicago, hay un club de cine que se reúne los jueves después de clase. Cada mes, los miembros votan por una película en español. Este mes, la profesora Jiménez propuso tres opciones: una comedia de México, un documental sobre los Andes y una película de dibujos animados de España.",
+  "Ganó la comedia, con once votos. La vieron en el salón de actos, con palomitas y subtítulos en inglés, porque algunos miembros todavía están aprendiendo español. La película cuenta la historia de una abuela que viaja a Los Ángeles para la boda de su nieto y causa problemas en todas partes.",
+  "Después de la película, el club habló sobre ella. A Valeria le pareció muy divertida, sobre todo la escena del aeropuerto. A su amigo Kevin le encantó la banda sonora, con canciones de mariachi y reguetón. En cambio, a Mariana el final le pareció un poco exagerado.",
+  "Al final, la profesora les pidió escribir una reseña corta en español, con una opinión y una nota de una a cinco estrellas. El próximo mes, el club va a ver un documental, y Kevin ya está pidiendo votos para una película de terror."
+ ],
+ "glossary": [
+  [
+   "reunirse",
+   "to meet"
+  ],
+  [
+   "el miembro",
+   "member"
+  ],
+  [
+   "proponer",
+   "to suggest"
+  ],
+  [
+   "el salón de actos",
+   "auditorium"
+  ],
+  [
+   "el nieto",
+   "grandson"
+  ],
+  [
+   "en todas partes",
+   "everywhere"
+  ],
+  [
+   "exagerado / exagerada",
+   "over the top"
+  ],
+  [
+   "la reseña",
+   "review"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "El club de cine se reúne ",
+   "after": ".",
+   "options": [
+    "los jueves",
+    "los lunes",
+    "los sábados"
+   ],
+   "answer": 0,
+   "why": "On Thursdays."
+  },
+  {
+   "before": "Este mes, ganó ",
+   "after": ".",
+   "options": [
+    "la comedia",
+    "el documental",
+    "la película de dibujos animados"
+   ],
+   "answer": 0,
+   "why": "The comedy won."
+  },
+  {
+   "before": "Vieron la película con subtítulos porque ",
+   "after": ".",
+   "options": [
+    "algunos todavía aprenden español",
+    "no tenían sonido",
+    "era muy larga"
+   ],
+   "answer": 0,
+   "why": "Some are still learning Spanish."
+  },
+  {
+   "before": "En la película, la abuela viaja a Los Ángeles para ",
+   "after": ".",
+   "options": [
+    "la boda de su nieto",
+    "ver a un médico",
+    "trabajar"
+   ],
+   "answer": 0,
+   "why": "For her grandson's wedding."
+  },
+  {
+   "before": "A Kevin le encantó ",
+   "after": ".",
+   "options": [
+    "la banda sonora",
+    "el final",
+    "la escena del aeropuerto"
+   ],
+   "answer": 0,
+   "why": "He loved the soundtrack."
+  },
+  {
+   "before": "Kevin quiere ver una película de ",
+   "after": " el próximo mes.",
+   "options": [
+    "terror",
+    "amor",
+    "acción"
+   ],
+   "answer": 0,
+   "why": "He wants a horror movie."
+  }
+ ],
+ "grammar": {
+  "title": "Opinions: me pareció, me encantó",
+  "intro": "To give your opinion about a movie you saw, use me pareció + adjective and me encantó or me gustó, with the indirect object pronoun for other people: le pareció, les encantó.",
+  "items": [
+   {
+    "before": "A Valeria la comedia le ",
+    "after": " muy divertida.",
+    "options": [
+     "pareció",
+     "parecieron",
+     "parecí"
+    ],
+    "answer": 0,
+    "why": "One movie: pareció."
+   },
+   {
+    "before": "A mis padres les ",
+    "after": " las canciones.",
+    "options": [
+     "encantaron",
+     "encantó",
+     "encanté"
+    ],
+    "answer": 0,
+    "why": "Plural subject: encantaron."
+   },
+   {
+    "before": "A nosotros ",
+    "after": " gustó mucho el final.",
+    "options": [
+     "nos",
+     "les",
+     "le"
+    ],
+    "answer": 0,
+    "why": "Nosotros: nos gustó."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Qué tipo de películas te gustan más? ¿Por qué?",
+  "Cuenta la historia de tu película favorita sin decir el título.",
+  "¿Prefieres ver películas en el cine o en casa?"
+ ],
+ "heritage": "In Latin America and the US, people say película de terror or de miedo; Spain also uses de miedo. Dubbing matters: many films have one Latin American Spanish dub and one from Spain, and heritage speakers often notice the different accents and words.",
+ "teacher": "After a short Spanish film clip, have students write a five-sentence review with me pareció and a star rating, then compare opinions in small groups.",
+ "vocabulary": [
+  {
+   "title": "Genres",
+   "words": [
+    [
+     "la comedia",
+     "comedy"
+    ],
+    [
+     "el drama",
+     "drama"
+    ],
+    [
+     "la película de terror",
+     "horror movie"
+    ],
+    [
+     "la película de acción",
+     "action movie"
+    ],
+    [
+     "la película de dibujos animados",
+     "animated movie"
+    ],
+    [
+     "la ciencia ficción",
+     "science fiction"
+    ],
+    [
+     "el documental",
+     "documentary"
+    ],
+    [
+     "el musical",
+     "musical"
+    ]
+   ]
+  },
+  {
+   "title": "Making a film",
+   "words": [
+    [
+     "el director / la directora",
+     "director"
+    ],
+    [
+     "el actor / la actriz",
+     "actor / actress"
+    ],
+    [
+     "el reparto",
+     "cast"
+    ],
+    [
+     "el personaje",
+     "character"
+    ],
+    [
+     "el guion",
+     "script"
+    ],
+    [
+     "la escena",
+     "scene"
+    ],
+    [
+     "la banda sonora",
+     "soundtrack"
+    ],
+    [
+     "el final",
+     "ending"
+    ]
+   ]
+  },
+  {
+   "title": "Watching",
+   "words": [
+    [
+     "la película",
+     "movie, film"
+    ],
+    [
+     "el estreno",
+     "premiere, release"
+    ],
+    [
+     "la taquilla",
+     "box office"
+    ],
+    [
+     "la entrada",
+     "ticket"
+    ],
+    [
+     "las palomitas",
+     "popcorn"
+    ],
+    [
+     "los subtítulos",
+     "subtitles"
+    ],
+    [
+     "doblado / doblada",
+     "dubbed"
+    ],
+    [
+     "la pantalla grande",
+     "big screen"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Me río mucho con las ",
+   "after": ".",
+   "options": [
+    "comedias",
+    "películas de terror",
+    "documentales"
+   ],
+   "answer": 0,
+   "why": "Comedies make you laugh."
+  },
+  {
+   "before": "No puedo dormir después de ver una película de ",
+   "after": ".",
+   "options": [
+    "terror",
+    "dibujos animados",
+    "amor"
+   ],
+   "answer": 0,
+   "why": "Horror keeps you awake."
+  },
+  {
+   "before": "Para entender la película en español, la vemos con ",
+   "after": " en inglés.",
+   "options": [
+    "subtítulos",
+    "palomitas",
+    "entradas"
+   ],
+   "answer": 0,
+   "why": "Subtitles help."
+  },
+  {
+   "before": "Compramos las ",
+   "after": " en la taquilla.",
+   "options": [
+    "entradas",
+    "escenas",
+    "bandas"
+   ],
+   "answer": 0,
+   "why": "Tickets at the box office."
+  },
+  {
+   "before": "La película no está en su idioma original: está ",
+   "after": ".",
+   "options": [
+    "doblada",
+    "estrenada",
+    "animada"
+   ],
+   "answer": 0,
+   "why": "Dubbed into another language."
+  },
+  {
+   "before": "El ",
+   "after": " de la película es muy triste: el perro muere.",
+   "options": [
+    "final",
+    "reparto",
+    "estreno"
+   ],
+   "answer": 0,
+   "why": "The ending."
+  },
+  {
+   "before": "Un ",
+   "after": " cuenta hechos reales, como la vida de los pingüinos.",
+   "options": [
+    "documental",
+    "musical",
+    "guion"
+   ],
+   "answer": 0,
+   "why": "Documentaries tell real facts."
+  },
+  {
+   "before": "Guillermo del Toro es un ",
+   "after": " mexicano muy famoso.",
+   "options": [
+    "director",
+    "personaje",
+    "guion"
+   ],
+   "answer": 0,
+   "why": "He directs films."
+  }
+ ],
+ "demand": {
+  "query": "spanish movie vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 4 searches to people in the United States who typed «spanish movies vocabulary». One suggestion asks for film vocabulary, so the list includes the people who make a film: el director, el reparto and el guion.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

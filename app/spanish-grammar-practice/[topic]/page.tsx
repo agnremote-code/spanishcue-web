@@ -1,21 +1,82 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import type { ReactNode } from "react";
 import { Breadcrumbs, Faq, GrowthFooter, GrowthTopbar, JsonLd, Section } from "../../growth/components";
 import { faqPageSchema, learningResourceSchema } from "../../growth/schema";
-import ChoiceQuiz from "../../mini-apps/ChoiceQuiz";
+import ChoiceQuiz, { type QuizItem } from "../../mini-apps/ChoiceQuiz";
 import { canonicalUrl } from "../../seo";
-import { AUTOCOMPLETE_REPORT, PRACTICE_PATH, practiceBySlug, practiceTopics } from "../data";
+import { loadUsContent } from "../../us-content/load";
+import type { UsGrammarPage } from "../../us-content/types";
+import { AUTOCOMPLETE_REPORT, PRACTICE_PATH, practiceBySlug } from "../data";
+import { allTopics, assetTopics } from "../topics";
 import styles from "../../growth/growth.module.css";
 
 type Props = { params: Promise<{ topic: string }> };
 
+/** What the page renders, whether the topic comes from data.ts (bundled) or from the «grammar» asset family. */
+type View = {
+  slug: string;
+  path: string;
+  name: string;
+  levels: string;
+  title: string;
+  description: string;
+  h1: string;
+  answer: string;
+  rulesCaption: string;
+  rules: { use: string; example: string; meaning: string }[];
+  quiz: QuizItem[];
+  mistakes: string[];
+  figure: string;
+  source: ReactNode;
+  heritage: string;
+  teacher?: string;
+  teacherLinks: { href: string; label: string }[];
+  faq: { question: string; answer: string }[];
+};
+
+async function viewFor(params: Props["params"]): Promise<View | null> {
+  const { topic: slug } = await params;
+  const topic = practiceBySlug.get(slug);
+  if (topic) {
+    return {
+      ...topic,
+      source: <>Source: Google autocomplete in English (United States), captured on 26 November 2026. Method and full data: <Link className={styles.textLink} href={AUTOCOMPLETE_REPORT}>our autocomplete report</Link> (in Spanish).</>,
+    };
+  }
+  const entry = assetTopics.find((item) => item.slug === slug);
+  if (!entry) return null;
+  const page = await loadUsContent<UsGrammarPage>("grammar", entry.slug);
+  if (!page) return null;
+  return {
+    slug: entry.slug,
+    path: entry.path,
+    name: page.name,
+    levels: page.level,
+    title: page.title,
+    description: page.description,
+    h1: page.h1,
+    answer: page.answer,
+    rulesCaption: page.rulesCaption,
+    rules: page.rules,
+    quiz: page.quiz,
+    mistakes: page.mistakes,
+    figure: page.figure.text,
+    source: <>Source: {page.figure.source}.</>,
+    heritage: page.heritage,
+    teacher: page.teacher,
+    teacherLinks: [],
+    faq: page.faq,
+  };
+}
+
 export function generateStaticParams() {
-  return practiceTopics.map((topic) => ({ topic: topic.slug }));
+  return allTopics.map((topic) => ({ topic: topic.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const topic = practiceBySlug.get((await params).topic);
+  const topic = await viewFor(params);
   if (!topic) return {};
   return {
     title: topic.title,
@@ -27,10 +88,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function PracticeTopicPage({ params }: Props) {
-  const topic = practiceBySlug.get((await params).topic);
+  const topic = await viewFor(params);
   if (!topic) notFound();
-  const index = practiceTopics.indexOf(topic);
-  const next = practiceTopics[(index + 1) % practiceTopics.length];
+  const index = allTopics.findIndex((item) => item.slug === topic.slug);
+  const next = allTopics[(index + 1) % allTopics.length];
   return (
     <>
       <main className={styles.page} lang="en">
@@ -66,13 +127,19 @@ export default async function PracticeTopicPage({ params }: Props) {
           <Section title="What SpanishCue data shows">
             <div className={styles.panel}>
               <p>{topic.figure}</p>
-              <p><small>Source: Google autocomplete in English (United States), captured on 26 November 2026. Method and full data: <Link className={styles.textLink} href={AUTOCOMPLETE_REPORT}>our autocomplete report</Link> (in Spanish).</small></p>
+              <p><small>{topic.source}</small></p>
             </div>
           </Section>
 
           <Section title="If you grew up speaking Spanish at home">
             <div className={styles.prose}><p>{topic.heritage}</p></div>
           </Section>
+
+          {topic.teacher ? (
+            <Section title="Use it in class">
+              <div className={styles.prose}><p>{topic.teacher}</p></div>
+            </Section>
+          ) : null}
 
           <Section title="Questions">
             <Faq items={topic.faq} />

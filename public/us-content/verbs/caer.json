@@ -1,0 +1,278 @@
+{
+ "verb": "caer",
+ "meaning": "to fall",
+ "level": "A2",
+ "title": "Spanish Verb Caer and Caerse Practice: Forms, Me Cae Bien and Quiz",
+ "description": "Practice the Spanish verbs caer and caerse: caigo, the preterite cayó and cayeron, me cae bien for people you like, ten questions and a reading.",
+ "h1": "Spanish verb caer: practice",
+ "intro": "Caer means to fall, and caerse adds the idea of an accident (me caí). It has an irregular yo form (caigo) and a y in the preterite (cayó). It also says whether you like someone: me cae bien. Practice it all with feedback.",
+ "demand": {
+  "query": "spanish verb caer",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "Caerse: to fall down",
+   "example": "Me caí en la nieve.",
+   "meaning": "I fell in the snow."
+  },
+  {
+   "use": "To fall (things, rain)",
+   "example": "Caen hojas de los árboles.",
+   "meaning": "Leaves are falling from the trees."
+  },
+  {
+   "use": "Liking people: caer bien / mal",
+   "example": "Tu hermano me cae muy bien.",
+   "meaning": "I really like your brother."
+  },
+  {
+   "use": "To drop something: se me cayó",
+   "example": "Se me cayó el teléfono.",
+   "meaning": "I dropped my phone."
+  },
+  {
+   "use": "Dates: caer en",
+   "example": "Mi cumpleaños cae en sábado.",
+   "meaning": "My birthday falls on a Saturday."
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "caigo"
+  ],
+  [
+   "tú",
+   "caes"
+  ],
+  [
+   "él / ella / usted",
+   "cae"
+  ],
+  [
+   "nosotros / nosotras",
+   "caemos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "caen"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "caí"
+  ],
+  [
+   "tú",
+   "caíste"
+  ],
+  [
+   "él / ella / usted",
+   "cayó"
+  ],
+  [
+   "nosotros / nosotras",
+   "caímos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "cayeron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "Cuando patino, siempre me ",
+   "after": ".",
+   "options": [
+    "caigo",
+    "cao",
+    "cayo"
+   ],
+   "answer": 0,
+   "why": "Irregular yo: caigo."
+  },
+  {
+   "before": "En otoño ",
+   "after": " muchas hojas.",
+   "options": [
+    "caen",
+    "cae",
+    "caemos"
+   ],
+   "answer": 0,
+   "why": "Plural subject hojas: caen."
+  },
+  {
+   "before": "Tu novio me ",
+   "after": " muy bien.",
+   "options": [
+    "cae",
+    "caigo",
+    "caen"
+   ],
+   "answer": 0,
+   "why": "Liking a person: él me cae bien."
+  },
+  {
+   "before": "Los vecinos nuevos nos ",
+   "after": " mal.",
+   "options": [
+    "caen",
+    "cae",
+    "caemos"
+   ],
+   "answer": 0,
+   "why": "Plural subject vecinos: caen."
+  },
+  {
+   "before": "Este año, el 4 de julio ",
+   "after": " en domingo.",
+   "options": [
+    "cae",
+    "se cae",
+    "caen"
+   ],
+   "answer": 0,
+   "why": "Dates: caer en."
+  },
+  {
+   "before": "Ayer me ",
+   "after": " en la escalera.",
+   "options": [
+    "caí",
+    "cayí",
+    "caé"
+   ],
+   "answer": 0,
+   "why": "Preterite yo: caí, with accent."
+  },
+  {
+   "before": "El niño se ",
+   "after": " de la bicicleta.",
+   "options": [
+    "cayó",
+    "caió",
+    "cayo"
+   ],
+   "answer": 0,
+   "why": "Preterite él: cayó, i becomes y."
+  },
+  {
+   "before": "¿Te ",
+   "after": " cuando corrías?",
+   "options": [
+    "caíste",
+    "cayiste",
+    "caistes"
+   ],
+   "answer": 0,
+   "why": "Preterite tú: caíste, accent on the i."
+  },
+  {
+   "before": "Las cajas se ",
+   "after": " del camión.",
+   "options": [
+    "cayeron",
+    "caieron",
+    "cayieron"
+   ],
+   "answer": 0,
+   "why": "Preterite ellos: cayeron."
+  },
+  {
+   "before": "A mi papá se le ",
+   "after": " las llaves en el parque.",
+   "options": [
+    "cayeron",
+    "cayó",
+    "caí"
+   ],
+   "answer": 0,
+   "why": "Las llaves is plural: se le cayeron."
+  }
+ ],
+ "reading": {
+  "titleEs": "Una caída con suerte",
+  "paragraphs": [
+   "El primer día de invierno, Mateo salió a correr en Denver. Había hielo en la acera y, de repente, se cayó. Se le cayeron los audífonos y el teléfono. Una mujer que paseaba a su perro lo ayudó a levantarse.",
+   "Se llamaba Carolina y acababa de mudarse de Bogotá. A Mateo le cayó bien desde el primer momento: era simpática y le dio consejos para caminar sobre el hielo. Hoy corren juntos los domingos, y Mateo dice que fue la caída con más suerte de su vida."
+  ],
+  "comprehension": [
+   {
+    "before": "Mateo se cayó porque ",
+    "after": ".",
+    "options": [
+     "había hielo",
+     "estaba cansado",
+     "chocó con un perro"
+    ],
+    "answer": 0,
+    "why": "There was ice on the sidewalk."
+   },
+   {
+    "before": "Al caerse, a Mateo se le cayeron ",
+    "after": ".",
+    "options": [
+     "los audífonos y el teléfono",
+     "las llaves",
+     "los lentes"
+    ],
+    "answer": 0,
+    "why": "His earbuds and his phone."
+   },
+   {
+    "before": "Carolina se acababa de mudar de ",
+    "after": ".",
+    "options": [
+     "Bogotá",
+     "Denver",
+     "Lima"
+    ],
+    "answer": 0,
+    "why": "She had just moved from Bogotá."
+   },
+   {
+    "before": "Mateo piensa que la caída fue ",
+    "after": ".",
+    "options": [
+     "de buena suerte",
+     "muy grave",
+     "culpa del perro"
+    ],
+    "answer": 0,
+    "why": "He calls it the luckiest fall of his life."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Yo cao mucho.",
+   "right": "Yo me caigo mucho.",
+   "why": "Yo form: caigo, and the accident needs me."
+  },
+  {
+   "wrong": "Él se caió.",
+   "right": "Él se cayó.",
+   "why": "Between vowels, the i becomes y: cayó."
+  },
+  {
+   "wrong": "Yo caí mi teléfono.",
+   "right": "Se me cayó el teléfono.",
+   "why": "Dropping by accident uses se me cayó."
+  },
+  {
+   "wrong": "Ella me cae buena.",
+   "right": "Ella me cae bien.",
+   "why": "Caer bien uses the adverb bien."
+  }
+ ],
+ "heritage": "Heritage speakers often say «se me cayó» naturally, which many classroom learners find hard. The writing points to watch are the accents in «caí» and «caíste» and the y in «cayó» and «cayeron».",
+ "teacher": "Have students describe a funny fall or a dropped object with se me cayó, then rate famous characters with Me cae bien or Me cae mal and give one reason.",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 7 searches to people in the United States who typed «spanish verb caer». Two ask for caerse, and one mixes caer with verbs ending in -car, so the spelling of caí and cayó is explained here.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

@@ -1,0 +1,278 @@
+{
+ "verb": "leer",
+ "meaning": "to read",
+ "level": "A1",
+ "title": "Spanish Verb Leer Practice: Present, Past Tense and Quiz",
+ "description": "Practice the Spanish verb leer: present tense, the preterite with leyó and leyeron, ten questions that correct themselves and a short reading. Free, no login.",
+ "h1": "Spanish verb leer: practice",
+ "intro": "Leer is regular in the present, but its preterite has a spelling change: leyó, leyeron. Learn its forms and uses and practice with questions that explain every answer.",
+ "demand": {
+  "query": "spanish verb leer",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "To read",
+   "example": "Leo un libro antes de dormir.",
+   "meaning": "I read a book before going to sleep."
+  },
+  {
+   "use": "To read aloud: leer en voz alta",
+   "example": "La maestra lee en voz alta.",
+   "meaning": "The teacher reads aloud."
+  },
+  {
+   "use": "To read news, messages",
+   "example": "¿Leíste mi mensaje?",
+   "meaning": "Did you read my message?"
+  },
+  {
+   "use": "Leer sobre / acerca de",
+   "example": "Leímos sobre los mayas.",
+   "meaning": "We read about the Maya."
+  },
+  {
+   "use": "Leer la mente",
+   "example": "¡Me lees la mente!",
+   "meaning": "You read my mind!"
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "leo"
+  ],
+  [
+   "tú",
+   "lees"
+  ],
+  [
+   "él / ella / usted",
+   "lee"
+  ],
+  [
+   "nosotros / nosotras",
+   "leemos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "leen"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "leí"
+  ],
+  [
+   "tú",
+   "leíste"
+  ],
+  [
+   "él / ella / usted",
+   "leyó"
+  ],
+  [
+   "nosotros / nosotras",
+   "leímos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "leyeron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "Yo ",
+   "after": " el periódico en el teléfono.",
+   "options": [
+    "leo",
+    "lee",
+    "leí mañana"
+   ],
+   "answer": 0,
+   "why": "Present yo: leo."
+  },
+  {
+   "before": "¿Qué ",
+   "after": " tú ahora?",
+   "options": [
+    "lees",
+    "leyes",
+    "leen"
+   ],
+   "answer": 0,
+   "why": "Present tú: lees."
+  },
+  {
+   "before": "Mi hermana ",
+   "after": " cómics japoneses.",
+   "options": [
+    "lee",
+    "le",
+    "lée"
+   ],
+   "answer": 0,
+   "why": "Present ella: lee (two e's)."
+  },
+  {
+   "before": "En clase nosotros ",
+   "after": " un cuento cada semana.",
+   "options": [
+    "leemos",
+    "leímos mañana",
+    "lemos"
+   ],
+   "answer": 0,
+   "why": "Present nosotros: leemos."
+  },
+  {
+   "before": "Anoche ",
+   "after": " tres capítulos.",
+   "options": [
+    "leí",
+    "lei",
+    "leyí"
+   ],
+   "answer": 0,
+   "why": "Preterite yo: leí, with an accent."
+  },
+  {
+   "before": "¿",
+   "after": " el libro para la clase de literatura?",
+   "options": [
+    "Leíste",
+    "Leiste",
+    "Leyiste"
+   ],
+   "answer": 0,
+   "why": "Preterite tú: leíste."
+  },
+  {
+   "before": "Mi papá ",
+   "after": " la noticia y se rió.",
+   "options": [
+    "leyó",
+    "leió",
+    "leó"
+   ],
+   "answer": 0,
+   "why": "The i between vowels becomes y: leyó."
+  },
+  {
+   "before": "Los estudiantes ",
+   "after": " el poema en voz alta.",
+   "options": [
+    "leyeron",
+    "leieron",
+    "leeron"
+   ],
+   "answer": 0,
+   "why": "Preterite ellos: leyeron."
+  },
+  {
+   "before": "La maestra lee ",
+   "after": " voz alta.",
+   "options": [
+    "en",
+    "a",
+    "con"
+   ],
+   "answer": 0,
+   "why": "Reading aloud: leer en voz alta."
+  },
+  {
+   "before": "Ayer nosotros ",
+   "after": " sobre la historia de Puerto Rico.",
+   "options": [
+    "leímos",
+    "leemos ayer",
+    "leyimos"
+   ],
+   "answer": 0,
+   "why": "Preterite nosotros: leímos."
+  }
+ ],
+ "reading": {
+  "titleEs": "El club de lectura de la biblioteca",
+  "paragraphs": [
+   "Todos los jueves, en la biblioteca de un barrio de Houston, se reúne un club de lectura en español. Hay estudiantes, abuelas, un cartero y una médica. Cada mes leen un libro diferente de un autor latinoamericano.",
+   "Este mes leyeron una novela corta de Gabriel García Márquez. Don Ramón la leyó en dos días; Kimberly, que está aprendiendo español, la leyó despacio, con un diccionario. En la reunión, todos leen en voz alta su párrafo favorito y explican por qué lo eligieron."
+  ],
+  "comprehension": [
+   {
+    "before": "El club de lectura se reúne ",
+    "after": ".",
+    "options": [
+     "los jueves",
+     "los lunes",
+     "los sábados"
+    ],
+    "answer": 0,
+    "why": "Every Thursday."
+   },
+   {
+    "before": "Cada mes leen un libro de ",
+    "after": ".",
+    "options": [
+     "un autor latinoamericano",
+     "un autor español",
+     "historia"
+    ],
+    "answer": 0,
+    "why": "A Latin American author."
+   },
+   {
+    "before": "Kimberly leyó la novela ",
+    "after": ".",
+    "options": [
+     "despacio, con un diccionario",
+     "en dos días",
+     "en inglés"
+    ],
+    "answer": 0,
+    "why": "Slowly, with a dictionary."
+   },
+   {
+    "before": "En la reunión, cada persona lee ",
+    "after": ".",
+    "options": [
+     "su párrafo favorito",
+     "todo el libro",
+     "un poema"
+    ],
+    "answer": 0,
+    "why": "Their favorite paragraph."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Él leió el libro.",
+   "right": "Él leyó el libro.",
+   "why": "Between vowels the i becomes y: leyó."
+  },
+  {
+   "wrong": "Yo lei la carta.",
+   "right": "Yo leí la carta.",
+   "why": "The yo preterite needs the accent: leí."
+  },
+  {
+   "wrong": "Leemos acerca la guerra.",
+   "right": "Leemos sobre la guerra.",
+   "why": "Use sobre or acerca de."
+  },
+  {
+   "wrong": "Lee a mí un cuento.",
+   "right": "Léeme un cuento.",
+   "why": "The pronoun attaches to the command: léeme."
+  }
+ ],
+ "heritage": "Heritage speakers usually say leyó correctly but may write «leió» or forget the accents in «leí» and «leíste». A quick rule: every preterite form of leer except leyó and leyeron has a written accent on the í.",
+ "teacher": "Start a five-minute silent reading routine in Spanish. At the end, each student says one sentence with leí or leyó about what they read.",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish verb leer». 3 of them ask for conjugation, charts or tenses (conjugation, present tense, past tense). One asks specifically for the past tense, so the preterite and its y spelling get extra questions here.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

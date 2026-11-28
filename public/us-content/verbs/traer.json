@@ -1,0 +1,278 @@
+{
+ "verb": "traer",
+ "meaning": "to bring",
+ "level": "A2",
+ "title": "Spanish Verb Traer Practice: Conjugation, Traje and Quiz",
+ "description": "Practice the Spanish verb traer: traigo in the present, the irregular preterite traje and trajeron, traer vs llevar, ten self-correcting questions and a reading.",
+ "h1": "Spanish verb traer: practice",
+ "intro": "Traer means to bring toward the speaker. It has an irregular yo form (traigo) and an irregular preterite (traje, trajeron). Learn the forms, the difference with llevar and practice with instant feedback.",
+ "demand": {
+  "query": "spanish verb traer",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "To bring (toward here)",
+   "example": "¿Me traes un vaso de agua?",
+   "meaning": "Can you bring me a glass of water?"
+  },
+  {
+   "use": "To carry with you",
+   "example": "Hoy traigo mi almuerzo.",
+   "meaning": "Today I've brought my lunch."
+  },
+  {
+   "use": "Contents: to come with",
+   "example": "El libro trae un diccionario.",
+   "meaning": "The book comes with a dictionary."
+  },
+  {
+   "use": "To cause: traer problemas",
+   "example": "Esa decisión trajo muchos problemas.",
+   "meaning": "That decision caused a lot of problems."
+  },
+  {
+   "use": "Traer vs llevar",
+   "example": "Trae tu guitarra a mi casa. / Lleva tu guitarra a la playa.",
+   "meaning": "Bring your guitar here. / Take your guitar to the beach."
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "traigo"
+  ],
+  [
+   "tú",
+   "traes"
+  ],
+  [
+   "él / ella / usted",
+   "trae"
+  ],
+  [
+   "nosotros / nosotras",
+   "traemos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "traen"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "traje"
+  ],
+  [
+   "tú",
+   "trajiste"
+  ],
+  [
+   "él / ella / usted",
+   "trajo"
+  ],
+  [
+   "nosotros / nosotras",
+   "trajimos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "trajeron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "Yo siempre ",
+   "after": " una botella de agua al gimnasio.",
+   "options": [
+    "traigo",
+    "trao",
+    "traego"
+   ],
+   "answer": 0,
+   "why": "Irregular yo: traigo."
+  },
+  {
+   "before": "¿Tú ",
+   "after": " algo para la cena?",
+   "options": [
+    "traes",
+    "traigas",
+    "trae"
+   ],
+   "answer": 0,
+   "why": "Tú: traes."
+  },
+  {
+   "before": "Mis tíos ",
+   "after": " tamales en Navidad.",
+   "options": [
+    "traen",
+    "trae",
+    "traigan"
+   ],
+   "answer": 0,
+   "why": "Ellos: traen."
+  },
+  {
+   "before": "Nosotros ",
+   "after": " las sillas para la fiesta.",
+   "options": [
+    "traemos",
+    "traimos",
+    "traigamos"
+   ],
+   "answer": 0,
+   "why": "Nosotros: traemos."
+  },
+  {
+   "before": "Ven a mi casa y ",
+   "after": " tus fotos.",
+   "options": [
+    "trae",
+    "lleva",
+    "traes"
+   ],
+   "answer": 0,
+   "why": "Toward the speaker's place: traer."
+  },
+  {
+   "before": "Ayer ",
+   "after": " mi computadora a la clase.",
+   "options": [
+    "traje",
+    "traí",
+    "trají"
+   ],
+   "answer": 0,
+   "why": "Irregular preterite yo: traje."
+  },
+  {
+   "before": "¿Qué me ",
+   "after": " de tu viaje a Perú?",
+   "options": [
+    "trajiste",
+    "traíste",
+    "trajistes"
+   ],
+   "answer": 0,
+   "why": "Preterite tú: trajiste."
+  },
+  {
+   "before": "La lluvia ",
+   "after": " muchos problemas a la ciudad.",
+   "options": [
+    "trajo",
+    "traió",
+    "trajó"
+   ],
+   "answer": 0,
+   "why": "Preterite: trajo, no accent."
+  },
+  {
+   "before": "Los invitados ",
+   "after": " flores y vino.",
+   "options": [
+    "trajeron",
+    "trajieron",
+    "traieron"
+   ],
+   "answer": 0,
+   "why": "Preterite ellos: trajeron, no i."
+  },
+  {
+   "before": "Nosotros ",
+   "after": " pan dulce para todos.",
+   "options": [
+    "trajimos",
+    "traímos",
+    "trajemos"
+   ],
+   "answer": 0,
+   "why": "Preterite nosotros: trajimos."
+  }
+ ],
+ "reading": {
+  "titleEs": "La maleta de la abuela",
+  "paragraphs": [
+   "Cada vez que la abuela Lupe viaja de Oaxaca a Los Ángeles, trae una maleta enorme. Sus nietos ya saben qué trae: chocolate de mesa, mole en polvo, quesillo y pan de yema. «¿Por qué traes tanta comida, abuela?», le preguntan.",
+   "Este año, la abuela trajo algo diferente: un cuaderno viejo con las recetas de su madre. «Ya no puedo traer todo cada año», dijo. Esa tarde, los nietos trajeron sus teléfonos a la cocina, y la abuela les enseñó a hacer mole mientras ellos grababan cada paso."
+  ],
+  "comprehension": [
+   {
+    "before": "La abuela Lupe viaja desde ",
+    "after": ".",
+    "options": [
+     "Oaxaca",
+     "Guadalajara",
+     "Puebla"
+    ],
+    "answer": 0,
+    "why": "She travels from Oaxaca."
+   },
+   {
+    "before": "Normalmente, la maleta trae ",
+    "after": ".",
+    "options": [
+     "comida",
+     "ropa nueva",
+     "juguetes"
+    ],
+    "answer": 0,
+    "why": "Chocolate, mole, cheese and bread."
+   },
+   {
+    "before": "Este año, la abuela trajo ",
+    "after": ".",
+    "options": [
+     "un cuaderno de recetas",
+     "más chocolate",
+     "una maleta vacía"
+    ],
+    "answer": 0,
+    "why": "Her mother's recipe notebook."
+   },
+   {
+    "before": "Los nietos usaron sus teléfonos para ",
+    "after": ".",
+    "options": [
+     "grabar la receta",
+     "llamar a Oaxaca",
+     "comprar mole"
+    ],
+    "answer": 0,
+    "why": "They recorded every step."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Yo trao la comida.",
+   "right": "Yo traigo la comida.",
+   "why": "The yo form is irregular: traigo."
+  },
+  {
+   "wrong": "Ayer traí mi libro.",
+   "right": "Ayer traje mi libro.",
+   "why": "The preterite is irregular: traje."
+  },
+  {
+   "wrong": "Ellos trajieron pastel.",
+   "right": "Ellos trajeron pastel.",
+   "why": "After j, the ending is -eron, not -ieron."
+  },
+  {
+   "wrong": "Trae tus libros a la escuela (said at home).",
+   "right": "Lleva tus libros a la escuela.",
+   "why": "Away from where you are, use llevar."
+  }
+ ],
+ "heritage": "Heritage speakers in the US often say «traí» or «trajieron» in casual speech. In writing, the standard forms are «traje» and «trajeron». Some speakers also use traer where standard Spanish prefers llevar; ask where the speaker is.",
+ "teacher": "Plan a class potluck: each student says what they bring (Yo traigo…) and then reports what others brought with the preterite (Ana trajo…).",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish verb traer». 1 of them asks for conjugation, charts or tenses (conjugation). One suggestion pairs traer with dar and ir, so the page contrasts traer with llevar, the usual mix-up.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

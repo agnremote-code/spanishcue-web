@@ -1,0 +1,373 @@
+{
+ "level": "A1",
+ "theme": "nature",
+ "themeLabel": "Nature",
+ "title": "Spanish Nature Vocabulary: Landscapes, Plants and Practice",
+ "description": "Spanish nature vocabulary: landscapes, plants and outdoor words, with a practice quiz that corrects itself and a short A1 reading about a hike in Costa Rica.",
+ "h1": "Spanish nature vocabulary",
+ "titleEs": "Una mañana en el volcán",
+ "focus": "hay, the present, nature words",
+ "intro": "Learn the Spanish words for landscapes, plants, water and the sky, practice them with instant feedback, then go on a morning hike to a volcano in Costa Rica.",
+ "paragraphs": [
+  "Los Martínez viven en Chicago, pero este verano están de vacaciones en Costa Rica. Un día se levantan a las cinco de la mañana para subir al volcán Arenal con un guía.",
+  "El sendero empieza en el bosque. Hay árboles enormes, flores de muchos colores y hojas tan grandes como un paraguas. El guía les muestra un perezoso que duerme en una rama.",
+  "Después de dos horas llegan a un mirador. Desde allí ven el volcán, un lago azul y el valle verde. En el cielo hay pocas nubes y el sol brilla.",
+  "Al bajar, se bañan en un río de agua caliente que viene del volcán. Cerca hay una cascada pequeña. La hija menor dice que es el lugar más bonito del mundo. Por la noche, en el hotel, todos miran las estrellas y escuchan los sonidos de la selva."
+ ],
+ "glossary": [
+  [
+   "el guía",
+   "guide"
+  ],
+  [
+   "tan grandes como",
+   "as big as"
+  ],
+  [
+   "el paraguas",
+   "umbrella"
+  ],
+  [
+   "el perezoso",
+   "sloth"
+  ],
+  [
+   "la rama",
+   "branch"
+  ],
+  [
+   "el mirador",
+   "lookout point"
+  ],
+  [
+   "brillar",
+   "to shine"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Los Martínez se levantan a las ",
+   "after": ".",
+   "options": [
+    "cinco de la mañana",
+    "ocho",
+    "diez"
+   ],
+   "answer": 0,
+   "why": "At five in the morning."
+  },
+  {
+   "before": "El sendero empieza en ",
+   "after": ".",
+   "options": [
+    "el bosque",
+    "la playa",
+    "el lago"
+   ],
+   "answer": 0,
+   "why": "In the forest."
+  },
+  {
+   "before": "El guía les muestra un ",
+   "after": ".",
+   "options": [
+    "perezoso",
+    "mono",
+    "loro"
+   ],
+   "answer": 0,
+   "why": "A sloth sleeping on a branch."
+  },
+  {
+   "before": "Desde el mirador ven el volcán, un lago y ",
+   "after": ".",
+   "options": [
+    "el valle",
+    "el mar",
+    "una ciudad"
+   ],
+   "answer": 0,
+   "why": "And the green valley."
+  },
+  {
+   "before": "El agua del río es ",
+   "after": ".",
+   "options": [
+    "caliente",
+    "muy fría",
+    "salada"
+   ],
+   "answer": 0,
+   "why": "Warm water from the volcano."
+  },
+  {
+   "before": "Para la hija menor, es ",
+   "after": ".",
+   "options": [
+    "el lugar más bonito del mundo",
+    "un lugar aburrido",
+    "muy peligroso"
+   ],
+   "answer": 0,
+   "why": "The most beautiful place in the world."
+  }
+ ],
+ "grammar": {
+  "title": "Hay for what exists in a place",
+  "intro": "Hay means there is or there are, for one thing or many: hay un río, hay muchas flores.",
+  "items": [
+   {
+    "before": "En el bosque ",
+    "after": " árboles enormes.",
+    "options": [
+     "hay",
+     "son",
+     "están"
+    ],
+    "answer": 0,
+    "why": "There are: hay."
+   },
+   {
+    "before": "¿",
+    "after": " un lago cerca del volcán?",
+    "options": [
+     "Hay",
+     "Está",
+     "Es"
+    ],
+    "answer": 0,
+    "why": "Asking if something exists: ¿hay…?"
+   },
+   {
+    "before": "En el cielo no ",
+    "after": " nubes hoy.",
+    "options": [
+     "hay",
+     "están",
+     "tiene"
+    ],
+    "answer": 0,
+    "why": "There are no clouds: no hay."
+   }
+  ]
+ },
+ "speaking": [
+  "Describe un lugar de naturaleza que te gusta.",
+  "¿Prefieres la montaña o la playa? ¿Por qué?",
+  "¿Qué hay cerca de tu casa: un río, un parque, un bosque?"
+ ],
+ "heritage": "If your family comes from the countryside, you may know very specific nature words (names of trees, birds, crops). They are an asset. In writing, check accents in «río», «volcán», «arcoíris» and «árbol», and the plural «volcanes» (no accent).",
+ "teacher": "Show a photo of a landscape from a Spanish-speaking country and have students write five sentences with hay. Then they guess which country it is.",
+ "vocabulary": [
+  {
+   "title": "Landscapes",
+   "words": [
+    [
+     "la montaña",
+     "mountain"
+    ],
+    [
+     "el volcán",
+     "volcano"
+    ],
+    [
+     "el bosque",
+     "forest"
+    ],
+    [
+     "la selva",
+     "jungle, rainforest"
+    ],
+    [
+     "el desierto",
+     "desert"
+    ],
+    [
+     "la playa",
+     "beach"
+    ],
+    [
+     "el valle",
+     "valley"
+    ],
+    [
+     "la isla",
+     "island"
+    ]
+   ]
+  },
+  {
+   "title": "Water and sky",
+   "words": [
+    [
+     "el río",
+     "river"
+    ],
+    [
+     "el lago",
+     "lake"
+    ],
+    [
+     "el mar",
+     "sea"
+    ],
+    [
+     "la cascada",
+     "waterfall"
+    ],
+    [
+     "el cielo",
+     "sky"
+    ],
+    [
+     "la nube",
+     "cloud"
+    ],
+    [
+     "el arcoíris",
+     "rainbow"
+    ],
+    [
+     "la estrella",
+     "star"
+    ]
+   ]
+  },
+  {
+   "title": "Plants and ground",
+   "words": [
+    [
+     "el árbol",
+     "tree"
+    ],
+    [
+     "la flor",
+     "flower"
+    ],
+    [
+     "la hoja",
+     "leaf"
+    ],
+    [
+     "la planta",
+     "plant"
+    ],
+    [
+     "la hierba / el pasto",
+     "grass"
+    ],
+    [
+     "la piedra",
+     "stone, rock"
+    ],
+    [
+     "la tierra",
+     "earth, soil"
+    ],
+    [
+     "el sendero",
+     "trail"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "En la ",
+   "after": " hay muchos árboles altos y animales.",
+   "options": [
+    "selva",
+    "playa",
+    "nube"
+   ],
+   "answer": 0,
+   "why": "Rainforest: many tall trees and animals."
+  },
+  {
+   "before": "El agua cae desde muy alto en la ",
+   "after": ".",
+   "options": [
+    "cascada",
+    "isla",
+    "piedra"
+   ],
+   "answer": 0,
+   "why": "Water falling from a height: waterfall."
+  },
+  {
+   "before": "Después de la lluvia aparece un ",
+   "after": " de colores.",
+   "options": [
+    "arcoíris",
+    "valle",
+    "sendero"
+   ],
+   "answer": 0,
+   "why": "After rain: a rainbow."
+  },
+  {
+   "before": "Un ",
+   "after": " puede echar lava y humo.",
+   "options": [
+    "volcán",
+    "lago",
+    "bosque"
+   ],
+   "answer": 0,
+   "why": "Volcanoes erupt lava and smoke."
+  },
+  {
+   "before": "En otoño, las ",
+   "after": " de los árboles cambian de color.",
+   "options": [
+    "hojas",
+    "flores del mar",
+    "estrellas"
+   ],
+   "answer": 0,
+   "why": "Leaves change color in fall."
+  },
+  {
+   "before": "Cuba y Puerto Rico son ",
+   "after": ".",
+   "options": [
+    "islas",
+    "desiertos",
+    "valles"
+   ],
+   "answer": 0,
+   "why": "Both are islands."
+  },
+  {
+   "before": "Caminamos por un ",
+   "after": " en el bosque.",
+   "options": [
+    "sendero",
+    "cielo",
+    "arcoíris"
+   ],
+   "answer": 0,
+   "why": "A trail: sendero."
+  },
+  {
+   "before": "En el ",
+   "after": " casi nunca llueve.",
+   "options": [
+    "desierto",
+    "río",
+    "lago"
+   ],
+   "answer": 0,
+   "why": "Deserts get very little rain."
+  }
+ ],
+ "demand": {
+  "query": "spanish nature vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 4 searches to people in the United States who typed «spanish nature vocabulary». The reading below puts the words in a real place, so you see them used together and not only in a list.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

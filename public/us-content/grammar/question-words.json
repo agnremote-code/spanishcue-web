@@ -1,0 +1,176 @@
+{
+ "theme": "forms",
+ "level": "A1",
+ "name": "question words",
+ "title": "Spanish Question Words Practice: Qué, Cuál, Dónde, Cuándo Quiz",
+ "description": "Practice Spanish question words: qué, cuál, quién, dónde, adónde, cuándo, cuánto, cómo and por qué, with accents, a rule table and 10 sentences checked as you tap.",
+ "h1": "Spanish question words practice",
+ "answer": "Spanish question words always carry a written accent: qué, quién, cuál, dónde, cuándo, cuánto, cómo, por qué. Quién and cuál have plurals (quiénes, cuáles), and cuánto agrees with the noun (cuántas personas). Use qué for definitions and before nouns, cuál for choosing from a set, and adónde with movement.",
+ "demand": {
+  "query": "spanish question words practice",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "rulesCaption": "Question words and what they ask",
+ "rules": [
+  {
+   "use": "What (definition, before a noun)",
+   "example": "¿Qué es esto? ¿Qué libro lees?",
+   "meaning": "qué"
+  },
+  {
+   "use": "Which, what (choice from a set)",
+   "example": "¿Cuál es tu número? ¿Cuáles prefieres?",
+   "meaning": "cuál / cuáles"
+  },
+  {
+   "use": "Who",
+   "example": "¿Quién es ella? ¿Quiénes vienen?",
+   "meaning": "quién / quiénes"
+  },
+  {
+   "use": "Where, where to",
+   "example": "¿Dónde vives? ¿Adónde vas?",
+   "meaning": "dónde / adónde"
+  },
+  {
+   "use": "When, how, why",
+   "example": "¿Cuándo llegas? ¿Cómo estás? ¿Por qué lloras?",
+   "meaning": "cuándo / cómo / por qué"
+  },
+  {
+   "use": "How much, how many",
+   "example": "¿Cuánto cuesta? ¿Cuántas hermanas tienes?",
+   "meaning": "cuánto / cuánta / cuántos / cuántas"
+  }
+ ],
+ "quiz": [
+  {
+   "before": "¿",
+   "after": " es tu cumpleaños? —El 3 de mayo.",
+   "options": [
+    "Cuándo",
+    "Dónde"
+   ],
+   "answer": 0,
+   "why": "Asking for a date: cuándo."
+  },
+  {
+   "before": "¿",
+   "after": " es tu correo electrónico?",
+   "options": [
+    "Cuál",
+    "Qué"
+   ],
+   "answer": 0,
+   "why": "Asking for one item of information (a name, a number, an address) with ser: cuál."
+  },
+  {
+   "before": "¿",
+   "after": " hermanos tienes?",
+   "options": [
+    "Cuántos",
+    "Cuántas"
+   ],
+   "answer": 0,
+   "why": "Hermanos is masculine plural: cuántos."
+  },
+  {
+   "before": "¿",
+   "after": " vas después de clase? —Al gimnasio.",
+   "options": [
+    "Adónde",
+    "Dónde"
+   ],
+   "answer": 0,
+   "why": "Movement toward a place: adónde."
+  },
+  {
+   "before": "¿",
+   "after": " son esas personas?",
+   "options": [
+    "Quiénes",
+    "Quién"
+   ],
+   "answer": 0,
+   "why": "Several people: quiénes."
+  },
+  {
+   "before": "¿",
+   "after": " no viniste a la fiesta? —Porque estaba enfermo.",
+   "options": [
+    "Por qué",
+    "Porque"
+   ],
+   "answer": 0,
+   "why": "Why in a question: por qué, two words with accent."
+  },
+  {
+   "before": "¿",
+   "after": " se dice «backpack» en español?",
+   "options": [
+    "Cómo",
+    "Qué"
+   ],
+   "answer": 0,
+   "why": "How: cómo."
+  },
+  {
+   "before": "¿",
+   "after": " es una quinceañera? —Una fiesta de quince años.",
+   "options": [
+    "Qué",
+    "Cuál"
+   ],
+   "answer": 0,
+   "why": "Asking for a definition: qué es."
+  },
+  {
+   "before": "¿",
+   "after": " cuesta este libro?",
+   "options": [
+    "Cuánto",
+    "Cuántos"
+   ],
+   "answer": 0,
+   "why": "Price: cuánto cuesta."
+  },
+  {
+   "before": "¿De ",
+   "after": " eres? —De Puerto Rico.",
+   "options": [
+    "dónde",
+    "donde"
+   ],
+   "answer": 0,
+   "why": "Origin: de dónde, with accent."
+  }
+ ],
+ "mistakes": [
+  "Leaving out the accent: «¿Donde vives?» should be «¿Dónde vives?»; question words always carry it, even inside a sentence (no sé dónde está).",
+  "Using qué with ser for information: «¿Qué es tu nombre?» should be «¿Cuál es tu nombre?»",
+  "Writing porque in a question: «¿Porque lloras?» should be «¿Por qué lloras?»; porque (one word) answers.",
+  "Forgetting agreement: «¿Cuántos personas?» should be «¿Cuántas personas?»",
+  "Skipping the opening question mark: Spanish questions start with ¿."
+ ],
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 9 searches to people in the United States who typed «spanish question words practice». 4 ask for a quiz or exercises (spanish question words quiz; spanish question words exercises; spanish question words practice quiz; spanish interrogative words quiz). Several suggestions ask for practice and quizzes on the same short list of words, so each question here practises a contrast (qué or cuál, dónde or adónde).",
+  "source": "Google autocomplete in English (United States), captured by SpanishCue on 27 November 2026"
+ },
+ "heritage": "Heritage speakers usually ask questions perfectly in speech; the writing points are the accents (qué, cómo, cuándo also in indirect questions: no sé cuándo llega) and the four forms of por qué, porque, porqué and por que.",
+ "teacher": "Pairs interview each other with one card per question word and must use all of them. Then each student introduces their partner to the class from the answers.",
+ "faq": [
+  {
+   "question": "What is the difference between qué and cuál?",
+   "answer": "Before a noun, use qué: ¿qué libro? Before ser, qué asks for a definition (¿qué es un mole?) and cuál asks for a specific item, like a name, a number or a date: ¿cuál es tu teléfono?"
+  },
+  {
+   "question": "Do question words always have an accent?",
+   "answer": "Yes, when they ask, directly or indirectly: ¿Dónde vives? No sé dónde vive. Without the accent they are relative words: la casa donde vivo, cuando llego."
+  },
+  {
+   "question": "What is the difference between dónde and adónde?",
+   "answer": "Dónde asks where something is (¿dónde estás?); adónde asks where to, with movement verbs like ir (¿adónde vas?). In speech, many people use dónde for both, which is widely accepted."
+  }
+ ]
+}

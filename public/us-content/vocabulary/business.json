@@ -1,0 +1,373 @@
+{
+ "level": "A2",
+ "theme": "business",
+ "themeLabel": "Business",
+ "title": "Spanish Business Vocabulary: Office, Meetings and Practice",
+ "description": "Spanish business vocabulary: the office, meetings, sales and email phrases, with a quiz that corrects itself and an A2 reading about a small business in Miami.",
+ "h1": "Spanish business vocabulary",
+ "titleEs": "De la cocina a la empresa",
+ "focus": "the preterite and imperfect in a company story",
+ "intro": "Learn the Spanish words for the office, meetings, money and business email, practice them with instant feedback, then read how a family bakery in Miami grows into a small company.",
+ "paragraphs": [
+  "Hace diez años, Carmen y su hija Natalia vendían pastelitos de guayaba desde la cocina de su casa en Hialeah, cerca de Miami. Los vecinos los compraban los domingos y siempre pedían más. Natalia, que estudiaba administración de empresas, vio una oportunidad.",
+  "Primero hicieron un presupuesto sencillo y pidieron un pequeño préstamo a una cooperativa. Con ese dinero alquilaron un local y compraron un horno industrial. El primer año casi no hubo ganancias: todo lo que vendían servía para pagar el alquiler y a los proveedores.",
+  "Todo cambió cuando una cadena de cafeterías probó sus pastelitos y les ofreció un contrato. Natalia preparó la propuesta y negoció los precios en las reuniones, mientras Carmen cuidaba la calidad. Tuvieron que contratar a ocho empleados y trabajar con plazos muy estrictos.",
+  "Hoy la empresa tiene dos sucursales y vende a veinte cafeterías del sur de Florida. Carmen todavía llega a las cinco de la mañana para probar la masa. Natalia dice que el secreto no es solo la receta: es tratar a los clientes y a los empleados como a la familia. Por eso, cada diciembre, cierran un día para celebrar juntos el éxito del año."
+ ],
+ "glossary": [
+  [
+   "los pastelitos de guayaba",
+   "guava pastries"
+  ],
+  [
+   "administración de empresas",
+   "business administration"
+  ],
+  [
+   "alquilar",
+   "to rent"
+  ],
+  [
+   "el local",
+   "commercial space"
+  ],
+  [
+   "la cadena",
+   "chain"
+  ],
+  [
+   "contratar",
+   "to hire"
+  ],
+  [
+   "la masa",
+   "dough"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Hace diez años, Carmen y Natalia vendían pastelitos ",
+   "after": ".",
+   "options": [
+    "desde su casa",
+    "en una cafetería",
+    "en un supermercado"
+   ],
+   "answer": 0,
+   "why": "They sold from their home kitchen."
+  },
+  {
+   "before": "Natalia estudiaba ",
+   "after": ".",
+   "options": [
+    "administración de empresas",
+    "cocina",
+    "medicina"
+   ],
+   "answer": 0,
+   "why": "She studied business administration."
+  },
+  {
+   "before": "Pidieron un préstamo a ",
+   "after": ".",
+   "options": [
+    "una cooperativa",
+    "un banco grande",
+    "la familia"
+   ],
+   "answer": 0,
+   "why": "A small loan from a cooperative."
+  },
+  {
+   "before": "El primer año casi no hubo ganancias porque ",
+   "after": ".",
+   "options": [
+    "el dinero servía para pagar el alquiler y a los proveedores",
+    "nadie compraba",
+    "el horno se rompió"
+   ],
+   "answer": 0,
+   "why": "Income went to rent and suppliers."
+  },
+  {
+   "before": "Todo cambió cuando ",
+   "after": ".",
+   "options": [
+    "una cadena les ofreció un contrato",
+    "ganaron un premio",
+    "abrieron en Nueva York"
+   ],
+   "answer": 0,
+   "why": "A café chain offered a contract."
+  },
+  {
+   "before": "Según Natalia, el secreto es ",
+   "after": ".",
+   "options": [
+    "tratar a clientes y empleados como a la familia",
+    "bajar los precios",
+    "trabajar menos"
+   ],
+   "answer": 0,
+   "why": "Treat clients and employees like family."
+  }
+ ],
+ "grammar": {
+  "title": "Formal you (usted) in business",
+  "intro": "Business Spanish uses usted: le escribo, ¿podría usted…?, quedo a su disposición.",
+  "items": [
+   {
+    "before": "Estimado señor Ruiz: ",
+    "after": " escribo para confirmar la reunión.",
+    "options": [
+     "Le",
+     "Te",
+     "Lo"
+    ],
+    "answer": 0,
+    "why": "Formal indirect object: le escribo."
+   },
+   {
+    "before": "¿",
+    "after": " enviarme la factura hoy?",
+    "options": [
+     "Podría",
+     "Podrías",
+     "Puedes tú"
+    ],
+    "answer": 0,
+    "why": "Polite usted form: podría."
+   },
+   {
+    "before": "Quedo a ",
+    "after": " disposición.",
+    "options": [
+     "su",
+     "tu",
+     "sus"
+    ],
+    "answer": 0,
+    "why": "Formal possessive: su."
+   }
+  ]
+ },
+ "speaking": [
+  "Describe un negocio de tu barrio: qué vende y quiénes trabajan allí.",
+  "Imagina que abres un negocio. ¿Qué venderías y por qué?",
+  "Lee en voz alta un correo formal para pedir una reunión."
+ ],
+ "heritage": "Heritage speakers often handle family businesses in Spanish but write emails in English. For formal Spanish email, use «usted», «Estimado/a» and «Saludos cordiales», and avoid calques such as «aplicar para un préstamo» (solicitar un préstamo) or «agendar» in very formal contexts (programar una reunión).",
+ "teacher": "Ask pairs to write a short formal email in Spanish (asking for a quote or confirming a meeting) using three phrases from the list, then swap and answer.",
+ "vocabulary": [
+  {
+   "title": "The company",
+   "words": [
+    [
+     "la empresa",
+     "company"
+    ],
+    [
+     "el negocio",
+     "business"
+    ],
+    [
+     "el gerente / la gerente",
+     "manager"
+    ],
+    [
+     "el empleado / la empleada",
+     "employee"
+    ],
+    [
+     "el cliente",
+     "client, customer"
+    ],
+    [
+     "el proveedor",
+     "supplier"
+    ],
+    [
+     "la sucursal",
+     "branch"
+    ],
+    [
+     "el socio / la socia",
+     "business partner"
+    ]
+   ]
+  },
+  {
+   "title": "Money and sales",
+   "words": [
+    [
+     "las ventas",
+     "sales"
+    ],
+    [
+     "las ganancias",
+     "profits"
+    ],
+    [
+     "las pérdidas",
+     "losses"
+    ],
+    [
+     "el presupuesto",
+     "budget"
+    ],
+    [
+     "la factura",
+     "invoice"
+    ],
+    [
+     "el contrato",
+     "contract"
+    ],
+    [
+     "invertir",
+     "to invest"
+    ],
+    [
+     "el préstamo",
+     "loan"
+    ]
+   ]
+  },
+  {
+   "title": "Meetings and email",
+   "words": [
+    [
+     "la reunión",
+     "meeting"
+    ],
+    [
+     "la agenda",
+     "agenda, schedule"
+    ],
+    [
+     "el plazo",
+     "deadline"
+    ],
+    [
+     "adjuntar",
+     "to attach"
+    ],
+    [
+     "Estimado / Estimada…",
+     "Dear… (formal)"
+    ],
+    [
+     "Quedo a su disposición",
+     "I remain at your disposal"
+    ],
+    [
+     "Le escribo para…",
+     "I am writing to…"
+    ],
+    [
+     "Saludos cordiales",
+     "Kind regards"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Mi tía tiene una ",
+   "after": " de diseño con doce empleados.",
+   "options": [
+    "empresa",
+    "factura",
+    "reunión"
+   ],
+   "answer": 0,
+   "why": "A company: empresa."
+  },
+  {
+   "before": "El ",
+   "after": " nos vende la harina y el azúcar.",
+   "options": [
+    "proveedor",
+    "cliente",
+    "gerente"
+   ],
+   "answer": 0,
+   "why": "A supplier sells you materials."
+  },
+  {
+   "before": "Este año las ",
+   "after": " fueron mayores que los gastos.",
+   "options": [
+    "ganancias",
+    "pérdidas",
+    "sucursales"
+   ],
+   "answer": 0,
+   "why": "More income than costs: profits, ganancias."
+  },
+  {
+   "before": "Le envío la ",
+   "after": " por los servicios de octubre.",
+   "options": [
+    "factura",
+    "agenda",
+    "socia"
+   ],
+   "answer": 0,
+   "why": "You send an invoice for services."
+  },
+  {
+   "before": "El ",
+   "after": " para entregar el proyecto es el viernes.",
+   "options": [
+    "plazo",
+    "préstamo",
+    "contrato"
+   ],
+   "answer": 0,
+   "why": "Deadline: plazo."
+  },
+  {
+   "before": "Le ",
+   "after": " el documento en este correo.",
+   "options": [
+    "adjunto",
+    "invierto",
+    "pierdo"
+   ],
+   "answer": 0,
+   "why": "Adjuntar: to attach a file."
+  },
+  {
+   "before": "Para abrir otra tienda, pidieron un ",
+   "after": " al banco.",
+   "options": [
+    "préstamo",
+    "plazo",
+    "cliente"
+   ],
+   "answer": 0,
+   "why": "A bank loan: préstamo."
+  },
+  {
+   "before": "Un correo formal empieza con «",
+   "after": " señora López».",
+   "options": [
+    "Estimada",
+    "Querida amiga",
+    "Hola qué tal"
+   ],
+   "answer": 0,
+   "why": "Formal greeting: Estimada."
+  }
+ ],
+ "demand": {
+  "query": "spanish business vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 5 searches to people in the United States who typed «spanish business vocabulary». They ask for business terms and a dictionary, so the list adds full phrases you can use in an email or a meeting.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

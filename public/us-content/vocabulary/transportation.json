@@ -1,0 +1,373 @@
+{
+ "level": "A1",
+ "theme": "transportation",
+ "themeLabel": "Transportation",
+ "title": "Spanish Transportation Vocabulary: Ways to Get Around",
+ "description": "Spanish transportation vocabulary: el autobús, el metro, el tren, ir a pie and la parada, with a quiz and an A1 reading about getting around Mexico City.",
+ "h1": "Spanish transportation vocabulary",
+ "titleEs": "Una semana en la Ciudad de México",
+ "focus": "ir en + vehicle and the present tense",
+ "intro": "Learn the Spanish words for transportation: vehicles, places like the station and the stop, and the verbs for getting on, off and around. Practice with instant feedback, then read about a family from Texas that moves around Mexico City by metro, bus and bike.",
+ "paragraphs": [
+  "La familia Treviño vive en El Paso, Texas, y en casa van a todas partes en carro. Este verano, pasan una semana en la Ciudad de México y no tienen carro. Al principio, el papá está preocupado, pero la ciudad tiene muchas opciones.",
+  "Por la mañana, toman el metro. Es barato y rápido, pero a las ocho hay mucha gente. Cada estación tiene un dibujo, porque antes muchas personas no sabían leer. A Emilio, de once años, le gusta la estación con el dibujo de un chapulín.",
+  "Para ir al museo, toman un autobús rojo. La parada está enfrente del hotel. Por la tarde, alquilan bicicletas y van por una calle grande sin carros los domingos. Por la noche, toman un taxi porque están cansados.",
+  "El último día, Emilio hace una lista: tres veces en metro, dos en autobús, una en bicicleta, una en taxi y muchas veces a pie. «En El Paso solo vamos en carro», dice. «Aquí parece una aventura.»"
+ ],
+ "glossary": [
+  [
+   "a todas partes",
+   "everywhere"
+  ],
+  [
+   "preocupado / preocupada",
+   "worried"
+  ],
+  [
+   "barato / barata",
+   "cheap"
+  ],
+  [
+   "el dibujo",
+   "drawing, symbol"
+  ],
+  [
+   "el chapulín",
+   "grasshopper (Mexico)"
+  ],
+  [
+   "enfrente de",
+   "across from"
+  ],
+  [
+   "alquilar",
+   "to rent"
+  ],
+  [
+   "la aventura",
+   "adventure"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "En El Paso, la familia Treviño va a todas partes ",
+   "after": ".",
+   "options": [
+    "en carro",
+    "en metro",
+    "a pie"
+   ],
+   "answer": 0,
+   "why": "By car."
+  },
+  {
+   "before": "Por la mañana, el metro tiene ",
+   "after": ".",
+   "options": [
+    "mucha gente",
+    "pocos pasajeros",
+    "problemas"
+   ],
+   "answer": 0,
+   "why": "It is crowded at eight."
+  },
+  {
+   "before": "Cada estación de metro tiene ",
+   "after": ".",
+   "options": [
+    "un dibujo",
+    "una tienda",
+    "un taxi"
+   ],
+   "answer": 0,
+   "why": "Each station has a symbol."
+  },
+  {
+   "before": "La parada del autobús está ",
+   "after": ".",
+   "options": [
+    "enfrente del hotel",
+    "en el museo",
+    "en la estación"
+   ],
+   "answer": 0,
+   "why": "Across from the hotel."
+  },
+  {
+   "before": "Por la noche toman un taxi porque ",
+   "after": ".",
+   "options": [
+    "están cansados",
+    "llueve",
+    "no hay metro"
+   ],
+   "answer": 0,
+   "why": "They are tired."
+  },
+  {
+   "before": "Para Emilio, viajar en la Ciudad de México ",
+   "after": ".",
+   "options": [
+    "parece una aventura",
+    "es aburrido",
+    "es caro"
+   ],
+   "answer": 0,
+   "why": "It feels like an adventure."
+  }
+ ],
+ "grammar": {
+  "title": "Ir en + vehicle, ir a pie",
+  "intro": "Use en with vehicles (voy en tren, vamos en bicicleta) but a with your feet or an animal: voy a pie, van a caballo.",
+  "items": [
+   {
+    "before": "Mis abuelos van a Puerto Rico ",
+    "after": " avión.",
+    "options": [
+     "en",
+     "a",
+     "por"
+    ],
+    "answer": 0,
+    "why": "Vehicle: en avión."
+   },
+   {
+    "before": "Hoy no tengo bicicleta, así que voy ",
+    "after": " pie.",
+    "options": [
+     "a",
+     "en",
+     "de"
+    ],
+    "answer": 0,
+    "why": "On foot: a pie."
+   },
+   {
+    "before": "¿Vas a la escuela ",
+    "after": " autobús?",
+    "options": [
+     "en",
+     "a",
+     "con el"
+    ],
+    "answer": 0,
+    "why": "Vehicle: en autobús."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Cómo vas a la escuela o al trabajo?",
+  "¿Qué medio de transporte prefieres para un viaje largo? ¿Por qué?",
+  "Compara el transporte de tu ciudad con el de otra ciudad."
+ ],
+ "heritage": "Words for vehicles change by country: carro in Mexico and much of Latin America, coche in Spain, auto in Argentina and Chile; camión means bus in Mexico but truck elsewhere. Many heritage speakers say «parquear», and the standard verbs are estacionar or aparcar.",
+ "teacher": "Give pairs a city map and have them explain a route in Spanish with three different vehicles, saying where to get on, where to get off and how long it takes.",
+ "vocabulary": [
+  {
+   "title": "Vehicles",
+   "words": [
+    [
+     "el carro / el coche",
+     "car"
+    ],
+    [
+     "el autobús",
+     "bus"
+    ],
+    [
+     "el metro",
+     "subway"
+    ],
+    [
+     "el tren",
+     "train"
+    ],
+    [
+     "el avión",
+     "plane"
+    ],
+    [
+     "el barco",
+     "boat, ship"
+    ],
+    [
+     "la bicicleta",
+     "bicycle"
+    ],
+    [
+     "la moto",
+     "motorcycle"
+    ],
+    [
+     "el taxi",
+     "taxi"
+    ]
+   ]
+  },
+  {
+   "title": "Places",
+   "words": [
+    [
+     "la parada",
+     "stop"
+    ],
+    [
+     "la estación",
+     "station"
+    ],
+    [
+     "el aeropuerto",
+     "airport"
+    ],
+    [
+     "el puerto",
+     "port"
+    ],
+    [
+     "la calle",
+     "street"
+    ],
+    [
+     "el semáforo",
+     "traffic light"
+    ],
+    [
+     "el boleto",
+     "ticket"
+    ]
+   ]
+  },
+  {
+   "title": "Getting around",
+   "words": [
+    [
+     "ir en…",
+     "to go by…"
+    ],
+    [
+     "ir a pie",
+     "to walk, go on foot"
+    ],
+    [
+     "subir a",
+     "to get on"
+    ],
+    [
+     "bajar de",
+     "to get off"
+    ],
+    [
+     "tomar el autobús",
+     "to take the bus"
+    ],
+    [
+     "manejar",
+     "to drive"
+    ],
+    [
+     "tardar",
+     "to take (time)"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Para cruzar el océano rápido, viajamos en ",
+   "after": ".",
+   "options": [
+    "avión",
+    "bicicleta",
+    "metro"
+   ],
+   "answer": 0,
+   "why": "A plane crosses oceans fast."
+  },
+  {
+   "before": "Me bajo del autobús en la ",
+   "after": " de la biblioteca.",
+   "options": [
+    "parada",
+    "frontera",
+    "puerto"
+   ],
+   "answer": 0,
+   "why": "Bus stop: la parada."
+  },
+  {
+   "before": "Mi escuela está muy cerca, así que voy ",
+   "after": ".",
+   "options": [
+    "a pie",
+    "en avión",
+    "en barco"
+   ],
+   "answer": 0,
+   "why": "Close by: a pie."
+  },
+  {
+   "before": "El ",
+   "after": " va debajo de la ciudad.",
+   "options": [
+    "metro",
+    "barco",
+    "avión"
+   ],
+   "answer": 0,
+   "why": "The subway runs underground."
+  },
+  {
+   "before": "Cuando el ",
+   "after": " está en rojo, los carros paran.",
+   "options": [
+    "semáforo",
+    "boleto",
+    "puerto"
+   ],
+   "answer": 0,
+   "why": "Red light means stop."
+  },
+  {
+   "before": "Mi mamá ",
+   "after": " el carro para ir al trabajo.",
+   "options": [
+    "maneja",
+    "sube",
+    "baja"
+   ],
+   "answer": 0,
+   "why": "To drive: manejar."
+  },
+  {
+   "before": "Para subir al tren, necesito un ",
+   "after": ".",
+   "options": [
+    "boleto",
+    "semáforo",
+    "puerto"
+   ],
+   "answer": 0,
+   "why": "A ticket for the train."
+  },
+  {
+   "before": "El viaje en autobús ",
+   "after": " cuarenta minutos.",
+   "options": [
+    "tarda",
+    "baja",
+    "maneja"
+   ],
+   "answer": 0,
+   "why": "It takes forty minutes."
+  }
+ ],
+ "demand": {
+  "query": "spanish transportation vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 2 searches to people in the United States who typed «spanish transportation vocabulary». Both suggestions ask for transportation words, so the list adds the prepositions Spanish uses with them: en autobús, but a pie and a caballo.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

@@ -1,0 +1,377 @@
+{
+ "level": "A2",
+ "theme": "science",
+ "themeLabel": "Science",
+ "title": "Spanish Science Vocabulary: Lab, Body and Planet Words",
+ "description": "Spanish science vocabulary: the lab, the scientific method, the body and the planet, with a quiz that corrects itself and an A2 reading about a science fair.",
+ "h1": "Spanish science vocabulary",
+ "titleEs": "La feria de ciencias",
+ "focus": "the preterite for an experiment, sequence words",
+ "intro": "Learn the Spanish words for the lab, the scientific method and basic biology, chemistry and earth science, practice them with instant feedback, then follow two students at a science fair in Miami.",
+ "paragraphs": [
+  "En una escuela secundaria de Miami, cada primavera hay una feria de ciencias. Este año, las dos amigas Isabel y Renata decidieron estudiar una pregunta sencilla: ¿crecen mejor las plantas con música?",
+  "Primero escribieron su hipótesis: las plantas con música iban a crecer más. Después compraron seis plantas pequeñas iguales. Pusieron tres en un cuarto con música clásica y tres en otro cuarto en silencio. Las dos habitaciones tenían la misma luz y la misma temperatura, y regaron todas las plantas con la misma cantidad de agua.",
+  "Durante cuatro semanas midieron las plantas cada lunes y anotaron los datos en una tabla. También tomaron fotos. Al principio no vieron diferencias, pero en la tercera semana las plantas con música estaban un poco más altas.",
+  "En la conclusión, las chicas explicaron con honestidad que la diferencia era pequeña y que seis plantas no son suficientes para estar seguras. Propusieron repetir el experimento con más plantas. Los jueces valoraron mucho esa respuesta y les dieron el segundo premio. Según ellos, un buen científico no solo busca el resultado que espera: también acepta lo que dicen los datos, aunque sean pequeños o confusos."
+ ],
+ "glossary": [
+  [
+   "la feria",
+   "fair"
+  ],
+  [
+   "crecer",
+   "to grow"
+  ],
+  [
+   "iguales",
+   "identical"
+  ],
+  [
+   "regar",
+   "to water"
+  ],
+  [
+   "la cantidad",
+   "amount"
+  ],
+  [
+   "anotar",
+   "to write down"
+  ],
+  [
+   "los jueces",
+   "judges"
+  ],
+  [
+   "valorar",
+   "to value, appreciate"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "La pregunta del experimento era si las plantas crecen mejor ",
+   "after": ".",
+   "options": [
+    "con música",
+    "con más agua",
+    "con más luz"
+   ],
+   "answer": 0,
+   "why": "Do plants grow better with music?"
+  },
+  {
+   "before": "Pusieron tres plantas con música y tres ",
+   "after": ".",
+   "options": [
+    "en silencio",
+    "en la oscuridad",
+    "sin agua"
+   ],
+   "answer": 0,
+   "why": "Three in a silent room."
+  },
+  {
+   "before": "Para que el experimento fuera justo, las habitaciones tenían ",
+   "after": ".",
+   "options": [
+    "la misma luz y temperatura",
+    "diferente música",
+    "más plantas"
+   ],
+   "answer": 0,
+   "why": "Same light and temperature."
+  },
+  {
+   "before": "Midieron las plantas ",
+   "after": ".",
+   "options": [
+    "cada lunes durante cuatro semanas",
+    "todos los días",
+    "una sola vez"
+   ],
+   "answer": 0,
+   "why": "Every Monday for four weeks."
+  },
+  {
+   "before": "En la conclusión dijeron que ",
+   "after": ".",
+   "options": [
+    "la diferencia era pequeña",
+    "la música no sirve",
+    "las plantas murieron"
+   ],
+   "answer": 0,
+   "why": "The difference was small."
+  },
+  {
+   "before": "Ganaron el segundo premio porque ",
+   "after": ".",
+   "options": [
+    "explicaron sus resultados con honestidad",
+    "tenían las plantas más altas",
+    "usaron un microscopio"
+   ],
+   "answer": 0,
+   "why": "The judges valued their honest conclusion."
+  }
+ ],
+ "grammar": {
+  "title": "Cognates in -ción and -ía",
+  "intro": "Many science words are cognates: -tion becomes -ción (conclusión), -y becomes -ía (biología).",
+  "items": [
+   {
+    "before": "Observation en español es ",
+    "after": ".",
+    "options": [
+     "observación",
+     "observatión",
+     "observacía"
+    ],
+    "answer": 0,
+    "why": "-tion becomes -ción."
+   },
+   {
+    "before": "Biology en español es ",
+    "after": ".",
+    "options": [
+     "biología",
+     "biologí",
+     "biologia de"
+    ],
+    "answer": 0,
+    "why": "-y becomes -ía, with an accent."
+   },
+   {
+    "before": "Las palabras en -ción son ",
+    "after": ".",
+    "options": [
+     "femeninas",
+     "masculinas",
+     "plurales"
+    ],
+    "answer": 0,
+    "why": "Nouns in -ción are feminine: la conclusión."
+   }
+  ]
+ },
+ "speaking": [
+  "Describe un experimento que hiciste en la escuela.",
+  "¿Qué ciencia te interesa más: biología, química o física? ¿Por qué?",
+  "Diseña un experimento sencillo y explica tu hipótesis."
+ ],
+ "heritage": "Science Spanish is full of cognates, which helps, but spelling differs: «fotosíntesis» (no ph), «química» (qu), «hipótesis», «células». The accent marks are where most points are lost in writing. «Los datos» is plural, like data in English.",
+ "teacher": "Have students present a simple experiment in Spanish using hipótesis, datos and conclusión. Cognates make it accessible even at A2.",
+ "vocabulary": [
+  {
+   "title": "The lab and the method",
+   "words": [
+    [
+     "el laboratorio",
+     "laboratory"
+    ],
+    [
+     "el experimento",
+     "experiment"
+    ],
+    [
+     "la hipótesis",
+     "hypothesis"
+    ],
+    [
+     "los datos",
+     "data"
+    ],
+    [
+     "la conclusión",
+     "conclusion"
+    ],
+    [
+     "el microscopio",
+     "microscope"
+    ],
+    [
+     "medir",
+     "to measure"
+    ],
+    [
+     "observar",
+     "to observe"
+    ]
+   ]
+  },
+  {
+   "title": "Life and matter",
+   "words": [
+    [
+     "la célula",
+     "cell"
+    ],
+    [
+     "el ser vivo",
+     "living thing"
+    ],
+    [
+     "la energía",
+     "energy"
+    ],
+    [
+     "el átomo",
+     "atom"
+    ],
+    [
+     "la mezcla",
+     "mixture"
+    ],
+    [
+     "el líquido",
+     "liquid"
+    ],
+    [
+     "el sólido",
+     "solid"
+    ],
+    [
+     "el gas",
+     "gas"
+    ]
+   ]
+  },
+  {
+   "title": "The planet",
+   "words": [
+    [
+     "la Tierra",
+     "Earth"
+    ],
+    [
+     "el clima",
+     "climate"
+    ],
+    [
+     "la temperatura",
+     "temperature"
+    ],
+    [
+     "la gravedad",
+     "gravity"
+    ],
+    [
+     "el sistema solar",
+     "solar system"
+    ],
+    [
+     "la planta",
+     "plant"
+    ],
+    [
+     "la fotosíntesis",
+     "photosynthesis"
+    ],
+    [
+     "el ecosistema",
+     "ecosystem"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Antes del experimento escribimos una ",
+   "after": ".",
+   "options": [
+    "hipótesis",
+    "conclusión",
+    "gravedad"
+   ],
+   "answer": 0,
+   "why": "The prediction before testing: hypothesis."
+  },
+  {
+   "before": "Para ver una célula necesitamos un ",
+   "after": ".",
+   "options": [
+    "microscopio",
+    "termómetro de agua",
+    "átomo"
+   ],
+   "answer": 0,
+   "why": "Cells are seen with a microscope."
+  },
+  {
+   "before": "El hielo es agua en estado ",
+   "after": ".",
+   "options": [
+    "sólido",
+    "líquido",
+    "gaseoso"
+   ],
+   "answer": 0,
+   "why": "Ice is solid water."
+  },
+  {
+   "before": "Las plantas producen su alimento con la ",
+   "after": ".",
+   "options": [
+    "fotosíntesis",
+    "gravedad",
+    "hipótesis"
+   ],
+   "answer": 0,
+   "why": "Photosynthesis makes plant food from light."
+  },
+  {
+   "before": "La ",
+   "after": " hace que las cosas caigan al suelo.",
+   "options": [
+    "gravedad",
+    "energía solar",
+    "mezcla"
+   ],
+   "answer": 0,
+   "why": "Gravity pulls things down."
+  },
+  {
+   "before": "Después del experimento analizamos los ",
+   "after": ".",
+   "options": [
+    "datos",
+    "planetas",
+    "gases"
+   ],
+   "answer": 0,
+   "why": "We analyze the data."
+  },
+  {
+   "before": "La Tierra es el tercer planeta del ",
+   "after": ".",
+   "options": [
+    "sistema solar",
+    "ecosistema",
+    "laboratorio"
+   ],
+   "answer": 0,
+   "why": "Earth is the third planet from the Sun."
+  },
+  {
+   "before": "Un bosque con sus animales y plantas es un ",
+   "after": ".",
+   "options": [
+    "ecosistema",
+    "átomo",
+    "líquido"
+   ],
+   "answer": 0,
+   "why": "Living things and their environment: ecosystem."
+  }
+ ],
+ "demand": {
+  "query": "spanish science vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 5 searches to people in the United States who typed «spanish science vocabulary». One asks for a dictionary, so each term has its English equivalent and many are cognates you can learn in pairs.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

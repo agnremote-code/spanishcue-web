@@ -1,0 +1,361 @@
+{
+ "level": "A2",
+ "theme": "idioms",
+ "themeLabel": "Idioms",
+ "title": "Common Spanish Idioms: Meanings, Examples and Practice",
+ "description": "Common Spanish idioms with meanings and examples: costar un ojo de la cara, ser pan comido, meter la pata, with a self-correcting quiz and an A2 reading.",
+ "h1": "Common Spanish idioms",
+ "titleEs": "Un día lleno de expresiones",
+ "focus": "the preterite and idioms in context",
+ "intro": "Learn common Spanish idioms, what they really mean and when people use them, from costar un ojo de la cara to ponerse las pilas. Practice with instant feedback, then read a story where a student uses six of them in one day.",
+ "paragraphs": [
+  "El lunes, Marcos empezó su primer día como voluntario en una biblioteca de Chicago. Esa mañana llovía a cántaros, y llegó tarde y mojado. La bibliotecaria, la señora Peña, le dijo con una sonrisa: «Más vale tarde que nunca».",
+  "Su primera tarea parecía pan comido: ordenar libros en los estantes. Pero Marcos estaba en las nubes y puso varios libros de cocina en la sección de historia. Cuando se dio cuenta, pensó: «¡Metí la pata!». Otro voluntario, Julián, le echó una mano y en un abrir y cerrar de ojos los libros estaban en su lugar.",
+  "A mediodía, Julián le contó que la señora Peña no tenía pelos en la lengua, pero que era muy justa. Por la tarde, ella le pidió a Marcos que leyera un cuento a un grupo de niños. Marcos estaba nervioso, pero cuando empezó a leer, se sintió como pez en el agua: hizo voces para cada personaje y los niños se rieron mucho.",
+  "Al final del día, la señora Peña le dijo: «Hoy diste en el clavo con los niños. ¿Puedes venir los jueves también?». Marcos aceptó. En el autobús, pensó que había sido un día muy largo, pero que había matado dos pájaros de un tiro: ayudó a la biblioteca y descubrió que le gusta enseñar."
+ ],
+ "glossary": [
+  [
+   "el voluntario",
+   "volunteer"
+  ],
+  [
+   "mojado",
+   "wet"
+  ],
+  [
+   "la bibliotecaria",
+   "librarian"
+  ],
+  [
+   "ordenar",
+   "to put in order"
+  ],
+  [
+   "los estantes",
+   "shelves"
+  ],
+  [
+   "darse cuenta",
+   "to realize"
+  ],
+  [
+   "justo / justa",
+   "fair"
+  ],
+  [
+   "el personaje",
+   "character"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Marcos llegó tarde porque ",
+   "after": ".",
+   "options": [
+    "llovía mucho",
+    "perdió el autobús",
+    "se durmió"
+   ],
+   "answer": 0,
+   "why": "It was pouring rain."
+  },
+  {
+   "before": "Su primera tarea era ",
+   "after": ".",
+   "options": [
+    "ordenar libros",
+    "leer cuentos",
+    "limpiar la biblioteca"
+   ],
+   "answer": 0,
+   "why": "Putting books on shelves."
+  },
+  {
+   "before": "Marcos puso libros de cocina en la sección de ",
+   "after": ".",
+   "options": [
+    "historia",
+    "niños",
+    "ciencia"
+   ],
+   "answer": 0,
+   "why": "In the history section."
+  },
+  {
+   "before": "Julián dice que la señora Peña ",
+   "after": ".",
+   "options": [
+    "no tiene pelos en la lengua",
+    "está siempre en las nubes",
+    "llega tarde"
+   ],
+   "answer": 0,
+   "why": "She speaks her mind."
+  },
+  {
+   "before": "Leyendo el cuento, Marcos se sintió ",
+   "after": ".",
+   "options": [
+    "como pez en el agua",
+    "muy aburrido",
+    "en las nubes"
+   ],
+   "answer": 0,
+   "why": "Right at home."
+  },
+  {
+   "before": "La señora Peña le pidió a Marcos que ",
+   "after": ".",
+   "options": [
+    "viniera también los jueves",
+    "no volviera",
+    "trabajara de noche"
+   ],
+   "answer": 0,
+   "why": "To come on Thursdays too."
+  }
+ ],
+ "grammar": {
+  "title": "Idioms change with the person",
+  "intro": "The verb in an idiom is conjugated as usual: yo meto la pata, ella metió la pata, nos tomaron el pelo.",
+  "items": [
+   {
+    "before": "Ayer yo ",
+    "after": " la pata con mi jefe.",
+    "options": [
+     "metí",
+     "metió",
+     "meto mañana"
+    ],
+    "answer": 0,
+    "why": "Preterite yo: metí."
+   },
+   {
+    "before": "¡No me ",
+    "after": " el pelo! ¿De verdad ganaste la lotería?",
+    "options": [
+     "tomes",
+     "toma",
+     "tomas"
+    ],
+    "answer": 0,
+    "why": "Negative command: no me tomes el pelo."
+   },
+   {
+    "before": "Mis hermanos siempre me ",
+    "after": " una mano con la mudanza.",
+    "options": [
+     "echan",
+     "echa",
+     "echamos"
+    ],
+    "answer": 0,
+    "why": "Ellos: echan una mano."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Qué expresión de la lista te gusta más? Úsala en una frase sobre tu vida.",
+  "Cuenta una vez que metiste la pata.",
+  "¿Conoces una expresión parecida en inglés para «ser uña y carne»?"
+ ],
+ "heritage": "Many idioms change by country: in Mexico, «echar la mano» is common for helping; in Spain people say «estar en las nubes» and in parts of Latin America «estar en la luna». If your family uses an expression not on this list, ask what it means and where it comes from.",
+ "teacher": "Give each pair an idiom card and ask them to act out a 30-second scene where the idiom fits. The class guesses which idiom it is.",
+ "vocabulary": [
+  {
+   "title": "Money and effort",
+   "words": [
+    [
+     "costar un ojo de la cara",
+     "to cost an arm and a leg"
+    ],
+    [
+     "ser pan comido",
+     "to be a piece of cake"
+    ],
+    [
+     "echar una mano",
+     "to lend a hand"
+    ],
+    [
+     "ponerse las pilas",
+     "to get your act together"
+    ],
+    [
+     "más vale tarde que nunca",
+     "better late than never"
+    ],
+    [
+     "dar en el clavo",
+     "to hit the nail on the head"
+    ]
+   ]
+  },
+  {
+   "title": "People and mistakes",
+   "words": [
+    [
+     "meter la pata",
+     "to put your foot in it"
+    ],
+    [
+     "tomar el pelo",
+     "to pull someone's leg"
+    ],
+    [
+     "estar en las nubes",
+     "to be daydreaming"
+    ],
+    [
+     "no tener pelos en la lengua",
+     "to speak your mind"
+    ],
+    [
+     "estar como pez en el agua",
+     "to feel right at home"
+    ],
+    [
+     "ser uña y carne",
+     "to be inseparable"
+    ]
+   ]
+  },
+  {
+   "title": "Weather and time",
+   "words": [
+    [
+     "llover a cántaros",
+     "to rain cats and dogs"
+    ],
+    [
+     "hacer un frío de perros",
+     "to be freezing cold"
+    ],
+    [
+     "en un abrir y cerrar de ojos",
+     "in the blink of an eye"
+    ],
+    [
+     "de vez en cuando",
+     "from time to time"
+    ],
+    [
+     "al pie de la letra",
+     "to the letter"
+    ],
+    [
+     "matar dos pájaros de un tiro",
+     "to kill two birds with one stone"
+    ],
+    [
+     "estar hasta las narices",
+     "to be fed up"
+    ],
+    [
+     "no pegar ojo",
+     "to not sleep a wink"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Este teléfono es carísimo: cuesta un ojo de la ",
+   "after": ".",
+   "options": [
+    "cara",
+    "mano",
+    "boca"
+   ],
+   "answer": 0,
+   "why": "Costar un ojo de la cara: very expensive."
+  },
+  {
+   "before": "El examen fue fácil; fue pan ",
+   "after": ".",
+   "options": [
+    "comido",
+    "dulce",
+    "caliente"
+   ],
+   "answer": 0,
+   "why": "Ser pan comido: very easy."
+  },
+  {
+   "before": "Llamé a la novia de mi amigo con el nombre de su exnovia. ¡Metí la ",
+   "after": "!",
+   "options": [
+    "pata",
+    "mano",
+    "pierna"
+   ],
+   "answer": 0,
+   "why": "Meter la pata: to make an embarrassing mistake."
+  },
+  {
+   "before": "No escuchas nada en clase; siempre estás en las ",
+   "after": ".",
+   "options": [
+    "nubes",
+    "pilas",
+    "manos"
+   ],
+   "answer": 0,
+   "why": "Estar en las nubes: daydreaming."
+  },
+  {
+   "before": "Hoy llueve a ",
+   "after": "; no salgas sin paraguas.",
+   "options": [
+    "cántaros",
+    "perros",
+    "nubes"
+   ],
+   "answer": 0,
+   "why": "Llover a cántaros: to pour."
+  },
+  {
+   "before": "Mis amigas Luz y Rocío siempre están juntas; son uña y ",
+   "after": ".",
+   "options": [
+    "carne",
+    "pelo",
+    "pan"
+   ],
+   "answer": 0,
+   "why": "Ser uña y carne: inseparable."
+  },
+  {
+   "before": "Tienes exámenes la próxima semana: tienes que ponerte las ",
+   "after": ".",
+   "options": [
+    "pilas",
+    "patas",
+    "nubes"
+   ],
+   "answer": 0,
+   "why": "Ponerse las pilas: to get serious and work."
+  },
+  {
+   "before": "Mi mudanza es el sábado. ¿Me echas una ",
+   "after": "?",
+   "options": [
+    "mano",
+    "pata",
+    "cara"
+   ],
+   "answer": 0,
+   "why": "Echar una mano: to help."
+  }
+ ],
+ "demand": {
+  "query": "spanish idioms dictionary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 6 searches to people in the United States who typed «spanish idioms vocabulary». Several ask for common or famous idioms and an idiom dictionary, so the list picks expressions understood across the Spanish-speaking world, with their real meaning.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

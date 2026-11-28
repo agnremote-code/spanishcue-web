@@ -1,0 +1,176 @@
+{
+ "theme": "forms",
+ "level": "A1",
+ "name": "gender of nouns",
+ "title": "Spanish Noun Gender Practice: Masculine or Feminine Quiz",
+ "description": "Practice the gender of Spanish nouns: -o and -a endings, -ción, -dad and -ma words, exceptions like el día and la mano, and people, with 10 checked sentences.",
+ "h1": "Spanish gender of nouns practice",
+ "answer": "Every Spanish noun is masculine or feminine. Most nouns ending in -o are masculine and most ending in -a are feminine, while -ción, -sión, -dad, -tad and -tud are feminine. Many Greek words in -ma are masculine (el problema, el idioma), and a few frequent nouns break the pattern: el día, el mapa, la mano, la foto, la moto.",
+ "demand": {
+  "query": "spanish gender of nouns practice",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "rulesCaption": "Endings that show gender",
+ "rules": [
+  {
+   "use": "Ending in -o: usually masculine",
+   "example": "el libro, el carro, el vaso",
+   "meaning": "masculine"
+  },
+  {
+   "use": "Ending in -a: usually feminine",
+   "example": "la casa, la mesa, la ventana",
+   "meaning": "feminine"
+  },
+  {
+   "use": "-ción, -sión, -dad, -tad, -tud: feminine",
+   "example": "la canción, la ciudad, la libertad, la juventud",
+   "meaning": "feminine"
+  },
+  {
+   "use": "-ma from Greek: masculine",
+   "example": "el problema, el idioma, el tema, el sistema",
+   "meaning": "masculine"
+  },
+  {
+   "use": "Frequent exceptions",
+   "example": "el día, el mapa, el planeta; la mano, la foto, la moto",
+   "meaning": "learn with the article"
+  },
+  {
+   "use": "People: gender follows the person",
+   "example": "el estudiante, la estudiante; el doctor, la doctora",
+   "meaning": "one form or two"
+  }
+ ],
+ "quiz": [
+  {
+   "before": "",
+   "after": " canción de la película es muy famosa.",
+   "options": [
+    "La",
+    "El"
+   ],
+   "answer": 0,
+   "why": "-ción is feminine: la canción."
+  },
+  {
+   "before": "Tengo un ",
+   "after": " con mi computadora.",
+   "options": [
+    "problema",
+    "problemo"
+   ],
+   "answer": 0,
+   "why": "Problema keeps -a and is masculine: un problema."
+  },
+  {
+   "before": "Hoy es un ",
+   "after": " muy especial.",
+   "options": [
+    "día",
+    "dia"
+   ],
+   "answer": 0,
+   "why": "Día is masculine (un día) and takes an accent."
+  },
+  {
+   "before": "Levanta ",
+   "after": " mano si tienes una pregunta.",
+   "options": [
+    "la",
+    "el"
+   ],
+   "answer": 0,
+   "why": "Mano is a feminine exception: la mano."
+  },
+  {
+   "before": "",
+   "after": " ciudad de Nueva York es enorme.",
+   "options": [
+    "La",
+    "El"
+   ],
+   "answer": 0,
+   "why": "-dad is feminine: la ciudad."
+  },
+  {
+   "before": "El español es un ",
+   "after": " muy útil.",
+   "options": [
+    "idioma",
+    "idiomo"
+   ],
+   "answer": 0,
+   "why": "Idioma is masculine: un idioma."
+  },
+  {
+   "before": "Mi hermana es ",
+   "after": " estudiante en la universidad.",
+   "options": [
+    "una",
+    "un"
+   ],
+   "answer": 0,
+   "why": "Estudiante has one form; the article shows the person: una estudiante."
+  },
+  {
+   "before": "¿Viste ",
+   "after": " foto que te mandé?",
+   "options": [
+    "la",
+    "el"
+   ],
+   "answer": 0,
+   "why": "Foto is short for fotografía, feminine: la foto."
+  },
+  {
+   "before": "",
+   "after": " amistad es muy importante para mí.",
+   "options": [
+    "La",
+    "El"
+   ],
+   "answer": 0,
+   "why": "-tad is feminine: la amistad."
+  },
+  {
+   "before": "Busca Perú en ",
+   "after": " mapa.",
+   "options": [
+    "el",
+    "la"
+   ],
+   "answer": 0,
+   "why": "Mapa is a masculine exception: el mapa."
+  }
+ ],
+ "mistakes": [
+  "Changing -a words to -o: «el problemo» should be «el problema».",
+  "Assuming every -a word is feminine: el día, el mapa, el planeta, el idioma and el sistema are masculine.",
+  "Using el with -ción and -dad words: «el canción» should be «la canción».",
+  "Thinking gender is about meaning: a table is not «female»; gender is a grammar category you learn with each noun.",
+  "Forgetting that shortened words keep the original gender: la foto (fotografía), la moto (motocicleta), la tele (televisión)."
+ ],
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 4 searches to people in the United States who typed «spanish gender of nouns practice». 1 asks for a worksheet or a PDF (spanish gender nouns worksheet). 1 asks for a quiz or exercises (spanish gender of nouns quiz). One suggestion asks whether Spanish nouns have gender at all, so the answer above starts there.",
+  "source": "Google autocomplete in English (United States), captured by SpanishCue on 27 November 2026"
+ },
+ "heritage": "Heritage speakers usually know the gender of everyday nouns. Variation appears with English loanwords used in the US: el or la app, el or la email, el or la parking. Dictionaries list el correo electrónico and la aplicación; for loanwords, follow the most common form in your community and stay consistent.",
+ "teacher": "Make two piles, masculine and feminine, with noun cards. Students sort them and then explain the hard ones (el día, la mano) to their group. Finish with a quick article race.",
+ "faq": [
+  {
+   "question": "Do Spanish nouns really have gender?",
+   "answer": "Yes. Every noun is grammatically masculine or feminine, and articles and adjectives agree with it: el carro rojo, la casa roja. It is a grammar feature, not a statement about the object."
+  },
+  {
+   "question": "What are the best rules for guessing gender?",
+   "answer": "Nouns in -o are usually masculine and in -a usually feminine. Words in -ción, -sión, -dad, -tad and -tud are feminine. Many words in -ma are masculine. Always learn new nouns with their article."
+  },
+  {
+   "question": "What about nouns ending in -e or a consonant?",
+   "answer": "They can be either: el coche, la noche; el papel, la miel. There is no reliable rule, so learn the article with the word: el árbol, la flor."
+  }
+ ]
+}

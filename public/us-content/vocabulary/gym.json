@@ -1,0 +1,373 @@
+{
+ "level": "A2",
+ "theme": "gym",
+ "themeLabel": "Gym",
+ "title": "Spanish Gym Vocabulary: Exercises, Equipment and Practice",
+ "description": "Spanish gym vocabulary: equipment, exercises and body words, with a practice quiz that corrects itself and an A2 reading about a first month at the gym.",
+ "h1": "Spanish gym vocabulary",
+ "titleEs": "Un mes en el gimnasio",
+ "focus": "routines with the present, frequency words",
+ "intro": "Learn the Spanish words for gym equipment, exercises and the instructions trainers give, practice them with instant feedback, then follow Ana's first month at a gym in Houston.",
+ "paragraphs": [
+  "Ana tiene cuarenta y cinco años y trabaja en una oficina en Houston. Pasa ocho horas sentada frente a la computadora y en enero decidió cambiar: se inscribió en un gimnasio cerca de su casa.",
+  "La primera semana fue difícil. No sabía usar las máquinas y le daba vergüenza. Un entrenador, Héctor, le preparó un plan sencillo: calentar diez minutos en la bicicleta estática, tres series de sentadillas, flexiones contra la pared y abdominales en la colchoneta, y al final estirar bien.",
+  "Ahora va al gimnasio tres veces por semana, los lunes, miércoles y viernes, antes del trabajo. A veces le duelen los músculos, pero Héctor le dice que es normal y que debe descansar un día entre cada sesión. También bebe más agua y duerme mejor.",
+  "Después de un mes, Ana todavía no puede levantar pesas muy pesadas, pero sube las escaleras de la oficina sin cansarse. Lo más importante para ella no es el cuerpo, sino la energía. «Ahora llego al trabajo de buen humor», dice. Su meta para el verano es correr cinco kilómetros sin parar. Héctor cree que lo va a conseguir antes de julio, si sigue con el mismo plan."
+ ],
+ "glossary": [
+  [
+   "inscribirse",
+   "to sign up"
+  ],
+  [
+   "le daba vergüenza",
+   "she felt embarrassed"
+  ],
+  [
+   "contra la pared",
+   "against the wall"
+  ],
+  [
+   "la sesión",
+   "session"
+  ],
+  [
+   "pesado",
+   "heavy"
+  ],
+  [
+   "sin cansarse",
+   "without getting tired"
+  ],
+  [
+   "la meta",
+   "goal"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Ana decidió ir al gimnasio porque ",
+   "after": ".",
+   "options": [
+    "pasa mucho tiempo sentada",
+    "su médico se lo ordenó",
+    "quiere ser entrenadora"
+   ],
+   "answer": 0,
+   "why": "She sits eight hours a day."
+  },
+  {
+   "before": "La primera semana Ana ",
+   "after": ".",
+   "options": [
+    "no sabía usar las máquinas",
+    "corrió diez kilómetros",
+    "no fue"
+   ],
+   "answer": 0,
+   "why": "She didn't know how to use the machines."
+  },
+  {
+   "before": "Héctor le pide calentar en ",
+   "after": ".",
+   "options": [
+    "la bicicleta estática",
+    "la caminadora",
+    "la piscina"
+   ],
+   "answer": 0,
+   "why": "On the exercise bike."
+  },
+  {
+   "before": "Ahora Ana va al gimnasio ",
+   "after": ".",
+   "options": [
+    "tres veces por semana",
+    "todos los días",
+    "los fines de semana"
+   ],
+   "answer": 0,
+   "why": "Monday, Wednesday and Friday."
+  },
+  {
+   "before": "Según Héctor, debe ",
+   "after": " entre sesiones.",
+   "options": [
+    "descansar un día",
+    "correr más",
+    "levantar más peso"
+   ],
+   "answer": 0,
+   "why": "Rest a day between sessions."
+  },
+  {
+   "before": "La meta de Ana para el verano es ",
+   "after": ".",
+   "options": [
+    "correr cinco kilómetros sin parar",
+    "levantar cien kilos",
+    "ser entrenadora"
+   ],
+   "answer": 0,
+   "why": "Run 5 km without stopping."
+  }
+ ],
+ "grammar": {
+  "title": "How often: frequency expressions",
+  "intro": "Say how often with veces por semana, todos los días, a veces, nunca.",
+  "items": [
+   {
+    "before": "Voy al gimnasio tres ",
+    "after": " por semana.",
+    "options": [
+     "veces",
+     "vez",
+     "tiempos"
+    ],
+    "answer": 0,
+    "why": "Times per week: veces por semana."
+   },
+   {
+    "before": "Ana corre ",
+    "after": " los días.",
+    "options": [
+     "todos",
+     "todo",
+     "cada"
+    ],
+    "answer": 0,
+    "why": "Every day: todos los días."
+   },
+   {
+    "before": "",
+    "after": " me duelen los músculos después de entrenar.",
+    "options": [
+     "A veces",
+     "Una vez por",
+     "Veces"
+    ],
+    "answer": 0,
+    "why": "Sometimes: a veces."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Haces ejercicio? ¿Qué haces y cuántas veces por semana?",
+  "Da instrucciones para hacer una sentadilla correctamente.",
+  "¿Qué es más importante para estar en forma: el ejercicio, la comida o el sueño?"
+ ],
+ "heritage": "Gym Spanish varies: «lagartijas» (Mexico) or «flexiones», «caminadora» or «cinta de correr», «hacer ejercicio» or «entrenar». In writing, note «el músculo» (accent) and that «hacer ejercicio» is singular, not «hacer ejercicios» for the general idea.",
+ "teacher": "Lead a two-minute warm-up in Spanish using commands from the page, then have students take turns leading the class.",
+ "vocabulary": [
+  {
+   "title": "Equipment",
+   "words": [
+    [
+     "el gimnasio",
+     "gym"
+    ],
+    [
+     "las pesas",
+     "weights"
+    ],
+    [
+     "la caminadora / la cinta de correr",
+     "treadmill"
+    ],
+    [
+     "la bicicleta estática",
+     "exercise bike"
+    ],
+    [
+     "la colchoneta",
+     "exercise mat"
+    ],
+    [
+     "la máquina",
+     "machine"
+    ],
+    [
+     "el casillero",
+     "locker"
+    ],
+    [
+     "la botella de agua",
+     "water bottle"
+    ]
+   ]
+  },
+  {
+   "title": "Exercises",
+   "words": [
+    [
+     "hacer ejercicio",
+     "to work out"
+    ],
+    [
+     "las sentadillas",
+     "squats"
+    ],
+    [
+     "las flexiones / las lagartijas",
+     "push-ups"
+    ],
+    [
+     "los abdominales",
+     "sit-ups, abs"
+    ],
+    [
+     "estirar",
+     "to stretch"
+    ],
+    [
+     "levantar pesas",
+     "to lift weights"
+    ],
+    [
+     "correr",
+     "to run"
+    ],
+    [
+     "la serie / la repetición",
+     "set / rep"
+    ]
+   ]
+  },
+  {
+   "title": "Trainer talk",
+   "words": [
+    [
+     "el entrenador personal",
+     "personal trainer"
+    ],
+    [
+     "calentar",
+     "to warm up"
+    ],
+    [
+     "descansar",
+     "to rest"
+    ],
+    [
+     "respirar",
+     "to breathe"
+    ],
+    [
+     "despacio",
+     "slowly"
+    ],
+    [
+     "¡Una más!",
+     "One more!"
+    ],
+    [
+     "los músculos",
+     "muscles"
+    ],
+    [
+     "estar en forma",
+     "to be in shape"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Antes de hacer ejercicio, hay que ",
+   "after": " cinco minutos.",
+   "options": [
+    "calentar",
+    "descansar",
+    "levantar"
+   ],
+   "answer": 0,
+   "why": "Warm up first: calentar."
+  },
+  {
+   "before": "Corro treinta minutos en la ",
+   "after": ".",
+   "options": [
+    "caminadora",
+    "colchoneta",
+    "pesa"
+   ],
+   "answer": 0,
+   "why": "Running indoors: treadmill."
+  },
+  {
+   "before": "Para las piernas, hago diez ",
+   "after": ".",
+   "options": [
+    "sentadillas",
+    "flexiones",
+    "casilleros"
+   ],
+   "answer": 0,
+   "why": "Squats work the legs."
+  },
+  {
+   "before": "Guardo mi mochila en el ",
+   "after": ".",
+   "options": [
+    "casillero",
+    "músculo",
+    "gimnasio"
+   ],
+   "answer": 0,
+   "why": "A locker: casillero."
+  },
+  {
+   "before": "Hago abdominales sobre la ",
+   "after": ".",
+   "options": [
+    "colchoneta",
+    "bicicleta",
+    "botella"
+   ],
+   "answer": 0,
+   "why": "Sit-ups on a mat."
+  },
+  {
+   "before": "Después de cada serie, ",
+   "after": " un minuto.",
+   "options": [
+    "descanso",
+    "caliento",
+    "corro"
+   ],
+   "answer": 0,
+   "why": "Rest between sets."
+  },
+  {
+   "before": "El entrenador grita: «¡",
+   "after": "!» y yo hago la última repetición.",
+   "options": [
+    "Una más",
+    "Despacio",
+    "Descansa"
+   ],
+   "answer": 0,
+   "why": "One more! ¡Una más!"
+  },
+  {
+   "before": "Mi abuela camina todos los días y está muy ",
+   "after": ".",
+   "options": [
+    "en forma",
+    "despacio",
+    "cansada de pesas"
+   ],
+   "answer": 0,
+   "why": "Fit: en forma."
+  }
+ ],
+ "demand": {
+  "query": "spanish gym vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 5 searches to people in the United States who typed «spanish gym vocabulary». People ask for the words and for practice, so each group below is tested in the quiz.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

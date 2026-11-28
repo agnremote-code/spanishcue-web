@@ -1,0 +1,373 @@
+{
+ "level": "A1",
+ "theme": "supermarket",
+ "themeLabel": "Supermarket",
+ "title": "Spanish Supermarket Vocabulary: Grocery Store Words and Quiz",
+ "description": "Spanish supermarket and grocery store vocabulary: el pasillo, el carrito, una docena, una lata and el kilo, with a quiz and an A1 reading about a grocery list.",
+ "h1": "Spanish supermarket vocabulary",
+ "titleEs": "La lista de la abuela",
+ "focus": "quantities with de and hay",
+ "intro": "Learn the Spanish words for the supermarket: the sections of the store, the containers and quantities on a shopping list, and the words at the checkout. Practice with instant feedback, then read about a boy who does the weekly grocery shopping for his grandmother.",
+ "paragraphs": [
+  "Todos los sábados, Javier, de trece años, va al supermercado con la lista de compras de su abuela Carmen. La abuela vive en el mismo edificio, en Miami, y ya no maneja.",
+  "La lista de este sábado dice: una docena de huevos, dos libras de tomates, un paquete de arroz, tres latas de frijoles negros, una botella de aceite de oliva y un pan cubano.",
+  "Javier toma un carrito y empieza por las verduras. Después busca el arroz y los frijoles en el pasillo siete. En la panadería hay pan cubano recién hecho. El aceite está en oferta: dos botellas por el precio de una. Javier compra dos, porque sabe que su abuela cocina mucho.",
+  "En la caja, la cajera, la señora Marta, le pregunta por su abuela. Siempre le da un recibo y un caramelo. Cuando Javier llega a casa, la abuela revisa todo con la lista en la mano. «¿Dos botellas de aceite?», pregunta. Javier le muestra el recibo y ella sonríe: «Muy bien, eres un buen comprador»."
+ ],
+ "glossary": [
+  [
+   "el edificio",
+   "building"
+  ],
+  [
+   "ya no",
+   "no longer"
+  ],
+  [
+   "los frijoles negros",
+   "black beans"
+  ],
+  [
+   "el aceite de oliva",
+   "olive oil"
+  ],
+  [
+   "empezar por",
+   "to start with"
+  ],
+  [
+   "recién hecho",
+   "freshly made"
+  ],
+  [
+   "revisar",
+   "to check"
+  ],
+  [
+   "el comprador / la compradora",
+   "shopper"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Javier hace las compras ",
+   "after": ".",
+   "options": [
+    "todos los sábados",
+    "todos los días",
+    "los domingos"
+   ],
+   "answer": 0,
+   "why": "Every Saturday."
+  },
+  {
+   "before": "La abuela Carmen no va al supermercado porque ",
+   "after": ".",
+   "options": [
+    "ya no maneja",
+    "está enferma",
+    "trabaja mucho"
+   ],
+   "answer": 0,
+   "why": "She no longer drives."
+  },
+  {
+   "before": "En la lista hay tres latas de ",
+   "after": ".",
+   "options": [
+    "frijoles negros",
+    "tomates",
+    "atún"
+   ],
+   "answer": 0,
+   "why": "Three cans of black beans."
+  },
+  {
+   "before": "El arroz está en el pasillo ",
+   "after": ".",
+   "options": [
+    "siete",
+    "cinco",
+    "dos"
+   ],
+   "answer": 0,
+   "why": "Aisle seven."
+  },
+  {
+   "before": "Javier compra dos botellas de aceite porque ",
+   "after": ".",
+   "options": [
+    "están en oferta",
+    "la lista dice dos",
+    "una se rompe"
+   ],
+   "answer": 0,
+   "why": "Two for the price of one."
+  },
+  {
+   "before": "La cajera siempre le da a Javier ",
+   "after": ".",
+   "options": [
+    "un recibo y un caramelo",
+    "una bolsa gratis",
+    "pan cubano"
+   ],
+   "answer": 0,
+   "why": "A receipt and a candy."
+  }
+ ],
+ "grammar": {
+  "title": "Quantities: un kilo de, una lata de",
+  "intro": "After a word for an amount or container, use de and the noun with no article: una docena de huevos, una botella de agua, dos libras de manzanas.",
+  "items": [
+   {
+    "before": "Necesito un litro ",
+    "after": " leche.",
+    "options": [
+     "de",
+     "la",
+     "del"
+    ],
+    "answer": 0,
+    "why": "Amount + de."
+   },
+   {
+    "before": "Compra dos paquetes de ",
+    "after": ".",
+    "options": [
+     "galletas",
+     "las galletas",
+     "unas galletas"
+    ],
+    "answer": 0,
+    "why": "No article after de."
+   },
+   {
+    "before": "Mi papá trae una bolsa ",
+    "after": " naranjas.",
+    "options": [
+     "de",
+     "con las",
+     "por"
+    ],
+    "answer": 0,
+    "why": "Container + de."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Quién hace las compras en tu casa?",
+  "Escribe tu lista de compras para una fiesta y léela a un compañero.",
+  "Describe tu supermercado favorito: ¿qué hay en cada pasillo?"
+ ],
+ "heritage": "In the US many heritage speakers say «la marketa» or «el súper» for the supermarket, and «el carrito» or «el changuito» depending on the family's country. Recipes from Latin America use kilos and gramos, while US stores sell in libras and onzas.",
+ "teacher": "Set up a pretend grocery store with picture cards: one student reads a shopping list with quantities and the other finds each item and says which aisle it is in.",
+ "vocabulary": [
+  {
+   "title": "In the store",
+   "words": [
+    [
+     "el supermercado",
+     "supermarket"
+    ],
+    [
+     "el pasillo",
+     "aisle"
+    ],
+    [
+     "el carrito",
+     "shopping cart"
+    ],
+    [
+     "la canasta",
+     "basket"
+    ],
+    [
+     "la caja",
+     "checkout"
+    ],
+    [
+     "el cajero / la cajera",
+     "cashier"
+    ],
+    [
+     "la carnicería",
+     "meat counter"
+    ],
+    [
+     "la panadería",
+     "bakery section"
+    ]
+   ]
+  },
+  {
+   "title": "Containers and amounts",
+   "words": [
+    [
+     "la lata",
+     "can"
+    ],
+    [
+     "la botella",
+     "bottle"
+    ],
+    [
+     "la caja de cereal",
+     "box of cereal"
+    ],
+    [
+     "el paquete",
+     "package"
+    ],
+    [
+     "la bolsa",
+     "bag"
+    ],
+    [
+     "una docena de",
+     "a dozen"
+    ],
+    [
+     "un kilo de / una libra de",
+     "a kilo of / a pound of"
+    ],
+    [
+     "el litro",
+     "liter"
+    ]
+   ]
+  },
+  {
+   "title": "On the list",
+   "words": [
+    [
+     "la lista de compras",
+     "shopping list"
+    ],
+    [
+     "los lácteos",
+     "dairy"
+    ],
+    [
+     "las verduras",
+     "vegetables"
+    ],
+    [
+     "los congelados",
+     "frozen food"
+    ],
+    [
+     "los productos de limpieza",
+     "cleaning products"
+    ],
+    [
+     "la oferta",
+     "sale, special"
+    ],
+    [
+     "el recibo",
+     "receipt"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Compro una ",
+   "after": " de huevos.",
+   "options": [
+    "docena",
+    "lata",
+    "botella"
+   ],
+   "answer": 0,
+   "why": "Eggs come by the dozen."
+  },
+  {
+   "before": "El atún viene en ",
+   "after": ".",
+   "options": [
+    "lata",
+    "docena",
+    "kilo"
+   ],
+   "answer": 0,
+   "why": "Tuna comes in a can."
+  },
+  {
+   "before": "Pongo todas las compras en el ",
+   "after": ".",
+   "options": [
+    "carrito",
+    "recibo",
+    "pasillo"
+   ],
+   "answer": 0,
+   "why": "Groceries go in the cart."
+  },
+  {
+   "before": "Pago en la ",
+   "after": " con la cajera.",
+   "options": [
+    "caja",
+    "carnicería",
+    "canasta"
+   ],
+   "answer": 0,
+   "why": "Pay at the checkout."
+  },
+  {
+   "before": "El helado está en la sección de ",
+   "after": ".",
+   "options": [
+    "congelados",
+    "lácteos",
+    "verduras"
+   ],
+   "answer": 0,
+   "why": "Ice cream is frozen food."
+  },
+  {
+   "before": "La leche y el yogur están en ",
+   "after": ".",
+   "options": [
+    "los lácteos",
+    "los congelados",
+    "la panadería"
+   ],
+   "answer": 0,
+   "why": "Milk and yogurt are dairy."
+  },
+  {
+   "before": "El cereal está en el ",
+   "after": " cinco.",
+   "options": [
+    "pasillo",
+    "carrito",
+    "paquete"
+   ],
+   "answer": 0,
+   "why": "Cereal is in aisle five."
+  },
+  {
+   "before": "Hoy las manzanas están en ",
+   "after": ": dos libras por tres dólares.",
+   "options": [
+    "oferta",
+    "caja",
+    "lista"
+   ],
+   "answer": 0,
+   "why": "On sale: en oferta."
+  }
+ ],
+ "demand": {
+  "query": "spanish supermarket vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 5 searches to people in the United States who typed «spanish supermarket vocabulary». Other suggestions ask for grocery store and shopping vocabulary, so this page focuses on the store itself and on quantities, while money and prices are on the shopping page.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

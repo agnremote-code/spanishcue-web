@@ -1,0 +1,181 @@
+{
+ "theme": "forms",
+ "level": "A1–A2",
+ "name": "articles",
+ "title": "Spanish Articles Practice: El, La, Los, Las, Un, Una with a Quiz",
+ "description": "Practice Spanish articles: el, la, los, las, un, una, unos, unas, el agua and al/del, with a rule table, 10 sentences checked as you tap and common mistakes.",
+ "h1": "Spanish articles practice",
+ "answer": "Spanish articles agree with the noun in gender and number: el and la for one specific thing, los and las for several; un and una for one thing in general, unos and unas for some. A + el becomes al and de + el becomes del. Feminine nouns that start with a stressed a take el: el agua.",
+ "demand": {
+  "query": "spanish articles practice",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "rulesCaption": "Definite and indefinite articles in Spanish",
+ "rules": [
+  {
+   "use": "One specific masculine noun",
+   "example": "el libro, el día",
+   "meaning": "el"
+  },
+  {
+   "use": "One specific feminine noun",
+   "example": "la mesa, la mano",
+   "meaning": "la"
+  },
+  {
+   "use": "Several specific nouns",
+   "example": "los chicos, las casas",
+   "meaning": "los / las"
+  },
+  {
+   "use": "One noun in general",
+   "example": "un perro, una ciudad",
+   "meaning": "un / una"
+  },
+  {
+   "use": "Some, a few",
+   "example": "unos amigos, unas fotos",
+   "meaning": "unos / unas"
+  },
+  {
+   "use": "Stressed a- at the start of a feminine noun",
+   "example": "el agua fría, las aguas",
+   "meaning": "el (singular only)"
+  },
+  {
+   "use": "A or de before el",
+   "example": "Voy al parque. Vengo del centro.",
+   "meaning": "al / del"
+  }
+ ],
+ "quiz": [
+  {
+   "before": "Necesito ",
+   "after": " lápiz para el examen.",
+   "options": [
+    "un",
+    "una"
+   ],
+   "answer": 0,
+   "why": "Lápiz is masculine and we mean any pencil: un."
+  },
+  {
+   "before": "",
+   "after": " problema es que no tengo tiempo.",
+   "options": [
+    "El",
+    "La"
+   ],
+   "answer": 0,
+   "why": "Problema ends in -a but is masculine: el problema."
+  },
+  {
+   "before": "Abre ",
+   "after": " ventanas, por favor; hace calor.",
+   "options": [
+    "las",
+    "los"
+   ],
+   "answer": 0,
+   "why": "Ventanas is feminine plural: las."
+  },
+  {
+   "before": "El sábado vamos ",
+   "after": " cine con mis primos.",
+   "options": [
+    "al",
+    "a el"
+   ],
+   "answer": 0,
+   "why": "A + el always contracts to al."
+  },
+  {
+   "before": "Me lavo las manos con ",
+   "after": " agua caliente.",
+   "options": [
+    "el",
+    "la"
+   ],
+   "answer": 0,
+   "why": "Agua starts with a stressed a: el agua, though it is feminine."
+  },
+  {
+   "before": "Esta es la casa ",
+   "after": " profesor.",
+   "options": [
+    "del",
+    "de el"
+   ],
+   "answer": 0,
+   "why": "De + el contracts to del."
+  },
+  {
+   "before": "Tengo ",
+   "after": " preguntas sobre la tarea.",
+   "options": [
+    "unas",
+    "unos"
+   ],
+   "answer": 0,
+   "why": "Preguntas is feminine plural: unas."
+  },
+  {
+   "before": "Mi madre es ",
+   "after": " doctora en un hospital de Houston.",
+   "options": [
+    "Ø (no article)",
+    "una"
+   ],
+   "answer": 0,
+   "why": "After ser, a bare profession takes no article: es doctora."
+  },
+  {
+   "before": "Me gustan ",
+   "after": " perros grandes.",
+   "options": [
+    "los",
+    "unos"
+   ],
+   "answer": 0,
+   "why": "With gustar, the thing liked takes the definite article: los perros."
+  },
+  {
+   "before": "",
+   "after": " mapa de la clase está en la pared.",
+   "options": [
+    "El",
+    "La"
+   ],
+   "answer": 0,
+   "why": "Mapa is masculine, like día and problema."
+  }
+ ],
+ "mistakes": [
+  "Guessing gender from the ending only: el día, el mapa, el problema and el idioma are masculine; la mano and la foto are feminine.",
+  "Writing «a el» and «de el»: the contractions al and del are required, except before names like El Salvador (de El Salvador).",
+  "Copying English «my mother is a doctor»: in Spanish, a profession after ser takes no article unless it has an adjective (es una doctora excelente).",
+  "Dropping the article with gustar or with general statements: «me gusta el café», «los gatos son independientes».",
+  "Thinking el agua makes agua masculine: it is still feminine, so «el agua fría», never «el agua frío»."
+ ],
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish articles practice». 2 ask for a worksheet or a PDF (spanish articles practice worksheets; spanish definite and indefinite articles practice pdf). 1 asks for a quiz or exercises (spanish articles quiz). Many ask for worksheets, so the rule table above prints well, but the ten sentences here correct themselves as soon as you tap.",
+  "source": "Google autocomplete in English (United States), captured by SpanishCue on 27 November 2026"
+ },
+ "heritage": "If you grew up speaking Spanish at home, articles are probably automatic. The points to check in writing are the contractions al and del, which some speakers write as «a el», and words borrowed from English: in the US you will hear both el and la with email, app or parking. Choose one and stay consistent.",
+ "teacher": "Give each student cards with nouns and a colored sticker for masculine or feminine. In pairs, they race to place el, la, los or las, then justify the tricky ones like el agua and la mano aloud.",
+ "faq": [
+  {
+   "question": "Why is it el agua if agua is feminine?",
+   "answer": "Feminine nouns that begin with a stressed a or ha take el in the singular to avoid two a sounds together: el agua, el águila, el hacha. Adjectives stay feminine (el agua fría) and the plural goes back to las: las aguas."
+  },
+  {
+   "question": "When do I leave the article out?",
+   "answer": "After ser with a bare profession, religion or nationality (es abogado, es católica), with most countries (vivo en México) and in lists or headlines. With an adjective, the article comes back: es un abogado famoso."
+  },
+  {
+   "question": "How do I know if a noun is masculine or feminine?",
+   "answer": "Most nouns ending in -o are masculine and most in -a, -ción, -dad and -tud are feminine, but learn each noun with its article. Common exceptions include el día, el mapa, el problema, la mano and la foto."
+  }
+ ]
+}

@@ -1,0 +1,176 @@
+{
+ "theme": "forms",
+ "level": "A2–B1",
+ "name": "conditional",
+ "title": "Spanish Conditional Practice: Would, Polite Requests and Quiz",
+ "description": "Practice the Spanish conditional: hablaría, comería, the 12 irregular stems, polite requests and advice, with a rule table and 10 sentences checked as you tap.",
+ "h1": "Spanish conditional practice",
+ "answer": "The Spanish conditional means would: me gustaría, comeríamos, viviría. Add -ía, -ías, -ía, -íamos, -ían to the whole infinitive, the same endings for -ar, -er and -ir. A small group uses a shortened stem: tendría, podría, haría, diría, saldría, vendría, pondría, querría, sabría, habría. Use it for polite requests, advice and hypothetical situations.",
+ "demand": {
+  "query": "spanish conditional practice",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "rulesCaption": "Conditional forms and uses",
+ "rules": [
+  {
+   "use": "Regular: infinitive + ending",
+   "example": "hablaría, comerías, viviríamos",
+   "meaning": "-ía, -ías, -ía, -íamos, -ían"
+  },
+  {
+   "use": "Irregular stems",
+   "example": "tendría, podría, haría, diría, saldría, vendría",
+   "meaning": "same endings"
+  },
+  {
+   "use": "Polite requests",
+   "example": "¿Podría ayudarme? Me gustaría un café.",
+   "meaning": "conditional"
+  },
+  {
+   "use": "Advice",
+   "example": "Yo que tú, estudiaría más. Deberías dormir.",
+   "meaning": "conditional"
+  },
+  {
+   "use": "Hypothetical result",
+   "example": "Si tuviera dinero, viajaría a Perú.",
+   "meaning": "si + imperfect subjunctive, conditional"
+  },
+  {
+   "use": "Future seen from the past",
+   "example": "Dijo que llegaría tarde.",
+   "meaning": "conditional"
+  }
+ ],
+ "quiz": [
+  {
+   "before": "Me ",
+   "after": " un vaso de agua, por favor.",
+   "options": [
+    "gustaría",
+    "gustaba"
+   ],
+   "answer": 0,
+   "why": "Polite request: me gustaría."
+  },
+  {
+   "before": "¿",
+   "after": " abrir la ventana, por favor?",
+   "options": [
+    "Podría",
+    "Podería"
+   ],
+   "answer": 0,
+   "why": "Poder has a short stem: podría."
+  },
+  {
+   "before": "Yo que tú, ",
+   "after": " con el profesor.",
+   "options": [
+    "hablaría",
+    "hablaré"
+   ],
+   "answer": 0,
+   "why": "Advice with yo que tú takes the conditional."
+  },
+  {
+   "before": "Con más tiempo, nosotros ",
+   "after": " más ejercicio.",
+   "options": [
+    "haríamos",
+    "haceríamos"
+   ],
+   "answer": 0,
+   "why": "Hacer has the stem har-: haríamos."
+  },
+  {
+   "before": "Si ganara la lotería, ",
+   "after": " una casa para mi mamá.",
+   "options": [
+    "compraría",
+    "compraré"
+   ],
+   "answer": 0,
+   "why": "Hypothetical result after si + imperfect subjunctive: conditional."
+  },
+  {
+   "before": "Mis amigos dijeron que ",
+   "after": " a las ocho.",
+   "options": [
+    "vendrían",
+    "venirían"
+   ],
+   "answer": 0,
+   "why": "Venir has the stem vendr-: vendrían."
+  },
+  {
+   "before": "¿Qué ",
+   "after": " tú en mi lugar?",
+   "options": [
+    "dirías",
+    "decirías"
+   ],
+   "answer": 0,
+   "why": "Decir has the stem dir-: dirías."
+  },
+  {
+   "before": "Ella ",
+   "after": " ir al concierto, pero tiene que trabajar.",
+   "options": [
+    "querría",
+    "querería"
+   ],
+   "answer": 0,
+   "why": "Querer drops the e in the conditional: querría, with double r."
+  },
+  {
+   "before": "Sin teléfono, no ",
+   "after": " vivir.",
+   "options": [
+    "sabríamos",
+    "saberíamos"
+   ],
+   "answer": 0,
+   "why": "Saber has the stem sabr-: sabríamos."
+  },
+  {
+   "before": "Tú ",
+   "after": " más feliz en otra ciudad, ¿no crees?",
+   "options": [
+    "serías",
+    "sería"
+   ],
+   "answer": 0,
+   "why": "Tú form of the conditional: serías; sería is yo or él."
+  }
+ ],
+ "mistakes": [
+  "Adding the ending to the stem instead of the infinitive: «hablía» should be «hablaría».",
+  "Using regular forms for irregular stems: «tenería» should be «tendría», «poneríamos» should be «pondríamos».",
+  "Using the conditional after si: «si tendría dinero» should be «si tuviera dinero»; the conditional goes in the other half.",
+  "Forgetting the accent on the í: hablaria, comerian and viviriamos all need it.",
+  "Translating every «would» as conditional: «when I was a child, I would play outside» is a habit in the past, so it takes the imperfect: jugaba."
+ ],
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish conditional practice». 1 asks for a worksheet or a PDF (spanish conditional tense practice worksheets pdf). 2 ask for a quiz or exercises (spanish conditional exercises; spanish conditional quiz). Some suggestions ask for conjugation practice, so the irregular stems are drilled one by one.",
+  "source": "Google autocomplete in English (United States), captured by SpanishCue on 27 November 2026"
+ },
+ "heritage": "In speech, many heritage speakers use the conditional after si («si tendría tiempo, iría»), a pattern heard in several regions. Written Spanish and the AP exam expect «si tuviera tiempo, iría». Also check the accent on every conditional ending: comería, viviríamos.",
+ "teacher": "Hand out dilemma cards (you find a wallet, you win a trip) and have students answer ¿Qué harías? in pairs. Then each reports a partner's answer with dijo que haría…",
+ "faq": [
+  {
+   "question": "How do you form the Spanish conditional?",
+   "answer": "Take the infinitive and add -ía, -ías, -ía, -íamos or -ían: hablar → hablaría, comer → comerías, vivir → viviríamos. The same verbs that are irregular in the future are irregular here, with the same stems."
+  },
+  {
+   "question": "Is «would» always the conditional?",
+   "answer": "No. When «would» describes a past habit (we would go to the beach every summer), Spanish uses the imperfect: íbamos a la playa. The conditional is for hypothetical or polite meanings."
+  },
+  {
+   "question": "What goes with si: conditional or subjunctive?",
+   "answer": "The si clause takes the imperfect subjunctive and the result takes the conditional: si tuviera tiempo, te ayudaría. Never put the conditional right after si in standard Spanish."
+  }
+ ]
+}

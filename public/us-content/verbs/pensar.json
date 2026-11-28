@@ -1,0 +1,278 @@
+{
+ "verb": "pensar",
+ "meaning": "to think",
+ "level": "A2",
+ "title": "Spanish Verb Pensar Practice: Conjugation, Pensar en, Quiz",
+ "description": "Practice the Spanish verb pensar: the e to ie stem change, pensar en, pensar de and pensar + infinitive, ten self-correcting questions and a short reading.",
+ "h1": "Spanish verb pensar: practice",
+ "intro": "Pensar is a stem-changing verb (pienso, piensas) and its meaning changes with the preposition: pensar en (think about), pensar de (opinion), pensar + infinitive (plan). Learn each and practice with instant feedback.",
+ "demand": {
+  "query": "spanish verb pensar",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "To think, believe: pensar que",
+   "example": "Pienso que tienes razón.",
+   "meaning": "I think you're right."
+  },
+  {
+   "use": "To think about: pensar en",
+   "example": "Siempre pienso en mi familia.",
+   "meaning": "I always think about my family."
+  },
+  {
+   "use": "Opinion: ¿qué piensas de…?",
+   "example": "¿Qué piensas de la película?",
+   "meaning": "What do you think of the movie?"
+  },
+  {
+   "use": "To plan: pensar + infinitive",
+   "example": "Pienso viajar a Perú en julio.",
+   "meaning": "I'm planning to travel to Peru in July."
+  },
+  {
+   "use": "¡Ni pensarlo!",
+   "example": "¿Prestarle mi carro? ¡Ni pensarlo!",
+   "meaning": "Lend him my car? No way!"
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "pienso"
+  ],
+  [
+   "tú",
+   "piensas"
+  ],
+  [
+   "él / ella / usted",
+   "piensa"
+  ],
+  [
+   "nosotros / nosotras",
+   "pensamos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "piensan"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "pensé"
+  ],
+  [
+   "tú",
+   "pensaste"
+  ],
+  [
+   "él / ella / usted",
+   "pensó"
+  ],
+  [
+   "nosotros / nosotras",
+   "pensamos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "pensaron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "Yo ",
+   "after": " que el examen fue fácil.",
+   "options": [
+    "pienso",
+    "penso",
+    "piensa"
+   ],
+   "answer": 0,
+   "why": "Stem change: pienso."
+  },
+  {
+   "before": "¿En qué ",
+   "after": ", Carla?",
+   "options": [
+    "piensas",
+    "pensas",
+    "piensa"
+   ],
+   "answer": 0,
+   "why": "Tú: piensas."
+  },
+  {
+   "before": "Nosotros ",
+   "after": " ir al concierto.",
+   "options": [
+    "pensamos",
+    "piensamos",
+    "piensan"
+   ],
+   "answer": 0,
+   "why": "No stem change with nosotros: pensamos."
+  },
+  {
+   "before": "Mis padres ",
+   "after": " que estudio poco.",
+   "options": [
+    "piensan",
+    "pensan",
+    "piensamos"
+   ],
+   "answer": 0,
+   "why": "Ellos: piensan."
+  },
+  {
+   "before": "Pienso mucho ",
+   "after": " mi abuela.",
+   "options": [
+    "en",
+    "de",
+    "sobre de"
+   ],
+   "answer": 0,
+   "why": "Thinking about someone: pensar en."
+  },
+  {
+   "before": "¿Qué piensas ",
+   "after": " mi nuevo corte de pelo?",
+   "options": [
+    "de",
+    "en",
+    "a"
+   ],
+   "answer": 0,
+   "why": "Asking an opinion: pensar de."
+  },
+  {
+   "before": "Este verano ",
+   "after": " trabajar en un campamento.",
+   "options": [
+    "pienso",
+    "pienso de",
+    "pienso en"
+   ],
+   "answer": 0,
+   "why": "A plan: pensar + infinitive."
+  },
+  {
+   "before": "Al principio ",
+   "after": " que era una broma.",
+   "options": [
+    "pensé",
+    "piensé",
+    "pensaba una vez"
+   ],
+   "answer": 0,
+   "why": "Preterite yo: pensé, no stem change."
+  },
+  {
+   "before": "¿",
+   "after": " en mí ayer?",
+   "options": [
+    "Pensaste",
+    "Piensaste",
+    "Pensastes"
+   ],
+   "answer": 0,
+   "why": "Preterite tú: pensaste."
+  },
+  {
+   "before": "Ella lo ",
+   "after": " bien antes de decidir.",
+   "options": [
+    "pensó",
+    "piensó",
+    "pienso"
+   ],
+   "answer": 0,
+   "why": "Preterite: pensó."
+  }
+ ],
+ "reading": {
+  "titleEs": "¿Qué piensas hacer?",
+  "paragraphs": [
+   "Faltan dos meses para la graduación y todos le preguntan a Luis: «¿Qué piensas hacer después?». Sus padres piensan que debe estudiar ingeniería. Su consejera piensa que tiene talento para el arte. Luis piensa en las dos opciones todo el tiempo.",
+   "Una noche habló con su abuelo, que fue carpintero cuarenta años. El abuelo le dijo: «Piensa en lo que te hace perder la noción del tiempo». Luis pensó en las horas que pasa diseñando muebles en la computadora. Ahora piensa estudiar diseño industrial: arte y ingeniería a la vez."
+  ],
+  "comprehension": [
+   {
+    "before": "Los padres de Luis piensan que debe estudiar ",
+    "after": ".",
+    "options": [
+     "ingeniería",
+     "arte",
+     "medicina"
+    ],
+    "answer": 0,
+    "why": "The text says they want engineering."
+   },
+   {
+    "before": "La consejera piensa que Luis tiene talento para ",
+    "after": ".",
+    "options": [
+     "el arte",
+     "los deportes",
+     "la música"
+    ],
+    "answer": 0,
+    "why": "For art."
+   },
+   {
+    "before": "El abuelo de Luis fue ",
+    "after": ".",
+    "options": [
+     "carpintero",
+     "ingeniero",
+     "profesor"
+    ],
+    "answer": 0,
+    "why": "A carpenter for forty years."
+   },
+   {
+    "before": "Al final, Luis piensa estudiar ",
+    "after": ".",
+    "options": [
+     "diseño industrial",
+     "ingeniería civil",
+     "historia del arte"
+    ],
+    "answer": 0,
+    "why": "Industrial design: art and engineering."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Pienso de ti.",
+   "right": "Pienso en ti.",
+   "why": "Thinking about someone is pensar en."
+  },
+  {
+   "wrong": "Yo penso que sí.",
+   "right": "Yo pienso que sí.",
+   "why": "Stem change e to ie: pienso."
+  },
+  {
+   "wrong": "¿Qué piensas sobre de esto?",
+   "right": "¿Qué piensas de esto?",
+   "why": "Opinion: pensar de (or sobre), not both."
+  },
+  {
+   "wrong": "Pienso a viajar.",
+   "right": "Pienso viajar.",
+   "why": "Pensar + infinitive takes no preposition."
+  }
+ ],
+ "heritage": "Heritage speakers often use «pensar» naturally but mix up «pensar en» and «pensar de» in writing. A quick test: if you can say «think about», use en; if you mean «opinion of», use de.",
+ "teacher": "Run a quick opinion round: show photos and ask «¿Qué piensas de…?»; students answer «Pienso que…». Then ask «¿Qué piensas hacer este fin de semana?».",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 5 searches to people in the United States who typed «spanish verb pensar». 1 of them asks for conjugation, charts or tenses (conjugation). One asks what pensar means, so the page separates its meanings by preposition.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

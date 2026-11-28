@@ -1,0 +1,369 @@
+{
+ "level": "A1",
+ "theme": "bedroom",
+ "themeLabel": "Bedroom",
+ "title": "Spanish Bedroom Vocabulary: Furniture, Items and Practice",
+ "description": "Spanish bedroom vocabulary: furniture, bedding and things on your desk, with a practice quiz that corrects itself and a short A1 reading about moving rooms.",
+ "h1": "Spanish bedroom vocabulary",
+ "titleEs": "El cuarto nuevo de Camila",
+ "focus": "estar + location words, hay",
+ "intro": "Learn the Spanish words for bedroom furniture, bedding and the things around you, practice them with instant feedback, then help Camila organize her new room in San Diego.",
+ "paragraphs": [
+  "Camila tiene trece años y acaba de mudarse con su familia a una casa nueva en San Diego. Antes compartía cuarto con su hermana; ahora, por primera vez, tiene un cuarto para ella sola.",
+  "El cuarto es pequeño pero tiene una ventana grande. Camila pone la cama al lado de la ventana porque le gusta ver el cielo antes de dormir. La mesita de noche está entre la cama y la pared, con una lámpara y su despertador.",
+  "Enfrente de la cama está el escritorio, donde hace la tarea. Encima del escritorio hay una estantería con sus libros favoritos y una planta. El armario está en la esquina.",
+  "Por último, Camila pega un póster de su cantante favorita en la pared y pone una cobija de colores sobre la cama. Su mamá entra y sonríe: «Ahora sí es tu cuarto»."
+ ],
+ "glossary": [
+  [
+   "mudarse",
+   "to move (house)"
+  ],
+  [
+   "compartir",
+   "to share"
+  ],
+  [
+   "para ella sola",
+   "all to herself"
+  ],
+  [
+   "el cielo",
+   "sky"
+  ],
+  [
+   "la pared",
+   "wall"
+  ],
+  [
+   "pegar",
+   "to stick"
+  ],
+  [
+   "por último",
+   "finally"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Antes, Camila compartía cuarto con ",
+   "after": ".",
+   "options": [
+    "su hermana",
+    "su mamá",
+    "una amiga"
+   ],
+   "answer": 0,
+   "why": "She used to share with her sister."
+  },
+  {
+   "before": "Camila pone la cama al lado de la ventana porque ",
+   "after": ".",
+   "options": [
+    "le gusta ver el cielo",
+    "hace calor",
+    "no hay espacio"
+   ],
+   "answer": 0,
+   "why": "She likes to see the sky before sleeping."
+  },
+  {
+   "before": "La mesita de noche está ",
+   "after": ".",
+   "options": [
+    "entre la cama y la pared",
+    "en la esquina",
+    "debajo de la ventana"
+   ],
+   "answer": 0,
+   "why": "Between the bed and the wall."
+  },
+  {
+   "before": "Encima del escritorio hay ",
+   "after": ".",
+   "options": [
+    "una estantería",
+    "un armario",
+    "una cama"
+   ],
+   "answer": 0,
+   "why": "A bookshelf with books and a plant."
+  },
+  {
+   "before": "El armario está ",
+   "after": ".",
+   "options": [
+    "en la esquina",
+    "al lado de la puerta",
+    "enfrente de la cama"
+   ],
+   "answer": 0,
+   "why": "In the corner."
+  },
+  {
+   "before": "En la pared, Camila pega ",
+   "after": ".",
+   "options": [
+    "un póster de su cantante favorita",
+    "fotos de su familia",
+    "un mapa"
+   ],
+   "answer": 0,
+   "why": "A poster of her favorite singer."
+  }
+ ],
+ "grammar": {
+  "title": "Location: estar + preposition + de",
+  "intro": "To say where something is: está encima de, debajo de, al lado de. De + el becomes del.",
+  "items": [
+   {
+    "before": "La lámpara ",
+    "after": " encima de la mesita.",
+    "options": [
+     "está",
+     "es",
+     "hay"
+    ],
+    "answer": 0,
+    "why": "Location of a specific thing: estar."
+   },
+   {
+    "before": "El gato duerme debajo ",
+    "after": " escritorio.",
+    "options": [
+     "del",
+     "de el",
+     "de la"
+    ],
+    "answer": 0,
+    "why": "De + el = del."
+   },
+   {
+    "before": "En mi cuarto ",
+    "after": " dos ventanas.",
+    "options": [
+     "hay",
+     "están",
+     "son"
+    ],
+    "answer": 0,
+    "why": "What there is: hay."
+   }
+  ]
+ },
+ "speaking": [
+  "Describe tu cuarto: qué hay y dónde está cada cosa.",
+  "¿Compartes cuarto con alguien? ¿Te gusta?",
+  "Diseña tu cuarto ideal y explica dónde pones cada mueble."
+ ],
+ "heritage": "Many heritage speakers say «el clóset», «la cobija» and «el cuarto», which are standard in Mexico and the US. You will also read «el armario», «la manta» and «el dormitorio». Watch «colchón» (accent) and «encima de» (two words).",
+ "teacher": "Pairs sit back to back: one describes a bedroom picture with location words while the other draws it. Compare the drawings at the end.",
+ "vocabulary": [
+  {
+   "title": "Furniture",
+   "words": [
+    [
+     "la cama",
+     "bed"
+    ],
+    [
+     "la mesita de noche",
+     "nightstand"
+    ],
+    [
+     "el armario / el clóset",
+     "closet"
+    ],
+    [
+     "la cómoda",
+     "dresser"
+    ],
+    [
+     "el escritorio",
+     "desk"
+    ],
+    [
+     "la silla",
+     "chair"
+    ],
+    [
+     "la estantería",
+     "bookshelf"
+    ],
+    [
+     "la litera",
+     "bunk bed"
+    ]
+   ]
+  },
+  {
+   "title": "Bedding and decor",
+   "words": [
+    [
+     "la almohada",
+     "pillow"
+    ],
+    [
+     "la sábana",
+     "sheet"
+    ],
+    [
+     "la cobija / la manta",
+     "blanket"
+    ],
+    [
+     "el colchón",
+     "mattress"
+    ],
+    [
+     "la cortina",
+     "curtain"
+    ],
+    [
+     "el cartel / el póster",
+     "poster"
+    ],
+    [
+     "la lámpara",
+     "lamp"
+    ],
+    [
+     "el despertador",
+     "alarm clock"
+    ]
+   ]
+  },
+  {
+   "title": "Where things are",
+   "words": [
+    [
+     "encima de",
+     "on top of"
+    ],
+    [
+     "debajo de",
+     "under"
+    ],
+    [
+     "al lado de",
+     "next to"
+    ],
+    [
+     "dentro de",
+     "inside"
+    ],
+    [
+     "enfrente de",
+     "in front of"
+    ],
+    [
+     "entre",
+     "between"
+    ],
+    [
+     "en la esquina",
+     "in the corner"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Mi ropa está en el ",
+   "after": ".",
+   "options": [
+    "armario",
+    "despertador",
+    "colchón"
+   ],
+   "answer": 0,
+   "why": "Clothes go in the closet."
+  },
+  {
+   "before": "Pongo la cabeza en la ",
+   "after": " para dormir.",
+   "options": [
+    "almohada",
+    "sábana",
+    "cortina"
+   ],
+   "answer": 0,
+   "why": "Your head rests on the pillow."
+  },
+  {
+   "before": "Hace frío: necesito otra ",
+   "after": ".",
+   "options": [
+    "cobija",
+    "lámpara",
+    "silla"
+   ],
+   "answer": 0,
+   "why": "Cold: a blanket."
+  },
+  {
+   "before": "El ",
+   "after": " suena a las siete de la mañana.",
+   "options": [
+    "despertador",
+    "escritorio",
+    "cartel"
+   ],
+   "answer": 0,
+   "why": "The alarm clock rings."
+  },
+  {
+   "before": "Mi hermano y yo dormimos en una ",
+   "after": ": él arriba y yo abajo.",
+   "options": [
+    "litera",
+    "cómoda",
+    "mesita"
+   ],
+   "answer": 0,
+   "why": "Bunk bed: litera."
+  },
+  {
+   "before": "Los zapatos están ",
+   "after": " la cama.",
+   "options": [
+    "debajo de",
+    "encima de la",
+    "dentro del"
+   ],
+   "answer": 0,
+   "why": "Shoes are usually under the bed."
+  },
+  {
+   "before": "Hago la tarea en el ",
+   "after": ".",
+   "options": [
+    "escritorio",
+    "colchón",
+    "clóset"
+   ],
+   "answer": 0,
+   "why": "Homework at the desk."
+  },
+  {
+   "before": "Cierro las ",
+   "after": " para que no entre la luz.",
+   "options": [
+    "cortinas",
+    "sábanas",
+    "almohadas"
+   ],
+   "answer": 0,
+   "why": "Curtains block the light."
+  }
+ ],
+ "demand": {
+  "query": "spanish bedroom vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 5 searches to people in the United States who typed «spanish bedroom vocabulary». Two ask for bedroom items and furniture, so the list goes beyond the bed to everything you can point to in a room.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}
