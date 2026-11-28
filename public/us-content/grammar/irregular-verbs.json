@@ -1,0 +1,176 @@
+{
+ "theme": "forms",
+ "level": "A1–B1",
+ "name": "irregular verbs",
+ "title": "Spanish Irregular Verbs Practice: Present and Preterite Quiz",
+ "description": "Practice Spanish irregular verbs: ser, ir, tener, hacer, decir, poder, venir and yo-go verbs in the present and preterite, with 10 sentences checked as you tap.",
+ "h1": "Spanish irregular verbs practice",
+ "answer": "Spanish irregular verbs change their stem or endings. In the present, many are irregular only in yo (tengo, hago, pongo, salgo, conozco); others change their stem (quiero, puedo, pido). In the preterite, a key group takes a new stem and unstressed endings: tuve, hice, dije, pude, quise, vine, estuve. Ser and ir share the preterite: fui, fue, fueron.",
+ "demand": {
+  "query": "spanish irregular verbs practice",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "rulesCaption": "Main patterns of irregular verbs",
+ "rules": [
+  {
+   "use": "Only yo is irregular (-go, -zco)",
+   "example": "tengo, hago, pongo, salgo, traigo, conozco",
+   "meaning": "present"
+  },
+  {
+   "use": "Stem change e → ie, o → ue, e → i",
+   "example": "quiero, puedo, pido (not with nosotros)",
+   "meaning": "present"
+  },
+  {
+   "use": "Fully irregular",
+   "example": "soy, estoy, voy, he",
+   "meaning": "present"
+  },
+  {
+   "use": "New stem, no accent",
+   "example": "tuve, estuve, pude, puse, supe, quise, vine, hice",
+   "meaning": "preterite"
+  },
+  {
+   "use": "Stem with j, ending -eron",
+   "example": "dije, dijeron; traje, trajeron",
+   "meaning": "preterite"
+  },
+  {
+   "use": "Ser and ir share forms",
+   "example": "fui, fuiste, fue, fuimos, fueron",
+   "meaning": "preterite"
+  }
+ ],
+ "quiz": [
+  {
+   "before": "Yo ",
+   "after": " mucha tarea esta semana.",
+   "options": [
+    "tengo",
+    "teno"
+   ],
+   "answer": 0,
+   "why": "Tener is a yo-go verb: tengo."
+  },
+  {
+   "before": "¿",
+   "after": " venir a mi fiesta el sábado?",
+   "options": [
+    "Puedes",
+    "Podes"
+   ],
+   "answer": 0,
+   "why": "Poder changes o to ue: puedes."
+  },
+  {
+   "before": "Yo siempre ",
+   "after": " la mesa antes de comer.",
+   "options": [
+    "pongo",
+    "pono"
+   ],
+   "answer": 0,
+   "why": "Poner in yo: pongo."
+  },
+  {
+   "before": "Nosotros ",
+   "after": " ir al cine, pero no hay boletos.",
+   "options": [
+    "queremos",
+    "quieremos"
+   ],
+   "answer": 0,
+   "why": "No stem change in nosotros: queremos."
+  },
+  {
+   "before": "Ayer ",
+   "after": " un pastel de cumpleaños.",
+   "options": [
+    "hice",
+    "hací"
+   ],
+   "answer": 0,
+   "why": "Preterite of hacer in yo: hice, no accent."
+  },
+  {
+   "before": "Mis tíos ",
+   "after": " de Guatemala la semana pasada.",
+   "options": [
+    "vinieron",
+    "venieron"
+   ],
+   "answer": 0,
+   "why": "Preterite stem of venir: vin-, so vinieron."
+  },
+  {
+   "before": "Ella no ",
+   "after": " la respuesta.",
+   "options": [
+    "supo",
+    "sabió"
+   ],
+   "answer": 0,
+   "why": "Preterite of saber: supo."
+  },
+  {
+   "before": "¿Qué te ",
+   "after": " tu mamá cuando llegaste tarde?",
+   "options": [
+    "dijo",
+    "decío"
+   ],
+   "answer": 0,
+   "why": "Preterite of decir: dijo."
+  },
+  {
+   "before": "El año pasado, nosotros ",
+   "after": " a Puerto Rico.",
+   "options": [
+    "fuimos",
+    "fueron"
+   ],
+   "answer": 0,
+   "why": "Preterite of ir with nosotros: fuimos."
+  },
+  {
+   "before": "Ellos ",
+   "after": " regalos para todos.",
+   "options": [
+    "trajeron",
+    "trajieron"
+   ],
+   "answer": 0,
+   "why": "After j, the ending is -eron: trajeron."
+  }
+ ],
+ "mistakes": [
+  "Regularizing yo forms: «yo hacio» and «yo poneo» should be «hago» and «pongo».",
+  "Adding accents to the preterite irregulars: «hice», «tuvo» and «dijo» have no written accent.",
+  "Changing the stem in nosotros: «podemos», «queremos», «pedimos» keep the infinitive stem.",
+  "Writing -ieron after j: «dijieron» and «trajieron» should be «dijeron» and «trajeron».",
+  "Mixing up fue: it is both «he/she went» and «he/she was»; context tells which."
+ ],
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish irregular verbs practice». 2 ask for a worksheet or a PDF (spanish irregular verbs worksheet pdf; spanish irregular verbs worksheet). 3 ask for a quiz or exercises (spanish irregular verbs exercises; spanish irregular verbs quiz; spanish stem changing verbs quiz). Several suggestions ask for worksheets or PDFs; here the most common patterns are grouped so you practise the pattern, not a random list.",
+  "source": "Google autocomplete in English (United States), captured by SpanishCue on 27 November 2026"
+ },
+ "heritage": "Heritage speakers often use regularized or regional forms in speech, like «trajieron», «dijistes» or «haiga». They are part of real Spanish, but written and exam Spanish expect «trajeron», «dijiste» and «haya». Focus your writing practice on those few forms.",
+ "teacher": "Divide the board into the patterns in the table and give teams verb cards. They place each verb under its pattern and then write one sentence with it in the preterite.",
+ "faq": [
+  {
+   "question": "Which Spanish irregular verbs should I learn first?",
+   "answer": "Ser, estar, ir, tener, hacer, decir, poder, querer, venir and saber. They are among the most frequent verbs in the language and cover the main irregular patterns."
+  },
+  {
+   "question": "Are irregular verbs irregular in every tense?",
+   "answer": "No. Many are irregular only in yo of the present (tengo, salgo), in the present stem (quiero) or in the preterite (tuve). The imperfect has only three irregular verbs: ser, ir and ver."
+  },
+  {
+   "question": "Why do some preterite forms have no accent?",
+   "answer": "The irregular preterite stems (tuv-, hic-, dij-, pud-) take endings stressed on the stem: tuve, hizo, dijo. Since the stress falls where Spanish expects it, no written accent is needed."
+  }
+ ]
+}

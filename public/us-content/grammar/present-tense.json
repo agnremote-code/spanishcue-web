@@ -1,0 +1,181 @@
+{
+ "theme": "forms",
+ "level": "A1",
+ "name": "present tense",
+ "title": "Spanish Present Tense Practice: Regular -ar, -er, -ir Verbs Quiz",
+ "description": "Practice the Spanish present tense: regular -ar, -er and -ir endings, common irregular verbs and uses, with a rule table and 10 sentences checked as you tap.",
+ "h1": "Spanish present tense practice",
+ "answer": "The Spanish present tense drops -ar, -er or -ir and adds endings for each person: hablo, hablas, habla, hablamos, hablan; como, comes, come, comemos, comen; vivo, vives, vive, vivimos, viven. It covers what you do usually, what is happening now and fixed plans in the near future.",
+ "demand": {
+  "query": "spanish present tense practice",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "rulesCaption": "Present tense endings and uses",
+ "rules": [
+  {
+   "use": "-ar verbs",
+   "example": "hablo, hablas, habla, hablamos, hablan",
+   "meaning": "-o, -as, -a, -amos, -an"
+  },
+  {
+   "use": "-er verbs",
+   "example": "como, comes, come, comemos, comen",
+   "meaning": "-o, -es, -e, -emos, -en"
+  },
+  {
+   "use": "-ir verbs",
+   "example": "vivo, vives, vive, vivimos, viven",
+   "meaning": "-o, -es, -e, -imos, -en"
+  },
+  {
+   "use": "Habits and routines",
+   "example": "Corro todas las mañanas.",
+   "meaning": "present"
+  },
+  {
+   "use": "Right now",
+   "example": "¿Qué haces? Estudio.",
+   "meaning": "present"
+  },
+  {
+   "use": "Near future with a time word",
+   "example": "Mañana trabajo hasta las seis.",
+   "meaning": "present"
+  },
+  {
+   "use": "Common irregular yo forms",
+   "example": "tengo, hago, pongo, salgo, conozco",
+   "meaning": "-go / -zco"
+  }
+ ],
+ "quiz": [
+  {
+   "before": "Yo ",
+   "after": " en un restaurante los fines de semana.",
+   "options": [
+    "trabajo",
+    "trabaja"
+   ],
+   "answer": 0,
+   "why": "-ar verb with yo: -o."
+  },
+  {
+   "before": "¿Tú ",
+   "after": " café por la mañana?",
+   "options": [
+    "bebes",
+    "bebas"
+   ],
+   "answer": 0,
+   "why": "-er verb with tú: -es."
+  },
+  {
+   "before": "Mis hermanos ",
+   "after": " en Dallas.",
+   "options": [
+    "viven",
+    "vivan"
+   ],
+   "answer": 0,
+   "why": "-ir verb with ellos: -en."
+  },
+  {
+   "before": "Nosotros ",
+   "after": " en la cafetería a las doce.",
+   "options": [
+    "almorzamos",
+    "almuerzamos"
+   ],
+   "answer": 0,
+   "why": "No stem change with nosotros: almorzamos."
+  },
+  {
+   "before": "Mi papá ",
+   "after": " las noticias todas las noches.",
+   "options": [
+    "mira",
+    "miras"
+   ],
+   "answer": 0,
+   "why": "Él: -a."
+  },
+  {
+   "before": "Yo ",
+   "after": " la tarea antes de cenar.",
+   "options": [
+    "hago",
+    "hazo"
+   ],
+   "answer": 0,
+   "why": "Hacer is irregular in yo: hago."
+  },
+  {
+   "before": "Ustedes ",
+   "after": " muy bien español.",
+   "options": [
+    "escriben",
+    "escribimos"
+   ],
+   "answer": 0,
+   "why": "Ustedes takes the ellos form: escriben."
+  },
+  {
+   "before": "¿A qué hora ",
+   "after": " la película?",
+   "options": [
+    "empieza",
+    "empeza"
+   ],
+   "answer": 0,
+   "why": "Empezar changes e to ie: empieza."
+  },
+  {
+   "before": "Yo no ",
+   "after": " a nadie en esta ciudad.",
+   "options": [
+    "conozco",
+    "conoco"
+   ],
+   "answer": 0,
+   "why": "Conocer in yo: conozco."
+  },
+  {
+   "before": "Mañana ",
+   "after": " a Miami; el vuelo sale a las ocho.",
+   "options": [
+    "viajo",
+    "viajé"
+   ],
+   "answer": 0,
+   "why": "A fixed plan with a time word can take the present."
+  }
+ ],
+ "mistakes": [
+  "Using the infinitive after a subject: «yo hablar español» should be «yo hablo español».",
+  "Adding estar for every present action: «estoy trabajo» is wrong; say «trabajo» or «estoy trabajando».",
+  "Forgetting irregular yo forms: «yo hacio» should be «yo hago», «yo teno» should be «yo tengo».",
+  "Applying the stem change to nosotros: «queremos», not «quieremos».",
+  "Using -an endings for -er and -ir verbs: «ellos coman» is subjunctive; the present is «ellos comen»."
+ ],
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish present tense practice». 2 ask for a worksheet or a PDF (spanish present tense practice worksheets; spanish present tense exercises pdf). 4 ask for a quiz or exercises (spanish present tense exercises; spanish present tense quiz; spanish present tense exercises pdf; spanish present tense quiz irregular verbs). Worksheets lead the suggestions; this page keeps the endings in one table and checks each sentence at once.",
+  "source": "Google autocomplete in English (United States), captured by SpanishCue on 27 November 2026"
+ },
+ "heritage": "Heritage speakers usually conjugate the present without thinking. In writing, look at the irregular yo forms that some families pronounce differently (haiga for haya is a separate issue) and at accents on words around the verb, like qué and cuándo in questions: ¿Qué haces?",
+ "teacher": "Students write five sentences about their week, one with each person (yo, tú, él, nosotros, ellos). Partners correct only the endings, then each reads the best sentence aloud.",
+ "faq": [
+  {
+   "question": "How many endings does the present tense have?",
+   "answer": "Five you will use all the time: yo, tú, él/ella/usted, nosotros and ellos/ellas/ustedes. Vosotros (Spain) adds a sixth form, which most US courses teach for recognition only."
+  },
+  {
+   "question": "Can the Spanish present mean the future?",
+   "answer": "Yes, with a time word and a fixed plan: mañana trabajo, el lunes empiezo. For less fixed plans, Spanish uses ir a + infinitive: voy a trabajar."
+  },
+  {
+   "question": "What are the most common irregular verbs?",
+   "answer": "Ser, estar, ir, tener, hacer, decir, poder, querer and venir. Many verbs are irregular only in yo: tengo, hago, pongo, salgo, conozco, traigo."
+  }
+ ]
+}

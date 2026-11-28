@@ -1,0 +1,176 @@
+{
+ "theme": "contrast",
+ "level": "B1–B2",
+ "name": "passive voice",
+ "title": "Spanish Passive Voice Practice: Ser + Participle vs Passive Se",
+ "description": "Practice the Spanish passive voice: ser + participle with por, the passive se, impersonal se and active alternatives, with a rule table and 10 checked sentences.",
+ "h1": "Spanish passive voice practice",
+ "answer": "Spanish has two passives. The true passive is ser + past participle, often with por: la casa fue construida por mi abuelo. The participle agrees with the subject. In everyday Spanish, the passive se is far more common when the doer does not matter: se venden casas, se habla español. Many English passives sound better as active sentences in Spanish.",
+ "demand": {
+  "query": "spanish passive voice practice",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "rulesCaption": "Passive structures in Spanish",
+ "rules": [
+  {
+   "use": "Ser + participle (+ por)",
+   "example": "El puente fue construido en 1950.",
+   "meaning": "ser + -ado / -ido"
+  },
+  {
+   "use": "Participle agrees with the subject",
+   "example": "Las cartas fueron escritas por Ana.",
+   "meaning": "-a / -os / -as"
+  },
+  {
+   "use": "Passive se: verb agrees with the thing",
+   "example": "Se vende carro. Se venden carros.",
+   "meaning": "se + 3rd person"
+  },
+  {
+   "use": "Impersonal se (people in general)",
+   "example": "Se vive bien aquí.",
+   "meaning": "se + singular verb"
+  },
+  {
+   "use": "Estar + participle: result, not passive",
+   "example": "La puerta está cerrada.",
+   "meaning": "state"
+  },
+  {
+   "use": "Active often sounds better",
+   "example": "Mi abuelo construyó la casa.",
+   "meaning": "active"
+  }
+ ],
+ "quiz": [
+  {
+   "before": "La novela fue ",
+   "after": " por Gabriel García Márquez.",
+   "options": [
+    "escrita",
+    "escrito"
+   ],
+   "answer": 0,
+   "why": "The participle agrees with la novela: escrita."
+  },
+  {
+   "before": "En esta tienda se ",
+   "after": " teléfonos usados.",
+   "options": [
+    "venden",
+    "vende"
+   ],
+   "answer": 0,
+   "why": "Passive se agrees with the plural thing: se venden."
+  },
+  {
+   "before": "Los ladrones fueron arrestados ",
+   "after": " la policía.",
+   "options": [
+    "por",
+    "de"
+   ],
+   "answer": 0,
+   "why": "The doer in a passive: por."
+  },
+  {
+   "before": "Aquí se ",
+   "after": " español e inglés.",
+   "options": [
+    "hablan",
+    "habla"
+   ],
+   "answer": 0,
+   "why": "Two languages: se hablan."
+  },
+  {
+   "before": "La ventana ",
+   "after": " rota; alguien la rompió anoche.",
+   "options": [
+    "está",
+    "es"
+   ],
+   "answer": 0,
+   "why": "The resulting state: estar + participle."
+  },
+  {
+   "before": "Los resultados ",
+   "after": " anunciados mañana.",
+   "options": [
+    "serán",
+    "estarán"
+   ],
+   "answer": 0,
+   "why": "A passive action in the future: ser, serán anunciados."
+  },
+  {
+   "before": "¿Cómo se ",
+   "after": " «window» en español?",
+   "options": [
+    "dice",
+    "dicen"
+   ],
+   "answer": 0,
+   "why": "Impersonal question: ¿cómo se dice?"
+  },
+  {
+   "before": "La iglesia fue ",
+   "after": " en el siglo XVIII.",
+   "options": [
+    "construida",
+    "construido"
+   ],
+   "answer": 0,
+   "why": "Iglesia is feminine: construida."
+  },
+  {
+   "before": "Se ",
+   "after": " a los ganadores en la ceremonia.",
+   "options": [
+    "premió",
+    "premiaron"
+   ],
+   "answer": 0,
+   "why": "With people introduced by a, se takes a singular verb: se premió a los ganadores."
+  },
+  {
+   "before": "En mi casa se ",
+   "after": " a las ocho.",
+   "options": [
+    "cena",
+    "cenan"
+   ],
+   "answer": 0,
+   "why": "Impersonal se with no object: singular, se cena."
+  }
+ ],
+ "mistakes": [
+  "Overusing ser + participle: «el libro fue leído por mí» is correct but unnatural; «leí el libro» is better.",
+  "Not agreeing the participle: «las casas fueron construido» should be «construidas».",
+  "Using a singular verb with a plural thing in the passive se: «se vende casas» is common in signs, but the standard is «se venden casas».",
+  "Confusing ser and estar + participle: «la tienda es cerrada a las nueve» (action) and «la tienda está cerrada» (state).",
+  "Using de instead of por for the doer: «escrito de Cervantes» should be «escrito por Cervantes»."
+ ],
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 3 searches to people in the United States who typed «spanish passive voice practice». Two suggestions ask for examples and how to use the passive, so each row in the table has its own example.",
+  "source": "Google autocomplete in English (United States), captured by SpanishCue on 27 November 2026"
+ },
+ "heritage": "Heritage speakers in the US sometimes copy the English passive («fue dicho que…»), which sounds translated. Spanish usually prefers the passive se or an active sentence: «se dijo que…» or «dijeron que…». On signs, «se vende casas» is very common; writing expects «se venden casas».",
+ "teacher": "Give students sentences from news headlines in English and ask them to translate with se or with an active verb, then compare which Spanish versions sound most natural.",
+ "faq": [
+  {
+   "question": "How do you form the passive voice in Spanish?",
+   "answer": "Ser in any tense + past participle + por + the doer: la carta fue escrita por Ana. The participle agrees with the subject in gender and number."
+  },
+  {
+   "question": "What is the passive se?",
+   "answer": "Se + a third-person verb that agrees with the thing: se vende una casa, se venden casas. It is the usual Spanish choice when the doer is unknown or unimportant, much more common than ser + participle."
+  },
+  {
+   "question": "Is the passive voice common in Spanish?",
+   "answer": "Ser + participle appears in news, history and formal writing, but everyday Spanish prefers the passive se or an active sentence. If an English passive sounds stiff in Spanish, make it active."
+  }
+ ]
+}

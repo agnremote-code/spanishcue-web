@@ -1,0 +1,181 @@
+{
+ "theme": "contrast",
+ "level": "A2–B1",
+ "name": "comparatives and superlatives",
+ "title": "Spanish Comparatives and Superlatives Practice: Más, Menos, Tan",
+ "description": "Practice Spanish comparisons: más… que, menos… que, tan… como, tanto como, mejor, peor, the superlative el más and -ísimo, with 10 checked sentences.",
+ "h1": "Spanish comparatives and superlatives practice",
+ "answer": "Spanish compares with más… que (more than), menos… que (less than) and tan… como (as… as). With nouns, equality uses tanto, tanta, tantos, tantas… como. Bueno and malo have their own forms: mejor and peor. The superlative puts the article before más: el más alto de la clase. For very, add -ísimo: rapidísimo.",
+ "demand": {
+  "query": "spanish comparatives practice",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "rulesCaption": "Comparing in Spanish",
+ "rules": [
+  {
+   "use": "More than",
+   "example": "Mi hermano es más alto que yo.",
+   "meaning": "más + adjective + que"
+  },
+  {
+   "use": "Less than",
+   "example": "Este libro es menos caro que ese.",
+   "meaning": "menos + adjective + que"
+  },
+  {
+   "use": "As… as (adjective or adverb)",
+   "example": "Ana es tan simpática como su madre.",
+   "meaning": "tan + adjective + como"
+  },
+  {
+   "use": "As much / as many (noun)",
+   "example": "Tengo tantos libros como tú.",
+   "meaning": "tanto / tanta / tantos / tantas + noun + como"
+  },
+  {
+   "use": "Irregular: better, worse, older, younger",
+   "example": "Tu idea es mejor. Mi hermana es mayor.",
+   "meaning": "mejor, peor, mayor, menor"
+  },
+  {
+   "use": "Superlative",
+   "example": "Es el edificio más alto de la ciudad.",
+   "meaning": "el / la / los / las + más + adjective + de"
+  },
+  {
+   "use": "Very, extremely",
+   "example": "La película es buenísima.",
+   "meaning": "-ísimo / -ísima"
+  }
+ ],
+ "quiz": [
+  {
+   "before": "Texas es ",
+   "after": " grande que Florida.",
+   "options": [
+    "más",
+    "tan"
+   ],
+   "answer": 0,
+   "why": "More than: más… que."
+  },
+  {
+   "before": "Mi carro es tan viejo ",
+   "after": " el tuyo.",
+   "options": [
+    "como",
+    "que"
+   ],
+   "answer": 0,
+   "why": "Equality: tan… como."
+  },
+  {
+   "before": "Tengo ",
+   "after": " tarea como tú.",
+   "options": [
+    "tanta",
+    "tan"
+   ],
+   "answer": 0,
+   "why": "Before a noun, use tanto agreeing with it: tanta tarea."
+  },
+  {
+   "before": "Este restaurante es ",
+   "after": " que el otro; la comida es deliciosa.",
+   "options": [
+    "mejor",
+    "más bueno"
+   ],
+   "answer": 0,
+   "why": "Better: mejor, not más bueno for quality."
+  },
+  {
+   "before": "Mi abuela es la persona ",
+   "after": " generosa de la familia.",
+   "options": [
+    "más",
+    "muy"
+   ],
+   "answer": 0,
+   "why": "Superlative: la persona más generosa."
+  },
+  {
+   "before": "Es el mejor estudiante ",
+   "after": " la escuela.",
+   "options": [
+    "de",
+    "en"
+   ],
+   "answer": 0,
+   "why": "Superlatives take de: el mejor de la escuela."
+  },
+  {
+   "before": "Mi hermana tiene diecinueve años; yo tengo quince. Ella es ",
+   "after": ".",
+   "options": [
+    "mayor",
+    "más vieja"
+   ],
+   "answer": 0,
+   "why": "For people's age, use mayor and menor."
+  },
+  {
+   "before": "El examen fue ",
+   "after": "; nadie terminó a tiempo.",
+   "options": [
+    "dificilísimo",
+    "más difícil"
+   ],
+   "answer": 0,
+   "why": "Extremely difficult: dificilísimo."
+  },
+  {
+   "before": "Corro ",
+   "after": " rápido como mi hermano.",
+   "options": [
+    "tan",
+    "tanto"
+   ],
+   "answer": 0,
+   "why": "With an adverb, use tan: tan rápido como."
+  },
+  {
+   "before": "Hay más ",
+   "after": " veinte estudiantes en la clase.",
+   "options": [
+    "de",
+    "que"
+   ],
+   "answer": 0,
+   "why": "Before a number, más takes de: más de veinte."
+  }
+ ],
+ "mistakes": [
+  "Using más bueno and más malo for quality: «más bueno» should be «mejor», «más malo» should be «peor».",
+  "Using que for equality: «tan alto que» should be «tan alto como».",
+  "Using tan before nouns: «tan dinero como» should be «tanto dinero como».",
+  "Using en with superlatives: «el más alto en la clase» should be «el más alto de la clase».",
+  "Using que before numbers: «más que diez» should be «más de diez» in affirmative sentences."
+ ],
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 4 searches to people in the United States who typed «spanish comparatives practice». Most suggestions pair comparatives with superlatives, so both are on this page instead of two thin ones.",
+  "source": "Google autocomplete in English (United States), captured by SpanishCue on 27 November 2026"
+ },
+ "heritage": "Heritage speakers usually compare naturally. In writing, watch two English-influenced patterns: «más mejor» (mejor is already more) and «el más alto en la clase» (de la clase). Also note that «más bueno» is common in speech for taste or kindness, but «mejor» is the standard for quality.",
+ "teacher": "Bring photos of three cities, three athletes or three phones. Students compare them in pairs with más, menos and tan, then the class votes on the superlative: ¿Cuál es el mejor?",
+ "faq": [
+  {
+   "question": "How do you say «more than» in Spanish?",
+   "answer": "Más + adjective, adverb or noun + que: más alto que, más rápido que, más libros que. Before a number, use más de: más de cien personas."
+  },
+  {
+   "question": "What are the irregular comparatives?",
+   "answer": "Mejor (better), peor (worse), mayor (older, or bigger in importance) and menor (younger, or smaller in importance). For physical size, más grande and más pequeño are normal."
+  },
+  {
+   "question": "What is the difference between el más and -ísimo?",
+   "answer": "El más compares with a group: es el más alto de la clase. -Ísimo means very or extremely without comparing: es altísimo. Words ending in -co and -go change spelling: rico → riquísimo, largo → larguísimo."
+  }
+ ]
+}

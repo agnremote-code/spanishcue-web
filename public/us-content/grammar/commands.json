@@ -1,0 +1,176 @@
+{
+ "theme": "forms",
+ "level": "A2–B1",
+ "name": "commands",
+ "title": "Spanish Commands Practice: Tú, Usted and Ustedes Imperative Quiz",
+ "description": "Practice Spanish commands: affirmative and negative tú, usted, ustedes, the eight irregular tú commands and pronoun position, with 10 sentences checked as you tap.",
+ "h1": "Spanish commands practice",
+ "answer": "Affirmative tú commands look like the él form of the present (habla, come, escribe), except eight irregulars: di, haz, ve, pon, sal, sé, ten, ven. Negative tú commands and all usted and ustedes commands use the present subjunctive: no hables, hable usted, coman ustedes. Pronouns attach to affirmative commands (dímelo) and go before negative ones (no me lo digas).",
+ "demand": {
+  "query": "spanish commands practice",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "rulesCaption": "Command forms in Spanish",
+ "rules": [
+  {
+   "use": "Affirmative tú: él form of the present",
+   "example": "Habla más despacio. Come verduras.",
+   "meaning": "habla, come, escribe"
+  },
+  {
+   "use": "Eight irregular tú commands",
+   "example": "Di la verdad. Haz la tarea. Ven aquí.",
+   "meaning": "di, haz, ve, pon, sal, sé, ten, ven"
+  },
+  {
+   "use": "Negative tú: present subjunctive",
+   "example": "No hables. No comas. No vengas.",
+   "meaning": "no + -es / -as"
+  },
+  {
+   "use": "Usted and ustedes: present subjunctive",
+   "example": "Pase, por favor. Siéntense.",
+   "meaning": "hable / hablen, coma / coman"
+  },
+  {
+   "use": "Pronouns attached to affirmative",
+   "example": "Dímelo. Siéntate. Cómpralo.",
+   "meaning": "accent to keep the stress"
+  },
+  {
+   "use": "Pronouns before negative",
+   "example": "No me lo digas. No te sientes.",
+   "meaning": "no + pronoun + verb"
+  }
+ ],
+ "quiz": [
+  {
+   "before": "Por favor, ",
+   "after": " la puerta; hace frío.",
+   "options": [
+    "cierra",
+    "cierras"
+   ],
+   "answer": 0,
+   "why": "Affirmative tú: like the él form, cierra."
+  },
+  {
+   "before": "",
+   "after": " la tarea antes de jugar.",
+   "options": [
+    "Haz",
+    "Hace"
+   ],
+   "answer": 0,
+   "why": "Hacer is irregular: haz."
+  },
+  {
+   "before": "No ",
+   "after": " el teléfono en clase.",
+   "options": [
+    "uses",
+    "usa"
+   ],
+   "answer": 0,
+   "why": "Negative tú uses the subjunctive: no uses."
+  },
+  {
+   "before": "Señora, ",
+   "after": " aquí, por favor.",
+   "options": [
+    "firme",
+    "firma"
+   ],
+   "answer": 0,
+   "why": "Usted command: firme."
+  },
+  {
+   "before": "",
+   "after": " a mi casa a las seis.",
+   "options": [
+    "Ven",
+    "Viene"
+   ],
+   "answer": 0,
+   "why": "Venir is irregular: ven."
+  },
+  {
+   "before": "Chicos, ",
+   "after": " sus libros en la página diez.",
+   "options": [
+    "abran",
+    "abren"
+   ],
+   "answer": 0,
+   "why": "Ustedes command: abran."
+  },
+  {
+   "before": "—¿Te compro el libro? —Sí, ",
+   "after": ".",
+   "options": [
+    "cómpramelo",
+    "me lo compra"
+   ],
+   "answer": 0,
+   "why": "Pronouns attach to affirmative commands, with an accent."
+  },
+  {
+   "before": "No ",
+   "after": " digas a nadie.",
+   "options": [
+    "se lo",
+    "lo se"
+   ],
+   "answer": 0,
+   "why": "Negative: pronouns before the verb, indirect first, se lo."
+  },
+  {
+   "before": "",
+   "after": " paciente con tu hermanito.",
+   "options": [
+    "Sé",
+    "Se"
+   ],
+   "answer": 0,
+   "why": "Ser in tú command: sé, with accent."
+  },
+  {
+   "before": "Por favor, no ",
+   "after": " tarde, señor Pérez.",
+   "options": [
+    "llegue",
+    "llega"
+   ],
+   "answer": 0,
+   "why": "Negative usted: no llegue."
+  }
+ ],
+ "mistakes": [
+  "Using the subjunctive for affirmative tú: «hables más alto» should be «habla más alto».",
+  "Using the affirmative form in the negative: «no habla» should be «no hables».",
+  "Regularizing the eight irregulars: «dice la verdad» and «hace la cama» should be «di la verdad» and «haz la cama».",
+  "Putting pronouns after negative commands: «no dímelo» should be «no me lo digas».",
+  "Forgetting the accent when pronouns are attached: «dimelo» should be «dímelo», «sientate» should be «siéntate»."
+ ],
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish commands practice». 1 asks for a worksheet or a PDF (spanish commands practice worksheet). 1 asks for a quiz or exercises (spanish commands quiz). Formal, informal and tú commands all appear among the suggestions, so this page covers the three in one table.",
+  "source": "Google autocomplete in English (United States), captured by SpanishCue on 27 November 2026"
+ },
+ "heritage": "Many heritage speakers use regional command forms at home, like «dile» and «hazlo» correctly but also «no lo dices» for «no lo digas». Formal writing expects the subjunctive in all negative commands. Check written accents too: cómpralo, dímelo, siéntate.",
+ "teacher": "Play a quick command game: one student gives instructions to the class with tú, then to the teacher with usted, then to two classmates with ustedes. The class acts each one out.",
+ "faq": [
+  {
+   "question": "What are the eight irregular tú commands?",
+   "answer": "Di (decir), haz (hacer), ve (ir), pon (poner), sal (salir), sé (ser), ten (tener) and ven (venir). Their negative forms are regular subjunctives: no digas, no hagas, no vayas, no pongas, no salgas, no seas, no tengas, no vengas."
+  },
+  {
+   "question": "How are formal commands formed?",
+   "answer": "Usted and ustedes commands use the present subjunctive: hable, hablen; coma, coman; escriba, escriban. The same form works for affirmative and negative: hable usted, no hable usted."
+  },
+  {
+   "question": "Where do pronouns go in commands?",
+   "answer": "Attached to the end of affirmative commands (dímelo, siéntense) and before the verb in negative commands (no me lo digas, no se sienten). With two pronouns, the indirect comes first, and le or les becomes se before lo or la."
+  }
+ ]
+}

@@ -1,0 +1,176 @@
+{
+ "theme": "forms",
+ "level": "B1",
+ "name": "pluperfect",
+ "title": "Spanish Pluperfect Practice: Había + Participle with a Quiz",
+ "description": "Practice the Spanish pluperfect (past perfect): había + participle, irregular participles, ya and todavía, with a rule table and 10 checked sentences.",
+ "h1": "Spanish pluperfect practice",
+ "answer": "The Spanish pluperfect (pluscuamperfecto, past perfect) is the imperfect of haber plus a past participle: había comido, habías visto, habíamos salido. Use it for an action that happened before another past action: cuando llegué, la película ya había empezado. Pronouns go before había, and the participle never changes.",
+ "demand": {
+  "query": "spanish pluperfect practice",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "rulesCaption": "Forming and using the pluperfect",
+ "rules": [
+  {
+   "use": "Haber in the imperfect",
+   "example": "había, habías, había, habíamos, habían",
+   "meaning": "+ participle"
+  },
+  {
+   "use": "Regular participles",
+   "example": "hablado, comido, vivido",
+   "meaning": "-ado / -ido"
+  },
+  {
+   "use": "Irregular participles",
+   "example": "hecho, dicho, visto, escrito, puesto, vuelto, abierto, roto, muerto",
+   "meaning": "learn these"
+  },
+  {
+   "use": "Before another past action",
+   "example": "Cuando llegué, ya habían cenado.",
+   "meaning": "pluperfect + preterite"
+  },
+  {
+   "use": "Never before then",
+   "example": "Nunca había visto el mar.",
+   "meaning": "nunca + pluperfect"
+  },
+  {
+   "use": "Pronouns before había",
+   "example": "Ya lo había leído.",
+   "meaning": "pronoun + había"
+  }
+ ],
+ "quiz": [
+  {
+   "before": "Cuando llegamos al cine, la película ya ",
+   "after": " empezado.",
+   "options": [
+    "había",
+    "ha"
+   ],
+   "answer": 0,
+   "why": "Before another past action: había empezado."
+  },
+  {
+   "before": "Nunca ",
+   "after": " visto la nieve antes de mudarme a Chicago.",
+   "options": [
+    "había",
+    "habían"
+   ],
+   "answer": 0,
+   "why": "Yo: había visto."
+  },
+  {
+   "before": "Mis padres ya ",
+   "after": " cuando volví a casa.",
+   "options": [
+    "habían cenado",
+    "habían cenada"
+   ],
+   "answer": 0,
+   "why": "The participle does not change: cenado."
+  },
+  {
+   "before": "Ella me dijo que había ",
+   "after": " la carta.",
+   "options": [
+    "escrito",
+    "escribido"
+   ],
+   "answer": 0,
+   "why": "Irregular participle: escrito."
+  },
+  {
+   "before": "Nosotros ya ",
+   "after": " salido cuando empezó a llover.",
+   "options": [
+    "habíamos",
+    "habíamos de"
+   ],
+   "answer": 0,
+   "why": "Nosotros: habíamos salido."
+  },
+  {
+   "before": "¿",
+   "after": " estado en México antes de este viaje?",
+   "options": [
+    "Habías",
+    "Había tú"
+   ],
+   "answer": 0,
+   "why": "Tú: habías estado."
+  },
+  {
+   "before": "Cuando encontré mis llaves, ya ",
+   "after": " llamado a un cerrajero.",
+   "options": [
+    "había",
+    "he"
+   ],
+   "answer": 0,
+   "why": "The earlier past action: había llamado."
+  },
+  {
+   "before": "No pude entrar porque alguien había ",
+   "after": " la ventana.",
+   "options": [
+    "roto",
+    "rompido"
+   ],
+   "answer": 0,
+   "why": "Irregular participle: roto."
+  },
+  {
+   "before": "El libro ya ",
+   "after": " había leído; por eso no lo compré.",
+   "options": [
+    "lo",
+    "le"
+   ],
+   "answer": 0,
+   "why": "Pronoun before había: lo había leído."
+  },
+  {
+   "before": "Cuando llegó la policía, el ladrón ya ",
+   "after": ".",
+   "options": [
+    "se había ido",
+    "había se ido"
+   ],
+   "answer": 0,
+   "why": "Reflexive pronoun before había: se había ido."
+  }
+ ],
+ "mistakes": [
+  "Using the present perfect for an earlier past: «cuando llegué, ya ha salido» should be «ya había salido».",
+  "Making the participle agree: «las cartas que había escritas» should be «las cartas que había escrito».",
+  "Regularizing participles: «había hacido» and «había rompido» should be «había hecho» and «había roto».",
+  "Putting pronouns between había and the participle: «había lo visto» should be «lo había visto».",
+  "Using the pluperfect when the order is clear with the preterite alone: «primero cenamos y luego fuimos al cine» needs no pluperfect."
+ ],
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 5 searches to people in the United States who typed «spanish pluperfect practice». One suggestion uses the Spanish name pluscuamperfecto and one asks when to use the tense, so both are answered above.",
+  "source": "Google autocomplete in English (United States), captured by SpanishCue on 27 November 2026"
+ },
+ "heritage": "Heritage speakers usually use the pluperfect correctly, but in writing some regularize participles («había ponido», «había hacido»). The standard forms are puesto and hecho. Also check the accent on había and habíamos.",
+ "teacher": "Tell a short story of a bad day and ask students to add what had already happened before each event: Cuando llegué al trabajo, mi jefe ya se había ido. Then they write their own.",
+ "faq": [
+  {
+   "question": "How do you form the pluperfect in Spanish?",
+   "answer": "Use the imperfect of haber (había, habías, había, habíamos, habían) plus the past participle: había hablado, habíamos comido. The participle never changes for gender or number."
+  },
+  {
+   "question": "When do I use the pluperfect?",
+   "answer": "When you talk about something that happened before another moment in the past: cuando llegué, ya habían salido. Words like ya, todavía no and nunca often go with it."
+  },
+  {
+   "question": "Is the pluperfect the same as the past perfect?",
+   "answer": "Yes. English calls it the past perfect (I had eaten), Spanish grammar calls it pretérito pluscuamperfecto, and many US textbooks call it the pluperfect."
+  }
+ ]
+}

@@ -1,0 +1,176 @@
+{
+ "theme": "forms",
+ "level": "A1–A2",
+ "name": "spelling",
+ "title": "Spanish Spelling Practice: B and V, C, Z, S, H, LL and Y Quiz",
+ "description": "Practice Spanish spelling: b and v, c, z and s, silent h, ll and y, g and j, qu and gu, and spelling changes in verbs, with a rule table and 10 checked sentences.",
+ "h1": "Spanish spelling practice",
+ "answer": "Spanish spelling is close to pronunciation, but a few letters share sounds: b and v sound the same, c before e or i, z and s sound alike in Latin America, h is silent, and ll and y sound the same for most speakers. Some sounds need two letters: qu before e and i (queso), gu before e and i (guerra). Verbs change spelling to keep their sound: busqué, llegué, empecé.",
+ "demand": {
+  "query": "spanish spelling practice",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "rulesCaption": "Spanish spelling rules that cause most errors",
+ "rules": [
+  {
+   "use": "B and V sound the same",
+   "example": "vaso, beso; voy, bueno",
+   "meaning": "learn each word"
+  },
+  {
+   "use": "C, Z, S (Latin America)",
+   "example": "cine, zapato, sopa",
+   "meaning": "z before a, o, u; c before e, i"
+  },
+  {
+   "use": "Silent h",
+   "example": "hola, hablar, ahora, hacer",
+   "meaning": "write it, don't say it"
+  },
+  {
+   "use": "LL and Y",
+   "example": "llamar, calle; yo, playa",
+   "meaning": "same sound for most speakers"
+  },
+  {
+   "use": "Hard c and g before e, i",
+   "example": "queso, quince; guerra, guitarra",
+   "meaning": "qu / gu"
+  },
+  {
+   "use": "Verb spelling changes",
+   "example": "busqué, llegué, empecé",
+   "meaning": "-car → qué, -gar → gué, -zar → cé"
+  }
+ ],
+ "quiz": [
+  {
+   "before": "Mañana ",
+   "after": " a la playa con mis primos.",
+   "options": [
+    "voy",
+    "boy"
+   ],
+   "answer": 0,
+   "why": "Ir is spelled with v: voy."
+  },
+  {
+   "before": "¿Quieres un ",
+   "after": " de agua?",
+   "options": [
+    "vaso",
+    "baso"
+   ],
+   "answer": 0,
+   "why": "Glass is vaso, with v."
+  },
+  {
+   "before": "",
+   "after": " mucho calor hoy.",
+   "options": [
+    "Hace",
+    "Ace"
+   ],
+   "answer": 0,
+   "why": "Hacer has a silent h: hace."
+  },
+  {
+   "before": "Mis ",
+   "after": " son nuevos y muy cómodos.",
+   "options": [
+    "zapatos",
+    "sapatos"
+   ],
+   "answer": 0,
+   "why": "Shoes: zapatos, with z."
+  },
+  {
+   "before": "Me encanta el ",
+   "after": " con pan.",
+   "options": [
+    "queso",
+    "keso"
+   ],
+   "answer": 0,
+   "why": "Before e, the hard c sound is written qu: queso."
+  },
+  {
+   "before": "Ayer ",
+   "after": " tarde a clase.",
+   "options": [
+    "llegué",
+    "llegé"
+   ],
+   "answer": 0,
+   "why": "-gar verbs add u in yo preterite: llegué."
+  },
+  {
+   "before": "Ayer ",
+   "after": " mis llaves por toda la casa.",
+   "options": [
+    "busqué",
+    "buscé"
+   ],
+   "answer": 0,
+   "why": "-car verbs change c to qu in yo preterite: busqué."
+  },
+  {
+   "before": "Mi hermano toca la ",
+   "after": ".",
+   "options": [
+    "guitarra",
+    "gitarra"
+   ],
+   "answer": 0,
+   "why": "Hard g before i: gu, guitarra."
+  },
+  {
+   "before": "Vivo en la ",
+   "after": " Ocho, cerca del parque.",
+   "options": [
+    "calle",
+    "caye"
+   ],
+   "answer": 0,
+   "why": "Street: calle, with ll."
+  },
+  {
+   "before": "La clase ",
+   "after": " a las nueve.",
+   "options": [
+    "empieza",
+    "empiesa"
+   ],
+   "answer": 0,
+   "why": "Empezar keeps the z before a: empieza."
+  }
+ ],
+ "mistakes": [
+  "Mixing b and v by sound: «boy», «baso» and «abía» should be «voy», «vaso» and «había».",
+  "Forgetting the silent h: «ablar» and «ora» should be «hablar» and «ahora».",
+  "Writing s for z or c: «sapato», «siudad» should be «zapato», «ciudad».",
+  "Dropping the u in verb forms: «llegé» and «pagé» should be «llegué» and «pagué».",
+  "Writing k for the hard c: «keso» should be «queso»; k appears only in a few borrowed words like kilo."
+ ],
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish spelling practice». 1 asks for a worksheet or a PDF (spanish spelling worksheets). 1 asks for a quiz or exercises (spanish spelling test practice). Spelling bees, spelling tests and alphabet practice all appear in the list; this page works on the letters that cause most errors.",
+  "source": "Google autocomplete in English (United States), captured by SpanishCue on 27 November 2026"
+ },
+ "heritage": "Heritage speakers often spell by sound, which leads to b and v, s, c and z, h and y and ll confusions. These are the most frequent errors in heritage writing and also the easiest to fix with reading. Keep a short list of your own frequent words (había, voy, hacer, ciudad) and check them every time.",
+ "teacher": "Run a mini spelling bee with words from the table: students spell aloud with Spanish letter names (be, uve, ce, zeta, hache) and then write a sentence with each word.",
+ "faq": [
+  {
+   "question": "Do b and v sound different in Spanish?",
+   "answer": "No. In modern Spanish, b and v are pronounced the same. The difference exists only in writing, so you learn each word: vaso, bueno, vivir, beber. Related words usually keep the same letter: vivir, vida, vivo."
+  },
+  {
+   "question": "Why do some verbs change spelling in the preterite?",
+   "answer": "To keep the same sound. Buscar becomes busqué (c would sound like s before e), llegar becomes llegué (g would sound like j) and empezar becomes empecé (Spanish writes ce, not ze)."
+  },
+  {
+   "question": "What are the letter names in Spanish?",
+   "answer": "A, be, ce, de, e, efe, ge, hache, i, jota, ka, ele, eme, ene, eñe, o, pe, cu, erre, ese, te, u, uve, uve doble, equis, ye, zeta. Many Latin Americans say be larga or be grande for b and ve corta or ve chica for v."
+  }
+ ]
+}

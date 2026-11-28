@@ -82,6 +82,7 @@ const curatedRoutes: { path: string; priority: number; changeFrequency: Frequenc
   ...["spanish-1", "spanish-2", "spanish-3"].map((course) => ({ path: `/spanish-sub-plans/${course}`, priority: 0.5, changeFrequency: "monthly" as Frequency })),
   ...["argumentative-essay", "project-presentation", "listening-and-reading"].map((part) => ({ path: `/ap-spanish-language/${part}`, priority: 0.5, changeFrequency: "monthly" as Frequency })),
   ...["ser-vs-estar", "preterite-vs-imperfect", "subjunctive", "por-vs-para", "preterite", "imperfect", "present-perfect", "future-tense", "reflexive-verbs", "direct-object-pronouns"].map((topic) => ({ path: `/spanish-grammar-practice/${topic}`, priority: 0.5, changeFrequency: "monthly" as Frequency })),
+  ...usCatalog.filter((entry) => entry.family === "grammar").map((entry) => ({ path: `/spanish-grammar-practice/${entry.slug}`, priority: 0.5, changeFrequency: "monthly" as Frequency })),
   { path: "/datos/errores-preterito-perfecto-a2", priority: 0.6, changeFrequency: "monthly" },
   { path: "/datos/que-autocompleta-google-en-gramatica", priority: 0.6, changeFrequency: "monthly" },
   { path: MATERIAL_ELE_PATH, priority: 0.95, changeFrequency: "weekly" },

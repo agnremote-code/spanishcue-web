@@ -1,0 +1,176 @@
+{
+ "theme": "forms",
+ "level": "A2–B1",
+ "name": "punctuation",
+ "title": "Spanish Punctuation Practice: ¿ ¡, Commas, Dashes and Quotes",
+ "description": "Practice Spanish punctuation: opening ¿ and ¡, commas, the dash in dialogue, quotation marks, numbers and capitals, with a rule table and 10 checked sentences.",
+ "h1": "Spanish punctuation practice",
+ "answer": "Spanish opens questions and exclamations with ¿ and ¡ and closes them with ? and !, placed exactly where the question starts. Dialogue uses a long dash (—) instead of quotation marks. Days, months and languages are lowercase. Many Spanish-speaking countries use a comma for decimals and a period for thousands, but Mexico and the US use the English system.",
+ "demand": {
+  "query": "spanish punctuation practice",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "rulesCaption": "Punctuation that differs from English",
+ "rules": [
+  {
+   "use": "Opening question and exclamation marks",
+   "example": "¿Dónde vives? ¡Qué bonito!",
+   "meaning": "¿ … ? / ¡ … !"
+  },
+  {
+   "use": "Question only on part of the sentence",
+   "example": "Si llueve, ¿vienes igual?",
+   "meaning": "¿ where the question starts"
+  },
+  {
+   "use": "Dialogue with dashes",
+   "example": "—¿Vienes? —preguntó Ana.",
+   "meaning": "— (raya)"
+  },
+  {
+   "use": "Lowercase days, months, languages",
+   "example": "el lunes 3 de mayo; hablo español",
+   "meaning": "lowercase"
+  },
+  {
+   "use": "Quotation marks",
+   "example": "Dijo «no» sin pensar.",
+   "meaning": "« » or “ ”"
+  },
+  {
+   "use": "Numbers",
+   "example": "3,5 kilos (Spain, Argentina); 3.5 (Mexico, US)",
+   "meaning": "comma or period by country"
+  }
+ ],
+ "quiz": [
+  {
+   "before": "",
+   "after": "Cómo te llamas?",
+   "options": [
+    "¿",
+    "Ø (nothing)"
+   ],
+   "answer": 0,
+   "why": "Spanish questions open with ¿."
+  },
+  {
+   "before": "",
+   "after": "Qué sorpresa!",
+   "options": [
+    "¡",
+    "¿"
+   ],
+   "answer": 0,
+   "why": "Exclamations open with ¡."
+  },
+  {
+   "before": "Mi cumpleaños es en ",
+   "after": ".",
+   "options": [
+    "junio",
+    "Junio"
+   ],
+   "answer": 0,
+   "why": "Months are lowercase in Spanish."
+  },
+  {
+   "before": "Si tienes tiempo, ",
+   "after": "me ayudas?",
+   "options": [
+    "¿",
+    "Ø (nothing)"
+   ],
+   "answer": 0,
+   "why": "The ¿ goes where the question starts, after the comma."
+  },
+  {
+   "before": "Estudio francés y ",
+   "after": " en la universidad.",
+   "options": [
+    "alemán",
+    "Alemán"
+   ],
+   "answer": 0,
+   "why": "Languages are lowercase."
+  },
+  {
+   "before": "La reunión es el ",
+   "after": " a las diez.",
+   "options": [
+    "martes",
+    "Martes"
+   ],
+   "answer": 0,
+   "why": "Days of the week are lowercase."
+  },
+  {
+   "before": "",
+   "after": "Tienes hambre? —preguntó mi madre.",
+   "options": [
+    "—¿",
+    "«¿"
+   ],
+   "answer": 0,
+   "why": "Dialogue starts with a dash: —¿Tienes hambre?"
+  },
+  {
+   "before": "Querida Ana",
+   "after": " Te escribo desde Lima.",
+   "options": [
+    ":",
+    ","
+   ],
+   "answer": 0,
+   "why": "Spanish letters use a colon after the greeting: Querida Ana:"
+  },
+  {
+   "before": "",
+   "after": "Hola!, ¿cómo estás?",
+   "options": [
+    "¡",
+    "Ø (nothing)"
+   ],
+   "answer": 0,
+   "why": "Each exclamation needs its own opening ¡."
+  },
+  {
+   "before": "Vivo en Nueva York desde ",
+   "after": " de 2019.",
+   "options": [
+    "enero",
+    "Enero"
+   ],
+   "answer": 0,
+   "why": "Months stay lowercase, even in dates."
+  }
+ ],
+ "mistakes": [
+  "Leaving out the opening ¿ or ¡: Spanish writes both marks, even in short questions (¿Sí?).",
+  "Capitalizing days, months and languages: «el Lunes 5 de Mayo» should be «el lunes 5 de mayo».",
+  "Putting ¿ at the start of the sentence when only part is a question: «Si llueve, ¿vienes?»",
+  "Using quotation marks for dialogue as in English: Spanish novels and many texts use dashes (—).",
+  "Using a comma after the greeting of a letter: formal Spanish uses a colon: «Estimado señor:»."
+ ],
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 5 searches to people in the United States who typed «spanish punctuation practice». 1 asks for a worksheet or a PDF (spanish accents practice worksheet pdf). Accent marks and comma rules show up next to punctuation, so commas are in the table and accent marks have their own practice page.",
+  "source": "Google autocomplete in English (United States), captured by SpanishCue on 27 November 2026"
+ },
+ "heritage": "Heritage speakers often skip ¿ and ¡ on phones and capitalize months and days by English habit. Those are the two punctuation errors teachers mark most in heritage writing. Setting a Spanish keyboard on your phone makes ¿ and ¡ one tap away.",
+ "teacher": "Give students a short dialogue copied with English punctuation. In pairs, they rewrite it with dashes, ¿ ¡ and lowercase months, then read it aloud as a scene.",
+ "faq": [
+  {
+   "question": "Why does Spanish use upside-down question marks?",
+   "answer": "So the reader knows from the start that a question or exclamation is coming, which matters because Spanish questions often have the same word order as statements: ¿Tu hermano trabaja aquí? The rule dates from 1754."
+  },
+  {
+   "question": "Are days and months capitalized in Spanish?",
+   "answer": "No. Days of the week, months, seasons and languages are lowercase: el lunes, en mayo, en verano, hablo inglés. They take a capital only at the start of a sentence or in titles."
+  },
+  {
+   "question": "How is dialogue punctuated in Spanish?",
+   "answer": "With a long dash (—) at the start of each line and around the narrator's words: —Ya voy —dijo Marta—, espera un momento. Quotation marks are used for quotes inside the text."
+  }
+ ]
+}

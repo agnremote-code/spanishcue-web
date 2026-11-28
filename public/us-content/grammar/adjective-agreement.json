@@ -1,0 +1,176 @@
+{
+ "theme": "forms",
+ "level": "A1–A2",
+ "name": "adjective agreement",
+ "title": "Spanish Adjective Agreement Practice: Gender and Number Quiz",
+ "description": "Practice Spanish noun-adjective agreement: -o and -a endings, adjectives in -e and consonants, plurals, mixed groups and nationalities, with 10 checked sentences.",
+ "h1": "Spanish adjective agreement practice",
+ "answer": "Spanish adjectives agree with the noun in gender and number. Adjectives in -o have four forms (alto, alta, altos, altas); adjectives in -e or most consonants have two (grande, grandes; fácil, fáciles). A mixed group of masculine and feminine nouns takes the masculine plural. Nationalities that end in a consonant add -a: español, española.",
+ "demand": {
+  "query": "spanish adjective agreement practice",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "rulesCaption": "How adjectives agree in Spanish",
+ "rules": [
+  {
+   "use": "Adjectives in -o: four forms",
+   "example": "un chico alto, una chica alta, unos chicos altos, unas chicas altas",
+   "meaning": "-o / -a / -os / -as"
+  },
+  {
+   "use": "Adjectives in -e: two forms",
+   "example": "un libro interesante, unas clases interesantes",
+   "meaning": "-e / -es"
+  },
+  {
+   "use": "Most consonants: two forms",
+   "example": "un examen fácil, unos exámenes fáciles",
+   "meaning": "+ -es"
+  },
+  {
+   "use": "Nationalities in a consonant add -a",
+   "example": "un chico español, una chica española",
+   "meaning": "-a / -as"
+  },
+  {
+   "use": "Mixed group: masculine plural",
+   "example": "Mi padre y mi madre son altos.",
+   "meaning": "-os"
+  },
+  {
+   "use": "Z changes to c in the plural",
+   "example": "un niño feliz, unos niños felices",
+   "meaning": "-ces"
+  }
+ ],
+ "quiz": [
+  {
+   "before": "Mi abuela es muy ",
+   "after": ".",
+   "options": [
+    "simpática",
+    "simpático"
+   ],
+   "answer": 0,
+   "why": "Abuela is feminine: simpática."
+  },
+  {
+   "before": "Tengo dos perros ",
+   "after": ".",
+   "options": [
+    "pequeños",
+    "pequeño"
+   ],
+   "answer": 0,
+   "why": "Perros is masculine plural: pequeños."
+  },
+  {
+   "before": "Las preguntas del examen eran ",
+   "after": ".",
+   "options": [
+    "difíciles",
+    "difícils"
+   ],
+   "answer": 0,
+   "why": "Consonant adjective in the plural: add -es, difíciles."
+  },
+  {
+   "before": "Mis tíos y mis tías son ",
+   "after": ".",
+   "options": [
+    "generosos",
+    "generosas"
+   ],
+   "answer": 0,
+   "why": "A mixed group takes the masculine plural."
+  },
+  {
+   "before": "Ella es ",
+   "after": "; es de Madrid.",
+   "options": [
+    "española",
+    "español"
+   ],
+   "answer": 0,
+   "why": "Nationalities in a consonant add -a: española."
+  },
+  {
+   "before": "Es una película muy ",
+   "after": ".",
+   "options": [
+    "interesante",
+    "interesanta"
+   ],
+   "answer": 0,
+   "why": "Adjectives in -e do not change for gender."
+  },
+  {
+   "before": "Los niños están ",
+   "after": " porque es Navidad.",
+   "options": [
+    "felices",
+    "felizes"
+   ],
+   "answer": 0,
+   "why": "Z becomes c before -es: felices."
+  },
+  {
+   "before": "Compré unas camisas ",
+   "after": ".",
+   "options": [
+    "azules",
+    "azul"
+   ],
+   "answer": 0,
+   "why": "Azul ends in a consonant: azules."
+  },
+  {
+   "before": "La comida mexicana es ",
+   "after": ".",
+   "options": [
+    "deliciosa",
+    "delicioso"
+   ],
+   "answer": 0,
+   "why": "Comida is feminine: deliciosa."
+  },
+  {
+   "before": "Mi hermano y yo somos ",
+   "after": ".",
+   "options": [
+    "altos",
+    "alto"
+   ],
+   "answer": 0,
+   "why": "Two people: plural, and mixed or masculine takes -os."
+  }
+ ],
+ "mistakes": [
+  "Matching the speaker instead of the noun: a man says «la casa es bonita», because casa is feminine.",
+  "Adding -a to adjectives in -e: «una chica inteligenta» should be «una chica inteligente».",
+  "Adding only -s to consonants: «fácils» should be «fáciles».",
+  "Using feminine plural for mixed groups: «los estudiantes (boys and girls) son simpáticos», not «simpáticas».",
+  "Forgetting that tricky nouns change the adjective: «el agua fría», «el problema serio», «la mano derecha»."
+ ],
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 5 searches to people in the United States who typed «spanish adjective agreement practice». 3 ask for a worksheet or a PDF (spanish adjective agreement worksheet; spanish noun adjective agreement practice pdf; spanish noun adjective agreement worksheet). Worksheets and PDFs lead the list; these ten sentences check each ending as soon as you tap.",
+  "source": "Google autocomplete in English (United States), captured by SpanishCue on 27 November 2026"
+ },
+ "heritage": "Heritage speakers usually make adjectives agree by ear. In writing, the traps are tricky nouns like el agua (el agua está fría), el mapa and la foto, and English-style colors: in Spanish, colors agree when they are adjectives (camisas blancas) but not when a noun names the color (camisas color naranja).",
+ "teacher": "Students describe a classmate with three adjectives without saying the name; the class guesses who it is. Then they describe two classmates together to practise plurals.",
+ "faq": [
+  {
+   "question": "Do all Spanish adjectives change for gender?",
+   "answer": "No. Adjectives ending in -o change (alto, alta). Most ending in -e, -ista or a consonant have one form for both genders (grande, optimista, fácil). Nationalities are the main exception: español, española."
+  },
+  {
+   "question": "Which form do I use for a mixed group?",
+   "answer": "The masculine plural, even if there is only one masculine noun: mi madre, mis tías y mi tío son altos."
+  },
+  {
+   "question": "Do adjectives always go after the noun?",
+   "answer": "Usually, but not always. Numbers, mucho, poco and a few others go before, and some adjectives change meaning by position: un gran amigo (a great friend), un amigo grande (a big friend)."
+  }
+ ]
+}

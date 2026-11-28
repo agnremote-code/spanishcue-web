@@ -44,7 +44,7 @@ test('the generated catalog lists exactly the pages in public/us-content', () =>
 });
 
 test('only known families exist', () => {
-  for (const family of families) assert.ok(['vocabulary', 'verbs', 'ap'].includes(family), `${family} has a route and a gate`);
+  for (const family of families) assert.ok(['vocabulary', 'verbs', 'ap', 'grammar'].includes(family), `${family} has a route and a gate`);
 });
 
 test('vocabulary pages pass the gate', () => {
@@ -173,8 +173,46 @@ test('AP unit pages pass the gate', () => {
   }
 });
 
+test('grammar practice pages pass the gate', () => {
+  if (!families.includes('grammar')) return;
+  const pages = load('grammar');
+  const legacy = readFileSync(resolve(root, 'app/spanish-grammar-practice/data.ts'), 'utf8');
+  const legacySlugs = new Set([...legacy.matchAll(/slug: "([a-z0-9-]+)"/g)].map(match => match[1]));
+  const legacyTitles = new Set([...legacy.matchAll(/title: "([^"]+)"/g)].map(match => match[1]));
+  const sentences = new Set([...legacy.matchAll(/before: "([^"]*)", after: "([^"]*)"/g)].map(match => normal(`${match[1]} ${match[2]}`).trim()));
+  const titles = new Set();
+  for (const { slug, page } of pages) {
+    assert.doesNotMatch(JSON.stringify(page), /PENDING/, `${slug}: no placeholder left`);
+    assert.ok(!legacySlugs.has(slug), `${slug}: already a bundled topic`);
+    assert.match(slug, /^[a-z0-9]+(?:-[a-z0-9]+)*$/);
+    assert.ok(['contrast', 'forms'].includes(page.theme), `${slug}: hub group`);
+    assert.match(page.h1, /^Spanish .+ practice$/, `${slug}: the hub card name comes from the H1`);
+    assert.match(page.level, /^(A1|A2|B1|B2|C1)(–(A2|B1|B2|C1))?$/, `${slug}: level range`);
+    assert.ok(page.title.length <= 70 && !titles.has(page.title) && !legacyTitles.has(page.title), `${slug}: title unique and at most 70 characters`);
+    titles.add(page.title);
+    assert.ok(page.description.length >= 110 && page.description.length <= 165, `${slug}: description 110-165 characters (${page.description.length})`);
+    assert.ok(page.demand?.query?.startsWith('spanish ') && page.demand.source && page.demand.date, `${slug}: real US demand recorded`);
+    assert.ok(words(page.answer).length >= 35, `${slug}: direct answer`);
+    assert.ok(page.rules.length >= 5 && page.mistakes.length >= 4 && page.faq.length >= 3, `${slug}: rules, mistakes and questions`);
+    assert.ok(page.quiz.length >= 10, `${slug}: 10+ practice questions`);
+    checkQuiz(page.quiz, slug);
+    for (const item of page.quiz) {
+      const key = normal(`${item.before} ${item.after}`).trim();
+      assert.ok(!sentences.has(key), `${slug}: question repeated from another page («${item.before}…»)`);
+      sentences.add(key);
+    }
+    assert.ok(words(ownText(page)).length >= 450, `${slug}: at least 450 own words`);
+    assert.ok(words(page.heritage).length >= 30 && words(page.teacher).length >= 15 && words(page.figure.text).length >= 15 && page.figure.source, `${slug}: heritage, teacher note and figure`);
+  }
+  const sets = pages.map(({ slug, page }) => ({ slug, set: shingles(ownText(page)) }));
+  for (let i = 0; i < sets.length; i += 1) for (let j = i + 1; j < sets.length; j += 1) {
+    const score = jaccard(sets[i].set, sets[j].set);
+    assert.ok(score < 0.3, `${sets[i].slug} and ${sets[j].slug} share ${(score * 100).toFixed(0)} % of their 5-word sequences`);
+  }
+});
+
 test('page bodies stay out of the Worker bundle', () => {
-  for (const file of ['app/spanish-vocabulary/[theme]/page.tsx', 'app/spanish-verb-practice/[verb]/page.tsx', 'app/ap-spanish-language/themes/[unit]/page.tsx']) {
+  for (const file of ['app/spanish-vocabulary/[theme]/page.tsx', 'app/spanish-verb-practice/[verb]/page.tsx', 'app/ap-spanish-language/themes/[unit]/page.tsx', 'app/spanish-grammar-practice/[topic]/page.tsx']) {
     const route = readFileSync(resolve(root, file), 'utf8');
     assert.match(route, /loadUsContent/);
     assert.doesNotMatch(route, /public\/us-content|\.json['"]/);
